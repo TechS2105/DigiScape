@@ -8,6 +8,7 @@ function Navbar() {
     const [isActiveSubMenuBox, setIsActiveSubMenuBox] = useState(null);
     const [isActiveInnerSubmenuBox, setIsInnerSubMenuBox] = useState(null);
     const [isActiveInnerSubMenuText, setIsInnerActiveInnerSubMenuText] = useState(null);
+    const [isActiveSpanText, setIsActiveSpanText] = useState(null);
 
     function handleNavMenuIcon() {
         
@@ -15,6 +16,7 @@ function Navbar() {
         setIsActiveSubMenuBox(prev => !prev);
         setIsInnerSubMenuBox(prev => !prev);
         setIsInnerActiveInnerSubMenuText(prev => !prev);
+        setIsActiveSpanText(prev => !prev);
 
     }
 
@@ -166,6 +168,40 @@ function Navbar() {
 
     }
 
+    // Inner sub menu contact 
+    const mobileNo = isActiveSpanText ? {
+
+        opacity: "1",
+        filter: "blur(0px)",
+        transform: "translateX(0px)",
+        transition: "all 0.8s ease 1.2s"
+
+    } : {
+
+        opacity: "0",
+        filter: "blur(20px)",
+        transform: "translateX(1000px)",
+        transition: "all 0.8s ease 0.3s"
+
+    }
+
+    // Inner sub menu email
+    const emailStyle = isActiveSpanText ? {
+
+        opacity: "1",
+        filter: "blur(0px)",
+        transform: "translateX(0px)",
+        transition: "all 0.8s ease 1.3s"
+
+    } : {
+
+        opacity: "0",
+        filter: "blur(20px)",
+        transform: "translateX(1000px)",
+        transition: "all 0.8s ease 0.2s"
+
+    }
+
     const slideInnerSubMenu = useRef(null);
     const slideMainMenu = useRef(null);
 
@@ -176,6 +212,7 @@ function Navbar() {
         setIsActiveSubMenuBox(prev => !prev);
         setIsInnerSubMenuBox(prev => !prev);
         setIsInnerActiveInnerSubMenuText(prev => !prev);
+        setIsActiveSpanText(prev => !prev);
 
         if (ref.current) {
             
@@ -246,8 +283,8 @@ function Navbar() {
 
                         <div className={NavbarStyle.contact}>
 
-                            <span> +91 88342 84323 </span> <br />
-                            <span> digiscape2025@gmail.com </span>
+                            <span style={mobileNo}> +91 88342 84323 </span> <br />
+                            <span style={emailStyle}> digiscape2025@gmail.com </span>
 
                         </div>
 

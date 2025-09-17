@@ -227,6 +227,7 @@ header > .submenuDiv{
     margin-bottom: 5px;
     letter-spacing: 2px;
     margin-right: 30px;
+    display: inline-flex;
 
 }
 
