@@ -1,15 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import NavbarStyle from '../../public/styles/navbar files/Navbar.module.css';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
 
     const [isActiveMenuIcon, setIsActiveMenuIcon] = useState(null);
     const [isActiveSubMenuBox, setIsActiveSubMenuBox] = useState(null);
+    const [isActiveInnerSubmenuBox, setIsInnerSubMenuBox] = useState(null);
+    const [isActiveInnerSubMenuText, setIsInnerActiveInnerSubMenuText] = useState(null);
 
     function handleNavMenuIcon() {
         
         setIsActiveMenuIcon(prev => !prev);
         setIsActiveSubMenuBox(prev => !prev);
+        setIsInnerSubMenuBox(prev => !prev);
+        setIsInnerActiveInnerSubMenuText(prev => !prev);
 
     }
 
@@ -17,13 +22,13 @@ function Navbar() {
     const firstMenuIcon = isActiveMenuIcon ? {
 
         transform: "rotate(50deg)",
-        transition: "all 0.8s ease"
+        transition: "all 0.8s ease 0.5s"
 
 
     } : {
 
         transform: "rotate(0deg)",
-        transition: "all 0.8s ease"
+        transition: "all 0.8s ease 1s"
 
     }
 
@@ -31,25 +36,25 @@ function Navbar() {
 
         transform: "scale(0)",
         opacity: "0",
-        transition: "all 0.8s ease"
+        transition: "all 0.8s ease 0.5s"
 
     } : {
 
         transform: "scale(1)",
         opacity: "1",
-        transition: "all 0.8s ease"
+        transition: "all 0.8s ease 1s"
 
     }
 
     const thirdMenuIcon = isActiveMenuIcon ? {
 
         transform: "rotate(-50deg) translate(12px, -10px)",
-        transition: "all 0.8s ease",
+        transition: "all 0.8s ease 0.5s",
         width: "50%"
 
     } : {
 
-        transition: "all 0.8s ease"
+        transition: "all 0.8s ease 1s"
 
     }
 
@@ -64,10 +69,133 @@ function Navbar() {
 
         transform: "translateY(-1000px)",
         filter: "blur(20px)",
-        transition: "all 0.8s ease"
+        transition: "all 0.8s ease 1.5s"
+
+    }
+
+    // Inner nav menu section
+    const innerSubMenuStyle = isActiveInnerSubmenuBox ? {
+
+        transform: "translateX(0px)",
+        filter: "blur(0px)",
+        transition: "all 0.8s ease 0.5s"
+
+    } : {
+
+        transform: "translateX(1000px)",
+        filter: "blur(20px)",
+        transition: "all 0.8s ease 1s"
+
+    }
+
+    // Inner first sub menu
+    const m1 = isActiveInnerSubMenuText ? {
+
+        transform: "translateX(0px)",
+        transition: "all 0.8s ease 0.6s"
+
+    } : {
+
+        transform: "translateX(-1000px)",
+        transition: "all 0.8s ease 0.9s"
 
     }
     
+    // Inner second sub menu
+    const m2 = isActiveInnerSubMenuText ? {
+
+        transform: "translateX(0px)",
+        transition: "all 0.8s ease 0.7s"
+
+    } : {
+
+        transform: "translateX(-1000px)",
+        transition: "all 0.8s ease 0.8s"
+
+    }
+
+    // Inner third sub menu
+    const m3 = isActiveInnerSubMenuText ? {
+
+        transform: "translateX(0px)",
+        transition: "all 0.8s ease 0.8s"
+
+    } : {
+
+        transform: "translateX(-1000px)",
+        transition: "all 0.8s ease 0.7s"
+
+    }
+
+    // Inner fourth sub menu
+    const m4 = isActiveInnerSubMenuText ? {
+        
+        transform: "translateX(0px)",
+        transition: "all 0.8s ease 0.9s"
+
+    } : {
+
+        transform: "translateX(-1000px)",
+        transition: "all 0.8s ease 0.6s"
+
+    }
+
+    // Inner fifth sub menu
+    const m5 = isActiveInnerSubMenuText ? {
+
+        transform: "translateX(0px)",
+        transition: "all 0.8s ease 1s"
+
+    } : {
+
+        transform: "translateX(-1000px)",
+        transition: "all 0.8s ease 0.5s"
+
+    }
+
+    // Inner sixth sub menu
+    const m6 = isActiveInnerSubMenuText ? {
+
+        transform: "translateX(0px)",
+        transition: "all 0.8s ease 1.1s"
+
+    } : {
+
+        transform: "translateX(-1000px)",
+        transition: "all 0.8s ease 0.4s"
+
+    }
+
+    const slideInnerSubMenu = useRef(null);
+    const slideMainMenu = useRef(null);
+
+    // Handle inner menu slide
+    const handleClick = (ref) => {
+
+        setIsActiveMenuIcon(prev => !prev);
+        setIsActiveSubMenuBox(prev => !prev);
+        setIsInnerSubMenuBox(prev => !prev);
+        setIsInnerActiveInnerSubMenuText(prev => !prev);
+
+        if (ref.current) {
+            
+            ref.current.style.transform = "translateX(1000px)"
+
+        }
+
+    }
+
+    // Handle main menu slide
+    const handleMainMenuClick = (ref) => {
+
+        if (ref.current) {
+            
+            ref.current.style.transform = "translateY(-1000px)"
+
+        }
+
+    }
+
     return (
 
         <header>
@@ -93,20 +221,20 @@ function Navbar() {
             </div>
 
             {/** Submenu Div  */}
-            <div className={NavbarStyle.submenuDiv} style={subMenuStyle}>
+            <div className={NavbarStyle.submenuDiv} style={subMenuStyle} ref={slideMainMenu}>
 
-                <div className={NavbarStyle.innerSubMenuDiv}>
+                <div className={NavbarStyle.innerSubMenuDiv} style={innerSubMenuStyle} ref={slideInnerSubMenu}>
 
                     <nav>
 
                         <ul>
 
-                            <li><a href="#">HOME</a></li>
-                            <li><a href="#">ABOUT</a></li>
-                            <li><a href="#">SERVICES</a></li>
-                            <li><a href="#">PORTFOLIO</a></li>
-                            <li><a href="#">BLOG</a></li>
-                            <li><a href="#">CONTACT</a></li>
+                            <li style={m1} onClick={() => handleMainMenuClick(slideMainMenu)}><NavLink to="/" onClick={() => handleClick(slideInnerSubMenu)}>HOME</NavLink></li>
+                            <li style={m2} onClick={() => handleMainMenuClick(slideMainMenu)}><NavLink to="/about" onClick={() => handleClick(slideInnerSubMenu)}>ABOUT</NavLink></li>
+                            <li style={m3} onClick={() => handleMainMenuClick(slideMainMenu)}><NavLink to="/services" onClick={() => handleClick(slideInnerSubMenu)}>SERVICES</NavLink></li>
+                            <li style={m4} onClick={() => handleMainMenuClick(slideMainMenu)}><NavLink to="/portfolio" onClick={() => handleClick(slideInnerSubMenu)}>PORTFOLIO</NavLink></li>
+                            <li style={m5} onClick={() => handleMainMenuClick(slideMainMenu)}><NavLink to="/blog" onClick={() => handleClick(slideInnerSubMenu)}>BLOG</NavLink></li>
+                            <li style={m6} onClick={() => handleMainMenuClick(slideMainMenu)}><NavLink to="/contact" onClick={() => handleClick(slideInnerSubMenu)}>CONTACT</NavLink></li>
 
                         </ul>
 
