@@ -253,7 +253,6 @@ header > .submenuDiv{
     font-size: 20px;
     text-decoration: none;
     color: #292929;
-    transition: all 0.8s ease;
     display: inline-flex;
 
 }
@@ -264,6 +263,5 @@ header > .submenuDiv{
     background-clip: text;
     background-image: linear-gradient(to right, navy, royalblue);
     -webkit-text-fill-color: transparent;
-    font-size: 25px;
 
 }

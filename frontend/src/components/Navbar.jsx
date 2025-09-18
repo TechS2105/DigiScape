@@ -9,6 +9,7 @@ function Navbar() {
     const [isActiveInnerSubmenuBox, setIsInnerSubMenuBox] = useState(null);
     const [isActiveInnerSubMenuText, setIsInnerActiveInnerSubMenuText] = useState(null);
     const [isActiveSpanText, setIsActiveSpanText] = useState(null);
+    const [isActiveSocialIcon, setIsActiveSocialIcon] = useState(null);
 
     function handleNavMenuIcon() {
         
@@ -17,6 +18,7 @@ function Navbar() {
         setIsInnerSubMenuBox(prev => !prev);
         setIsInnerActiveInnerSubMenuText(prev => !prev);
         setIsActiveSpanText(prev => !prev);
+        setIsActiveSocialIcon(prev => !prev);
 
     }
 
@@ -213,6 +215,7 @@ function Navbar() {
         setIsInnerSubMenuBox(prev => !prev);
         setIsInnerActiveInnerSubMenuText(prev => !prev);
         setIsActiveSpanText(prev => !prev);
+        setIsActiveSocialIcon(prev => !prev);
 
         if (ref.current) {
             
@@ -230,6 +233,55 @@ function Navbar() {
             ref.current.style.transform = "translateY(-1000px)"
 
         }
+
+    }
+
+    // Inner submenu box social icons style
+    const fb = isActiveSocialIcon ? {
+
+        transform: "scale(1)",
+        transition: "transform 0.8s ease 1.4s"
+
+    } : {
+
+        transform: "scale(0)",
+        transition: "transform 0.8s ease 0.19s"
+
+    }
+
+    const insta = isActiveSocialIcon ? {
+
+        transform: "scale(1)",
+        transition: "transform 0.8s ease 1.5s"
+
+    } : {
+
+        transform: "scale(0)",
+        transition: "transform 0.8s ease 0.18s"
+
+    }
+
+    const linkedin = isActiveSocialIcon ? {
+
+        transform: "scale(1)",
+        transition: "transform 0.8s ease 1.6s"
+
+    } : {
+
+        transform: 'scale(0)',
+        transition: "transform 0.8s ease 0.17s"
+
+    }
+
+    const tweet = isActiveSocialIcon ? {
+
+        transform: "scale(1)",
+        transition: "transform 0.8s ease 1.7s"
+
+    } : {
+
+        transform: "scale(0)",
+        transition: "transform 0.8s ease 0.16s"
 
     }
 
@@ -292,10 +344,10 @@ function Navbar() {
 
                             <ul>
 
-                                <li><a href="#">Facebook</a></li>
-                                <li><a href="#">Instagram</a></li>
-                                <li><a href="#">LinkedIn</a></li>
-                                <li><a href="#">Twitter</a></li>
+                                <li><a href="#" style={fb}>Facebook</a></li>
+                                <li><a href="#" style={insta}>Instagram</a></li>
+                                <li><a href="#" style={linkedin}>LinkedIn</a></li>
+                                <li><a href="#" style={tweet}>Twitter</a></li>
 
                             </ul>
 
