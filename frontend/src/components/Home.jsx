@@ -1,10 +1,24 @@
 import React from 'react';
+import HomeBanner from '../components/Home Banner Component/Homebanner';
+import HomeStyle from '../../public/styles/home files/Home.module.css';
 
 function Home() {
     
     return (
 
-        <h1> Home Page </h1>
+        <>
+        
+            <main>
+
+                <HomeBanner
+                
+                    HomeStyle={HomeStyle}
+                    
+                />
+
+            </main>
+            
+        </>
 
     );
 
