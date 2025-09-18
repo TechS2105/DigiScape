@@ -254,6 +254,8 @@ header > .submenuDiv{
     text-decoration: none;
     color: #292929;
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
 }
 

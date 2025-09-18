@@ -344,10 +344,10 @@ function Navbar() {
 
                             <ul>
 
-                                <li><a href="#" style={fb}>Facebook</a></li>
-                                <li><a href="#" style={insta}>Instagram</a></li>
-                                <li><a href="#" style={linkedin}>LinkedIn</a></li>
-                                <li><a href="#" style={tweet}>Twitter</a></li>
+                                <li><a href="#" style={fb}> Facebook </a></li>
+                                <li><a href="#" style={insta}> Instagram</a></li>
+                                <li><a href="#" style={linkedin}> LinkedIn</a></li>
+                                <li><a href="#" style={tweet}> Twitter</a></li>
 
                             </ul>
 
