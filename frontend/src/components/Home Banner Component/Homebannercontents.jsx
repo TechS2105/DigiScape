@@ -1,15 +1,15 @@
-import React from 'react'; 
+import React from 'react';
 
-function Homebannercontents() {
+function Homebannercontent({bannerContent}) {
     
     return (
 
         <>
         
-            <span> Futuristic Elegance </span>
-            <h1> Premium Digital Marketing & AI Solutions </h1>
-            <p>Discover DigiScape’s high-end digital marketing, web, and AI solutions designed for innovation-driven businesses.</p>
-            <button> Explore Our Solutions </button>
+            <span>{bannerContent.spanText}</span>
+            <h1>{bannerContent.title}</h1>
+            <p>{bannerContent.description}</p>
+            <button>{bannerContent.button}</button>
             
         </>
 
@@ -17,4 +17,4 @@ function Homebannercontents() {
 
 }
 
-export default Homebannercontents;
+export default Homebannercontent; 

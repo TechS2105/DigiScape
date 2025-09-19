@@ -66,7 +66,7 @@ header > .menuIcon{
     gap: 5px;
     cursor: pointer;
     position: absolute;
-    z-index: 9;
+    z-index: 999;
 
 }
 
@@ -100,11 +100,12 @@ header > .menuIcon{
 header > .submenuDiv{
 
     position: fixed;
+    z-index: 9;
     top: 0;
     right: 0;
     height: 100vh;
     width: 100%;
-    background-color: #292929c4;
+    background-image: linear-gradient(to right, #f7f7f78e, royalblue);
     backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
