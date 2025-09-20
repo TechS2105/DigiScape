@@ -1,4 +1,5 @@
 import HomeBannerApi from '../objects/Homebannerapi.js';
+import TextScroller from '../objects/Textscrollerapitext.js';
 
 const getDefaultRouter = (req, res) => {
 
@@ -12,9 +13,16 @@ const getHomeBannerApi = (req, res) => {
 
 }
 
+const getHomeTextScroller = (req, res) => {
+
+    res.status(200).json(TextScroller);
+
+}
+
 export default {
 
     getDefaultRouter,
-    getHomeBannerApi
+    getHomeBannerApi,
+    getHomeTextScroller
 
 }

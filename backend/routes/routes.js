@@ -5,5 +5,6 @@ const router = express.Router();
 
 router.get('/', getRouterController.getDefaultRouter);
 router.get('/api/home/banner', getRouterController.getHomeBannerApi);
+router.get('/api/home/textscroller', getRouterController.getHomeTextScroller);
 
 export default router;
