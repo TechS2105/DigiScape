@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from '../components/Navbar';
 import { Outlet } from 'react-router-dom';
+import ScrollableNavbarMenu from '../components/Scrollable Navbar Component/Scrollablenavbar';
 
 function Rootlayout() {
     
@@ -15,6 +16,8 @@ function Rootlayout() {
                 <Outlet />
                 
             </div> 
+
+            <ScrollableNavbarMenu />
             
         </>
 

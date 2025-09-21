@@ -11,7 +11,7 @@ function Home() {
       
     <>
           <main>
-              
+            
             <HomeBanner
                     
                 HomeStyle={HomeStyle}
