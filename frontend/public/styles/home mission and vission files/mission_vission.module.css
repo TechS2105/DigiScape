@@ -22,11 +22,10 @@
 .missionVissionContainer{
 
     width: 100%;
-    height: 250vh;
+    height: 200vh;
     background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
     background-size: contain;
     background-position: center;
-    margin-bottom: 50rem;
 
 }
 
@@ -107,7 +106,7 @@
 .missionVissionContainer > .missionVissionSubContent{
 
     width: 100%;
-    height: 55%;
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -438,39 +437,3 @@
     letter-spacing: 2px;
 
 }
-
-/** Mission Vision Second Sub Content Section */
-.missionVissionContainer > .missionVisionSecondSubContent{
-
-    width: 100%;
-    height: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-/** First Div */
-.missionVisionSecondSubContent > .mVSecondSubContentFirstDiv{
-
-    width: 33.5%;
-    height: 100%;
-
-}
-
-/** Second Div */
-.missionVisionSecondSubContent > .mVSecondSubContentSecondDiv{
-
-    width: 33.5%;
-    height: 100%;
-
-}
-
-/** Third Div */
-.missionVisionSecondSubContent > .mVSecondSubContentThirdDiv{
-
-    width: 33.5%;
-    height: 100%;
-
-}
-

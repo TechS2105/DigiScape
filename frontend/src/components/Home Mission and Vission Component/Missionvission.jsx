@@ -4,7 +4,6 @@ import Container from '../Container Component/Container';
 import MissionVissionHeaderContent from '../Home Mission and Vission Component/Missionvissionheadercontent';
 import MissionVissionSubSectionContent from '../Home Mission and Vission Component/Missionvissionsubsectioncontent';
 import BackgroundText from '../Home Mission and Vission Component/Missionvissionbackgroundtext';
-import MissionVisionSecondSubContainer from '../Home Mission and Vission Component/Missionvisionsecondsubcontainer';
 
 function Missionvission() {
 
@@ -130,17 +129,6 @@ function Missionvission() {
 
                         {/** Mission Vission Sub Content Inner Section */}
                         <MissionVissionSubSectionContent
-                        
-                            MissionVissionStyle={MissionVissionStyle}
-                            
-                        />
-
-                    </div>
-
-                    {/** Mission Vission Second Sub Content Section */}
-                    <div className={MissionVissionStyle.missionVisionSecondSubContent}>
-
-                        <MissionVisionSecondSubContainer
                         
                             MissionVissionStyle={MissionVissionStyle}
                             
