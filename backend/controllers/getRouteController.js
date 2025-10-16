@@ -1,6 +1,7 @@
 import HomeBannerApi from '../objects/Homebannerapi.js';
 import TextScroller from '../objects/Textscrollerapitext.js';
 import HomeHowWeWork from '../objects/Homehowwework.js';
+import HomePorttfolio from '../objects/Homeportfolio.js'; 
 
 const getDefaultRouter = (req, res) => {
 
@@ -27,12 +28,20 @@ const getHomeHowWeWorkAPI = (req, res) => {
 
 }
 
+/** Home Portfolio Section API */
+const getHomePortfolioRouter = (req, res) => {
+
+    res.status(200).json(HomePorttfolio);
+
+}
+
 
 export default {
 
     getDefaultRouter,
     getHomeBannerApi,
     getHomeTextScroller,
-    getHomeHowWeWorkAPI
+    getHomeHowWeWorkAPI,
+    getHomePortfolioRouter,
 
 }

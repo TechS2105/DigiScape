@@ -9,6 +9,7 @@ import HomeHowWeWork from '../components/Home How We Work Component/Howwework';
 import HomeSecondTextScroller from '../components/Home Second Text Scroller Component/Homesecondtextscroller';
 import HomeServices from '../components/Home Services Component/Homeservices';
 import HomeMissionVission from './Home Mission and Vission Component/Missionvission';
+import HomePortfolioSection from './Home Portfolio Component/Homeportfolio';
 
 function Home() {
 
@@ -18,11 +19,7 @@ function Home() {
           <main>
           
             {/** Home Hero/Banner Section */}
-            <HomeBanner
-                    
-                HomeStyle={HomeStyle}
-                    
-            />
+            <HomeBanner HomeStyle={HomeStyle} />
           
             {/** Home First Text Scroller Section */}
             <MarqueeTextScroller />
@@ -47,6 +44,9 @@ function Home() {
           
             {/** Home Mission and Vission */}
             <HomeMissionVission />
+          
+            {/** Home Portfolio Section */}
+            <HomePortfolioSection />
               
           </main>
           
