@@ -1,0 +1,111 @@
+/** Font */
+@font-face {
+    font-family: 'secondtextscrollerfont';
+    src: url('../../fonts/negan-demo/Negan\ DEMO.otf');
+}
+
+/** Second Text Scroller Section */
+.secondTextScrollerSectionDiv{
+
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+
+}
+
+/** Second Text Scroller Text */ 
+.secondTextScrollerSectionDiv > .secondTextScrollerSectionText{
+
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #292929;
+    white-space: nowrap;
+
+}
+
+/** Second Text Scroller Div */
+.secondTextScrollerSectionText > .scrollerDiv{
+
+    display: inline-block;
+    animation: spanTextAnimation 50s linear infinite;
+    padding-top: 30px;
+
+}
+
+.scrollerDiv > svg{
+
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    border: 5px dashed #ffffff;
+    border-radius: 50px;
+    margin: 0px 50px;
+    animation: svgAnime 50s linear infinite;
+
+}
+
+@keyframes svgAnime {
+    
+    0%{
+
+        transform: rotate(0deg);
+
+    }100%{
+
+        transform: rotate(-360deg);
+
+    }
+
+}
+
+.scrollerDiv > span{
+
+    display: inline-flex;
+    /* height: 100%; */
+    font-size: 150px;
+    font-family: 'secondtextscrollerfont';
+    text-transform: uppercase;
+    letter-spacing: 50px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom, #ffffff, #292929);
+    font-style: italic;
+
+}
+
+@keyframes spanTextAnimation {
+
+    0%{
+
+        transform: translateX(0%);
+
+    }100%{
+
+        transform: translateX(-100%);
+
+    }
+    
+}
+
+.scrollerDiv > span:nth-child(3){
+
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-fill-color: #292929;
+    /* text-shadow: 2px 5px 2px #ffffff; */
+
+}
+
+.scrollerDiv > span:nth-child(7){
+
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-fill-color: #292929;
+    -webkit-text-stroke-width: 2px;
+    /* text-shadow: 2px 5px 2px #ffffff; */
+
+}

@@ -1,0 +1,270 @@
+/** Font */
+@font-face {
+    font-family: 'howweworksemiboldfont';
+    src: url('../../fonts/poltab/Poltab-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'howweworkmediumfont';
+    src: url('../../fonts/poltab/Poltab-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'howweworkregularfont';
+    src: url('../../fonts/poltab/Poltab-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'howweworknumberfont';
+    src: url('../../fonts/negan-demo/Negan\ DEMO.otf');
+}
+
+/** How we work main section */
+.howWeWorkSection{
+
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+/** How we work content section */
+.howWeWorkSection > .howWeWorkSectionContent{
+
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+
+}
+
+.howWeWorkSectionContent > span{
+
+    font-family: 'howweworkmediumfont';
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #292929;
+    width: 300px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+
+}
+
+.howWeWorkSectionContent > h2{
+
+    font-size: 50px;
+    font-family: 'howweworksemiboldfont';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-style: italic;
+    position: relative;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to top, #ffffff, #292929);
+    -webkit-text-fill-color: transparent;
+
+}
+
+.howWeWorkSectionContent > h2::after{
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    width: 30%;
+    height: 5px;
+    background-color: royalblue;
+    content: "";
+    border-radius: 50px;
+
+}
+
+/** How We Work Service Box Section */
+.howWeWorkSection > .howWeWorkSectionServiceBox{
+
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 20px;
+
+}
+
+.howWeWorkSectionServiceBox > .howWeWorkBox{
+
+    width: 480px;
+    height: 450px;
+    background-image: linear-gradient(to top, royalblue, rgb(115, 150, 255));
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 10px 10px 5px #29292942;
+    border-right: 5px solid #ffffff;
+    border-bottom: 5px solid #ffffff;
+
+}
+
+/** How We Work Number Box */
+.howWeWorkBox > .howWeWorkBoxNumber{
+
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    border-radius: 50px;
+    width: 50%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 2px #292929;
+    transition: all 0.8s ease;
+    overflow: hidden;
+
+}
+
+.howWeWorkBox > .howWeWorkBoxNumber::after{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(115, 150, 255), royalblue);
+    content: "";
+    transition: all 0.8s ease;
+
+}
+
+.howWeWorkBoxNumber > span{
+
+    font-family: 'howweworknumberfont';
+    font-size: 40px;
+    color: #292929;
+    display: inline-flex;
+    transition: color 0.8s ease;
+    transition: all 0.8s ease;
+
+}
+
+.howWeWorkBox > h3{
+
+    padding-left: 50px;
+    color: #ffffff;
+    font-family: 'howweworkmediumfont';
+    font-size: 30px;
+    letter-spacing: 2px;
+
+}
+
+.howWeWorkBox > ul{
+
+    padding-left: 50px;
+    list-style-type: none;
+
+}
+
+.howWeWorkBox ul > li{
+
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-family: 'howweworkregularfont';
+    letter-spacing: 2px;
+    width: 100%;
+    transition: all 0.8s ease;
+
+}
+
+.howWeWorkBox ul > li:nth-child(1){
+
+    width: 80%;
+
+}
+
+.howWeWorkBox ul > li:nth-child(3){
+
+    width: 60%;
+
+}
+
+.howWeWorkBox > img{
+
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    object-fit: cover;
+
+}
+
+.howWeWorkBox:hover{
+
+    background-image: linear-gradient(to bottom, #292929, royalblue);
+
+}
+
+.howWeWorkBox:hover > img{
+
+    animation: imageAnime 50s linear infinite;
+    filter: drop-shadow(10px 10px 2px #2e2e2e4c);
+
+}
+
+@keyframes imageAnime {
+    
+    0%{
+
+        transform: rotate(0deg);
+
+    }100%{
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+.howWeWorkBox:hover ul > li{
+
+    background-color: #ffffff;
+    color: royalblue;
+
+} 
+
+.howWeWorkBox:hover > .howWeWorkBoxNumber{
+
+    box-shadow: 5px 50px 100px #ffffff;
+
+}
+
+.howWeWorkBox:hover > .howWeWorkBoxNumber::after{
+
+    height: 100%;
+
+}
+
+.howWeWorkBox:hover .howWeWorkBoxNumber > span{
+
+    position: relative;
+    z-index: 2;
+    color:#ffffff;
+
+}

@@ -1,0 +1,304 @@
+/** Fonts */
+@font-face {
+    font-family: 'servicesboldfont';
+    src: url('../../fonts/poltab/Poltab-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'servicesmediumfont';
+    src: url('../../fonts/poltab/Poltab-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'servicesregularfont';
+    src: url('../../fonts/poltab/Poltab-Regular.ttf');
+}
+
+/** Services Section */
+.servicesSectionDiv{
+
+    width: 100%;
+    height: 200vh;
+
+}
+
+/** Services Upper Contnet Section */
+.servicesSectionDiv > .servicesUpperContentDiv{
+
+    width: 100%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.servicesUpperContentDiv > .servicesContentTextDiv{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 50px;
+
+}
+
+.servicesContentTextDiv > span{
+
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'servicesmediumfont';
+    letter-spacing: 2px;
+
+}
+
+.servicesContentTextDiv > h2{
+
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'servicesboldfont';
+    letter-spacing: 2px;
+    font-weight: bolder;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom, #292929, #ffffff);
+    position: relative;
+    width: 1200px;
+
+}
+
+.servicesContentTextDiv > h2::after{
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    height: 5px;
+    width: 20%;
+    background-color: royalblue;
+    border-radius: 50%;
+}
+
+.servicesContentTextDiv > p{
+
+    text-align: center;
+    width: 1200px;
+    font-size: 20px;
+    font-family: 'servicesregularfont';
+
+}
+
+/** Home Service Section Main Content Section */
+.servicesSectionDiv > .servicesMainContentSectionDiv{
+
+    height: 65%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/** Home Services Section Inner Content */
+.servicesMainContentSectionDiv > .HomeServicesInnerContentSection{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+/** Home Services Section First Service section */
+.HomeServicesInnerContentSection > ul{
+
+    list-style-type: none;
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+
+} 
+
+.HomeServicesInnerContentSection ul > li{
+
+    font-family: 'servicesboldfont';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #292929;
+    cursor: pointer;
+
+}
+
+.HomeServicesInnerContentSection ul li > .HomeServicesHeading{
+
+    width: 90%;
+    transition: all 0.5s ease;
+
+}
+
+.HomeServicesInnerContentSection ul li:hover > .HomeServicesHeading{
+
+    color: royalblue;
+
+}
+
+.HomeServicesHeading h3 > span{
+
+    color: royalblue;
+    font-size: 30px;
+    opacity: 0.3;
+
+} 
+
+.HomeServicesInnerContentSection ul li > .HomeServicesIcon{
+
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.HomeServicesIcon > span{
+
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    /* margin-bottom: 10px; */
+
+}
+
+.HomeServicesIcon span > svg{
+
+    font-size: 60px;
+
+}
+
+/** Home Services Inner List Inner Content Section */
+.HomeServicesInnerContentSection ul > .serviceListContentSection{
+
+    width: 100%;
+    height: 25rem;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.serviceListContentSection > .serviceListContentSectionImageBox{
+
+    width: 50%;
+    height: 100%;
+    position: relative;
+
+}
+
+.serviceListContentSectionImageBox > img{
+    
+    width: 100%;
+    height: 100%;
+    clip-path: path("M 40,0 L 550, 0 A 50,50 0,0,1 600, 40 L 600, 200 A 50,50, 0,0,1 550, 250 L 450, 250 A 50,50 0,0,0 400, 300 L 400, 350 A 50,50 0,0,1 350, 380 L 40, 380 A 50,50 0,0,1 0, 340 L 0, 50 A 50,50 0,0,1 40,0  Z");
+    object-fit: cover;
+
+}
+
+.serviceListContentSectionImageBox > .homeServiceButton{
+
+    position: absolute;
+    top: 263px;
+    left: 413px;
+    width: 200px;
+    height: 150px;
+    background-color: royalblue;
+    clip-path: path("M 30, 0 L 150, 0 A 30,30 0,0,1 180, 20 L 180, 80 A 30,30 0,0,1 150, 110 L 30, 110 A 30,30 0,0,1 0, 80 L 0, 30 A 30,30 0,0,1 30, 0  Z");
+    cursor: pointer;
+    transition: "background-image" 0.5s ease;
+    overflow: hidden;
+
+}
+
+.homeServiceButton:hover{
+
+    background-image: linear-gradient(50deg, royalblue, rgba(255, 255, 255, 0.43));
+
+}
+
+.homeServiceButton > svg{
+
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-30%, -40%) rotate(-30deg);
+    font-size: 70px;
+    color: #ffffff;
+    transition: all 0.5s ease;
+
+}
+
+.homeServiceButton:hover > svg{
+
+    transform: translate(-30%, -40%) rotate(0deg) scale(1.2);
+
+}
+
+.serviceListContentSection > .serviceListContentSectionContentBox{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.serviceListContentSectionContentBox > p{
+
+    font-family: 'servicesregularfont';
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    line-height: 25px;
+
+}
+
+.serviceListContentSectionContentBox > table {
+
+    width: 100%;
+
+}
+
+.serviceListContentSectionContentBox > table, tbody, tr, td{
+
+    padding: 0px 10px 20px 0px;
+
+}
+
+.serviceListContentSectionContentBox table tbody tr > td{
+
+    font-family: 'servicesboldfont';
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}

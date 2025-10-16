@@ -1,0 +1,284 @@
+/** Fonts */
+@font-face {
+    font-family: 'homeaboutmediumfont';
+    src: url('../../fonts/poltab/Poltab-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'homeaboutboldfont';
+    src: url('../../fonts/poltab/Poltab-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'homeaboutlightfont';
+    src: url('../../fonts/poltab/Poltab-Regular.ttf');
+}
+
+/** Home About Div */
+.aboutDiv{
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
+
+}
+
+/** Home About Section Image Div */
+.aboutDiv > .aboutImageDiv{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+    background-size: cover;
+    background-position: center;
+
+}
+
+/** Inner First Image Div */
+.aboutImageDiv > .innerImageDiv{
+
+    width: 65%;
+    height: 90%;
+    position: relative;
+
+}
+
+.aboutImageDiv > .innerImageDiv::before{
+
+    position: absolute;
+    top: 50px;
+    left: -80px;
+    width: 80%;
+    height: 85%;
+    border: 7px solid royalblue;
+    content: "";
+
+}
+
+.innerImageDiv > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+
+}
+
+/** Inner Second Image Div */
+.aboutImageDiv > .innerSecondImageDiv{
+
+    position: absolute;
+    bottom: 100px;
+    left: 400px;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    border: 5px solid #ffffff;
+
+}
+
+.innerSecondImageDiv > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale();
+
+}
+
+/** Home About Section Content Div */
+.aboutDiv > .aboutContentDiv{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.aboutContentDiv > .aboutInnerContentDiv{
+
+    width: 100%;
+    padding-left: 50px;
+
+}
+
+.aboutInnerContentDiv > span{
+
+    font-family: 'homeaboutmediumfont';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    display: inline-flex;
+    background-color: royalblue;
+    width: 300px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-radius: 0px 50px 50px 0px;
+    color: #ffffff;
+    margin-bottom: 20px;
+
+}
+
+.aboutInnerContentDiv > h2{
+
+    font-family: 'homeaboutboldfont';
+    font-size: 40px;
+    width: 650px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+}
+
+.aboutInnerContentDiv > p{
+
+    font-family: 'homeaboutlightfont';
+    letter-spacing: 1px;
+    font-size: 15px;
+    width: 650px;
+    line-height: 20px;
+    margin-bottom: 20px;
+
+}
+
+/** What We Offer Section */
+.aboutInnerContentDiv > .whatWeOfferSection{
+
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+
+}
+
+.whatWeOfferSection > .whatWeOfferBox{
+
+    width: 600px;
+    height: 7rem;
+    display: flex;
+
+}
+
+.whatWeOfferBox > .svgIconBox{
+
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.svgIconBox span > svg{
+
+    color: #ffffff;
+    font-size: 30px;
+    background-color: royalblue;
+    box-shadow: 2px 2px 15px #ffffff inset;
+    padding: 15px;
+    border-radius: 50px;
+
+}
+
+/** What We Offer Content Box */
+.whatWeOfferBox > .contentBox{
+
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.contentBox > h3{
+
+    padding-left: 20px;
+    font-family: 'homeaboutmediumfont';
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-size: 20px;
+    color: royalblue;
+
+}
+
+.contentBox > p{
+
+    padding-left: 20px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-family: 'homeaboutlightfont';
+
+}
+
+/** Home About Us Button */
+.aboutInnerContentDiv > .buttonBox{
+
+    width: 600px;
+    height: 60px;
+    display: flex;
+    align-content: center;
+
+}
+
+.buttonBox > button{
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 250px;
+    border-radius: 50px;
+    border: 1px solid #292929;
+    background-color: transparent;
+    color: royalblue;
+    text-transform: uppercase;
+    font-family: 'homeaboutmediumfont';
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.8s ease;
+
+}
+
+.buttonBox > button:hover{
+
+    background: royalblue;
+    color: #ffffff;
+    border: transparent;
+
+}
+
+.buttonBox button > svg{
+
+    font-size: 35px;
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: #292929;
+    color: #ffffff;
+    transition: all 0.8s ease;
+
+}
+
+.buttonBox button:hover > svg{
+
+    background-color: #ffffff;
+    color: royalblue;
+    transform: translateX(10px) rotateY(360deg);
+
+}

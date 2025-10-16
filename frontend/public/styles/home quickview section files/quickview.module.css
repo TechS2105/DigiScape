@@ -1,0 +1,283 @@
+/** Fonts */
+
+@font-face {
+    font-family: 'quickviewmediumfont';
+    src: url('../../fonts/poltab/Poltab-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'quickviewregularfont';
+    src: url('../../fonts/poltab/Poltab-Regular.ttf');
+}
+
+/** Quick View Section */
+
+.quickView{
+
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 50px;
+
+}
+
+/** Quick View Title Section */
+.quickView > .quickViewTitleSection{
+
+    width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.quickViewTitleSection > span{
+
+    font-family: 'quickviewmediumfont';
+    font-size: 50px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    display: inline-flex;
+    position: relative;
+    font-style: italic;
+    letter-spacing: 2px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to bottom, #292929, #ffffff);
+    -webkit-text-fill-color: transparent; 
+
+}
+
+.quickViewTitleSection > span::after{
+
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -120%);
+    content: "";
+    background-color: royalblue;
+    width: 30%;
+    height: 5px;
+    border-radius: 50px;
+
+}
+
+.quickViewTitleSection > p{
+
+    font-family: 'quickviewregularfont';
+    font-size: 18px;
+    width: 800px;
+    text-align: center;
+    letter-spacing: 2px;
+
+}
+
+/** Quick View Inner Section */
+.quickView > .quickViewInnerSection{
+
+    width: 1300px;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/** Quick View First Inner Section */
+.quickViewInnerSection > .quickViewFirstInnerBox{
+
+    width: 33.33%;
+    height: 100%;
+    background-image: linear-gradient(to right, royalblue, rgb(115, 150, 255));
+    display: flex;
+    overflow: hidden;
+    border-radius: 20px 0px 20px 0px;
+
+}
+
+/** Quick View First Inner SVG Box*/
+.quickViewFirstInnerBox>.svgBox {
+
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.quickViewFirstInnerBox .svgBox span > svg {
+
+    color: royalblue;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 50px;
+
+}
+
+/** Quick View First Inner Content Box*/
+.quickViewFirstInnerBox>.contentBox {
+
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.quickViewFirstInnerBox .contentBox > h3 {
+
+    width: 500px;
+    padding: 5px 0px;
+    font-family: 'quickviewmediumfont';
+    letter-spacing: 2px;
+    border-radius: 50px 0px 0px 50px;
+    color: #ffff;
+    text-transform: uppercase;
+
+}
+
+.quickViewFirstInnerBox .contentBox > p {
+
+    color: #ffff;
+    font-family: 'quickviewmediumfont';
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 20px;
+
+}
+
+/** Quick View Second Inner Section */
+.quickViewInnerSection > .quickViewSecondInnerBox{
+
+    width: 33.33%;
+    height: 100%;
+    background-color: #ffff;
+    display: flex;
+    overflow: hidden;
+
+}
+
+/** Quick View Box Inner SVG Box*/
+.quickViewSecondInnerBox > .svgBox{
+
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.quickViewSecondInnerBox .svgBox span > svg{
+
+    font-size: 50px;
+
+} 
+
+/** Quick View Inner Content Box*/
+.quickViewSecondInnerBox > .contentBox{
+
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.quickViewSecondInnerBox .contentBox > h3{
+
+    font-family: 'quickviewmediumfont';
+    letter-spacing: 1px;
+    font-size: 20px;
+    text-transform: uppercase;
+
+}
+
+.quickViewSecondInnerBox .contentBox > p{
+
+    font-family: 'quickviewmediumfont';
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 20px;
+
+}
+
+/** Quick View Third Inner Section */
+.quickViewInnerSection > .quickViewThirdInnerBox{
+
+    width: 33.33%;
+    height: 100%;
+    background-image: linear-gradient(to right, royalblue, rgb(115, 150, 255));
+    border-radius: 20px 0px 20px 0px;
+    display: flex;
+    overflow: hidden;
+
+}
+
+/** Quick View Third Inner SVG Box */
+.quickViewThirdInnerBox > .svgBox {
+
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.quickViewThirdInnerBox .svgBox span > svg{
+
+    color: royalblue;
+    border-radius: 20px;
+    font-size: 50px;
+    background-color: #fff;
+    padding: 10px;
+
+}
+
+/** Quick View Thrid Inner Content */
+.quickViewThirdInnerBox > .contentBox {
+
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.quickViewThirdInnerBox .contentBox > h3{
+
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'quickviewmediumfont';
+    color: #fff;
+
+}
+
+.quickViewThirdInnerBox .contentBox > p{
+
+    color: #ffff;
+    font-family: 'quickviewmediumfont';
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 20px;
+
+}
