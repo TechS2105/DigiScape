@@ -24,6 +24,23 @@ function Homeportfolio() {
 
                 </div>
 
+                {/** Home Portfolio Work Carousel Section */}
+                <div className={HomePortfolioStyle.homePortfolioWorkContainer}>
+
+
+                        {/** Home Portfolio Work Inner Div */}
+                      
+                        <div className={HomePortfolioStyle.homePortfolioWorkInnerDiv}>
+                                
+                            <h3> North Calcutta Paints Private Limited </h3>
+
+                            <img src="../../../public/images/Home Portfolio Images/Guitarish.png" alt="" />
+
+
+                        </div>
+
+                </div>
+
             </div>
             
         </>
