@@ -1,6 +1,7 @@
 import React from 'react';
 import HomePortfolioStyle from '../../../public/styles/home portfolio section files/homeportfoliosectionstyle.module.css';
 import HomePortfolioHeader from '../../components/Home Portfolio Component/Homeportfolioheader';
+import { RxExternalLink } from "react-icons/rx";
 
 function Homeportfolio() {
     
@@ -35,9 +36,19 @@ function Homeportfolio() {
 
                             <h3> North Calcutta Paints Private Limited </h3>
 
-                            <img src="../../../public/images/Home Portfolio Images/NCPL.png" alt="" />
+                            <img src="../../../public/images/Home Portfolio Images/Guitarish.png" alt="" />
+
+                            <a href="#"> Live Demo </a>
 
                         </div>
+
+                    </div>
+
+                    {/** Home Portfolio Swiper Carousel */}
+                    <div className={HomePortfolioStyle.portfolioNavigator}>
+
+                        <span> Previous </span>
+                        <span> Next  </span>
 
                     </div>
 

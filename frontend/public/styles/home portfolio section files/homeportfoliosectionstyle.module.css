@@ -90,6 +90,7 @@
 
     width: 100%;
     height: 60%;
+    position: relative;
 
 }
 
@@ -122,33 +123,98 @@
     width: 100%;
     height: 100%;
     clip-path: path("M 70, 0 L 370, 0 A 30,30 0,0,0 390, 30 L 1125, 30 A 30,30 0,0,0 1150, 0 L 1450, 0 A 50,50, 0,0,1 1480, 50 L 1480, 600 A 50,50 0,0,1 1450, 650 L 1000, 650 A 50,50 0,0,0 950, 600 L 650, 600 A 50,50 0,0,0 600, 655 L 70, 655 A 50,50 0,0,1 40, 610 L 40, 500 A 50,50 0,0,0 90, 450 L 90, 200 A 50,50 0,0,0 40, 150 L 40, 50 A 50,50 0,0,1 70, 0  Z");
-
-}
-
-.homePortfolioWorkInnerSubDiv::before{
-
-    position: absolute;
-    content: '';
-    background: royalblue;
-    inset: -5px;
-    clip-path: path("M 50,0 L 380, 0 L 400, 30 L 1125, 30 L 1150, 0 L 1450, 0 L 1490, 50 Z")
+    object-fit: cover;
+    margin-top: 50px;
 
 }
 
 .homePortfolioWorkInnerSubDiv > h3{
 
-    font-size: 30px;
+    font-size: 32.5px;
     font-family: 'homeportfoliocreativefont';
     font-weight: 500;
-    letter-spacing: 5px;
+    letter-spacing: 3.5px;
     text-transform: uppercase;
     position: absolute;
+    top: 43px;
     z-index: 2;
-    color: #ffffffff;
     width: 800px;
-    text-align: right;
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: #292929;
-    -webkit-text-fill-color: transparent;
+    text-align: center;
+
+}
+
+.homePortfolioWorkInnerSubDiv > a{
+
+    color: rgb(0, 0, 0);
+    position: absolute;
+    left: -70px;
+    z-index: 2;
+    display: inline-flex;
+    transform: rotate(-90deg);
+    font-size: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: 'homeportfoliocreativefont';
+    transition: all 0.8s ease;
+
+}
+
+.homePortfolioWorkInnerSubDiv > a:hover{
+
+    transform: rotate(-90deg)  scale(1.1);
+    color: royalblue
+
+}
+
+/** Home portfolio navigator */
+.homePortfolioWorkContainer > .portfolioNavigator{
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-43%, -120%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    width: 35%;
+
+}
+
+.portfolioNavigator > span{
+
+    display: inline-flex;
+    font-family: 'homeportfoliocreativefont';
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.8s ease;
+
+}
+
+.portfolioNavigator > span:hover{
+    
+    color: royalblue;   
+    
+}
+
+.portfolioNavigator > span:nth-child(1){
+
+    position: relative;
+
+}
+
+.portfolioNavigator > span:nth-child(1)::after{
+
+    position: absolute;
+    top: 13px;
+    left: 110%;
+    width: 5rem;
+    height: 2px;
+    background-color: royalblue;
+    content: "";
 
 }
