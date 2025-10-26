@@ -18,9 +18,8 @@
 .homeBanner{
 
     width: 100%;
+    height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
 
 }
 
@@ -30,8 +29,6 @@
     width: 100%;
     height: 85vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
 
 }
@@ -43,12 +40,12 @@
     height: 100%;
     display: flex;
     align-items: center;
-    animation: bannerContentAnime 2s ease;
+    /* animation: bannerContentAnime 2s ease; */
     background-image: url('https://www.transparenttextures.com/patterns/snow.png');
 
 }
 
-@keyframes bannerContentAnime {
+/* @keyframes bannerContentAnime {
 
     from{
 
@@ -60,7 +57,7 @@
 
     }
     
-}
+} */
 
 .bannerContent > .contentDiv{
 
@@ -85,11 +82,11 @@
     padding-top: 5px;
     margin-bottom: 20px;
     border-radius: 50px 0px 50px 0px;
-    animation: spanTextAnime 2s ease;
+    /* animation: spanTextAnime 2s ease; */
 
 }
 
-@keyframes spanTextAnime {
+/* @keyframes spanTextAnime {
     
     from{
 
@@ -103,7 +100,7 @@
 
     }
 
-}
+} */
 
 .contentDiv > h1{
 
@@ -111,11 +108,11 @@
     font-family: 'homebannerboldfont';
     color: #292929;
     margin-bottom: 20px;
-    animation: headingTextAnime 3s ease;
+    /* animation: headingTextAnime 3s ease; */
 
 }
 
-@keyframes headingTextAnime {
+/* @keyframes headingTextAnime {
     
     from{
 
@@ -129,7 +126,7 @@
 
     }
 
-}
+} */
 
 .contentDiv > p{
 
@@ -139,11 +136,11 @@
     color: #292929;
     font-family: 'homebannerlightfont';
     letter-spacing: 1px;
-    animation: paraTextAnime 4s ease;
+    /* animation: paraTextAnime 4s ease; */
 
 }
 
-@keyframes paraTextAnime {
+/* @keyframes paraTextAnime {
     
     from{
 
@@ -157,7 +154,7 @@
 
     }
 
-}
+} */
 
 .contentDiv > button{
 
@@ -175,11 +172,11 @@
     transition: all 0.8s ease;
     position: relative;
     overflow: hidden;
-    animation: buttonAnime 5s ease;
+    /* animation: buttonAnime 5s ease; */
 
 }
 
-@keyframes buttonAnime {
+/* @keyframes buttonAnime {
     
     from{
 
@@ -193,7 +190,7 @@
 
     }
 
-}
+} */
 
 .contentDiv > button:hover{
 
@@ -239,11 +236,11 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-    animation: imageAnime 5s ease;
+    /* animation: imageAnime 5s ease; */
 
 }
 
-@keyframes imageAnime {
+/* @keyframes imageAnime {
     
     0%{
 
@@ -259,7 +256,7 @@
 
     }
 
-}
+} */
 
 /** Home Banner Navigation */
 .homeBannerNaviationSection{

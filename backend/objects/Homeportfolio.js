@@ -4,7 +4,7 @@ const homePortfolio = [
 
         id: 1,
         image: '/images/Home Portfolio Images/NCPL.png',
-        title: 'NCPL',
+        title: 'North Calcutta Paints Privat Limited',
         altText: "North Calcutta Paints Private Limited",
         url: 'https://northcalcuttapaints.in/'
 
@@ -14,7 +14,7 @@ const homePortfolio = [
 
         id: 2,
         image: '/images/Home Portfolio Images/Guitarish.png',
-        title: 'Guitarist',
+        title: 'Guitarist Portfolio',
         altText: 'Guitarist Portfolio',
         url: 'https://techs2105.github.io/guitarist/'
 
@@ -44,7 +44,7 @@ const homePortfolio = [
 
         id: 5,
         image: '/images/Home Portfolio Images/Photographer.png',
-        title: 'Photographer',
+        title: 'Photographer Portfolio',
         altText: 'Photographer Portfolio',
         url: 'https://techs2105.github.io/photographer/'
 

@@ -1,10 +1,44 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import HomePortfolioStyle from '../../../public/styles/home portfolio section files/homeportfoliosectionstyle.module.css';
 import HomePortfolioHeader from '../../components/Home Portfolio Component/Homeportfolioheader';
-import { RxExternalLink } from "react-icons/rx";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { Autoplay, Navigation } from 'swiper/modules';
 
 function Homeportfolio() {
-    
+
+    const [getPortfolioContent, setGetPortfolioContent] = useState([]);
+
+    useEffect(() => { 
+
+        //Create a function 
+        const portfolioContent = async () => {
+
+            try { 
+
+                const response = await fetch('http://localhost:3000/api/home/portfolio'); // fetch portfolio contents
+
+                if (!response.ok) {
+                    
+                    throw new Error(`HTTP! Server response status is ${response.status}`);
+
+                }
+
+                let data = await response.json(); // store data into json format
+                setGetPortfolioContent(data); // store data values into this state
+
+            } catch (error) {
+                
+                console.log(error); //Error message
+
+            }
+
+        } 
+
+        portfolioContent(); // Call the function 
+
+    }, []);
+
     return (
 
         <>
@@ -12,7 +46,7 @@ function Homeportfolio() {
             {/** Home Portoflio Div Main Container */}
             <div className={HomePortfolioStyle.homePortfolioMainContainer}>
 
-                {/** Hoem Portfolio Div Header Container */}
+                {/** Home Portfolio Div Header Container */}
                 <div className={HomePortfolioStyle.homePortofolioHeaderContainer}>
 
                     <HomePortfolioHeader
@@ -26,31 +60,45 @@ function Homeportfolio() {
                 </div>
 
                 {/** Home Portfolio Work Carousel Section */}
-                <div className={HomePortfolioStyle.homePortfolioWorkContainer}>
+                <div className={HomePortfolioStyle.portfolioCarousel}>
 
-                    {/** Home Portfolio Work Inner Div */}
-                    <div className={HomePortfolioStyle.homePortfolioWorkInnerDiv}>
-                                
-                        {/** Home Portfolio Work Inner Sub Container */}
-                        <div className={HomePortfolioStyle.homePortfolioWorkInnerSubDiv}>
+                    {/** Home Portfolio Carousel Swiper Div */}
+                    <Swiper
+                        
+                        slidesPerView={1}
+                        loop={true}
+                        spaceBetween={20}
+                        speed={2000}
+                        autoplay={{
 
-                            <h3> North Calcutta Paints Private Limited </h3>
+                            delay: 2000,
+                            pauseOnMouseEnter: true
 
-                            <img src="../../../public/images/Home Portfolio Images/Guitarish.png" alt="" />
+                        }}
 
-                            <a href="#"> Live Demo </a>
+                        modules={[Autoplay]}
+                        className={HomePortfolioStyle.portfolioSwiperDiv}
+                    
+                    >
 
-                        </div>
+                        {/** Home Portfolio Carousel Swiper Slide Div */}
+                        {getPortfolioContent.map((content) => {
 
-                    </div>
+                            return (
 
-                    {/** Home Portfolio Swiper Carousel */}
-                    <div className={HomePortfolioStyle.portfolioNavigator}>
+                                <SwiperSlide className={HomePortfolioStyle.portfolioSwiperSlideDiv}>
 
-                        <span> Previous </span>
-                        <span> Next  </span>
+                                    <h3> {content.title} </h3>
+                                    <img src={content.image} alt={content.altText} />
+                                    <a href={content.url} target='_blank'> Live Demo </a>
 
-                    </div>
+                                </SwiperSlide>
+
+                            );
+
+                        })}
+
+                    </Swiper>
 
                 </div>
 
