@@ -4,6 +4,8 @@ import HomePortfolioHeader from '../../components/Home Portfolio Component/Homep
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay, Navigation } from 'swiper/modules';
+import HomePortfolioImage from '../Home Portfolio Component/Homeportfolioimage';
+import HomePortfolioContent from '../Home Portfolio Component/Homeportfoliocontent';
 
 function Homeportfolio() {
 
@@ -76,7 +78,14 @@ function Homeportfolio() {
 
                         }}
 
-                        modules={[Autoplay]}
+                        navigation={{
+
+                            prevEl: "#prev",
+                            nextEl: "#next"
+
+                        }}
+
+                        modules={[Autoplay, Navigation]}
                         className={HomePortfolioStyle.portfolioSwiperDiv}
                     
                     >
@@ -88,9 +97,18 @@ function Homeportfolio() {
 
                                 <SwiperSlide className={HomePortfolioStyle.portfolioSwiperSlideDiv}>
 
-                                    <h3> {content.title} </h3>
-                                    <img src={content.image} alt={content.altText} />
-                                    <a href={content.url} target='_blank'> Live Demo </a>
+                                    {/** Home Portfolio Image Component  */}
+                                    <HomePortfolioImage
+                                    
+                                        content={content}
+                                        
+                                    />
+                                    {/** Home Portfolio Content Component */}
+                                    <HomePortfolioContent
+                                    
+                                        content={content}
+                                        
+                                    />
 
                                 </SwiperSlide>
 
@@ -99,6 +117,20 @@ function Homeportfolio() {
                         })}
 
                     </Swiper>
+
+                    {/** Swiper Navigator */}
+                    <div className={HomePortfolioStyle.swiperNavigator}>
+
+                        {/** Swiper Navigation Inner Div */}
+                        <div className={HomePortfolioStyle.swiperInnderNavigationDiv}>
+
+                            <span id="prev"> Previous </span>
+                            <span id="next"> Next </span>
+
+                        </div>
+
+                    </div>
+
 
                 </div>
 
