@@ -1,0 +1,226 @@
+/** Fonts */
+@font-face {
+
+    font-family: 'bannercontentmediumfont' ;
+    src: url('../../fonts/poltab/Poltab-Medium.ttf');
+
+}
+
+@font-face {
+
+    font-family: 'bannercontentregularfont'  ;
+    src: url('../../fonts/poltab/Poltab-Regular.ttf');
+
+}
+
+@font-face {
+
+    font-family: 'bannercontentlightfont'  ;
+    src: url('../../fonts/poltab/Poltab-Light.ttf');
+
+}
+
+/** Swiper banner main section */
+.bannerMainSection{
+
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+
+}
+
+/** Swiper banner section */
+.swiperBannerSection{
+
+    height: 100%;
+    position: absolute;
+    display: block;
+
+}
+
+/** Swiper banner slide section */
+.swiperBannerSlideSection{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/** Swiper slider banner image */
+.swiperBannerSlideSection > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    transform: rotateY(180deg);
+
+}
+
+/** Swiper slide banner content  */
+.swiperBannerSlideSection > .swiperSlideContent{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 100%;
+    background-color: #3e3e3eb4;
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+/** Swiper slide banner content */
+.swiperSlideContent > h2{
+
+    color: #ffffff;
+    width: 180%;
+    font-size: 100px;
+    padding-left: 20px;
+    font-family: 'bannercontentmediumfont';
+    letter-spacing: 5px;
+
+}
+
+.swiperSlideContent > span{
+
+    padding-left: 20px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'bannercontentregularfont';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+
+}
+
+.swiperSlideContent > span::after{
+
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    height: 3px;
+    width: 30%;
+    content: "";
+    background-color: royalblue;
+    border-radius: 50%;
+
+}
+
+.swiperSlideContent > button{
+
+    margin-left: 20px;
+    position: absolute;
+    left: 10px;
+    top: 75%;
+    width: 300px;
+    height: 50px;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    font-family: 'bannercontentregularfont';
+    font-size: 17px;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.8s ease;
+    border: 2px solid rgb(255, 255, 255);
+
+}
+
+.swiperSlideContent > button:hover{
+
+    background-color: #ffffff;
+    color: #3e3e3e;
+    transform: translateY(-10px);
+
+}
+
+/** Banner navigation section */
+.bannerMainSection > .bannerNavigationSection{
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-10%, -50%);
+    z-index: 2;
+    height: 50%;
+    width: 10%;
+    background-color: #ffffff;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.bannerNavigationSection > .prevBannerNavigation{
+
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.prevBannerNavigation > .previousArrow{
+
+    width: 100px;
+    height: 100px;
+    background-color: #3e3e3e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.8s ease;
+
+}
+
+.previousArrow > svg{
+
+    color: #ffffff;
+    font-size: 60px;
+
+}
+
+.bannerNavigationSection > .nxtBannerNavigation{
+
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 50px;
+
+}
+
+.nxtBannerNavigation > .nextArrow{
+
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.8s ease;
+    cursor: pointer;
+
+}
+
+.nextArrow > svg{
+
+    color: #ffffff;
+    font-size: 60px;
+
+}

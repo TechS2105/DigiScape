@@ -1,126 +1,140 @@
 import React, {useState, useEffect} from 'react';
-import HomeBannerContent from '../Home Banner Component/Homebannercontents';
-import HomeBannerImage from '../Home Banner Component/Homebannerimages';
+import HomeBannerStyle from '../../../public/styles/home banner files/Homebanner.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay, Navigation } from 'swiper/modules';
-import Container from '../Container Component/Container';
-import HomeBannerNavigation from '../Home Banner Component/Homebannernavigation';
+import HomeBannerImage from '../Home Banner Component/Homebannerimages';
+import HomeBannerContent from '../Home Banner Component/Homebannercontents';
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
-function Homebanner({ HomeStyle }) {
-    
-    const [bannerItems, setBannerItems] = useState([]);
+function Homebanner() {
+
+    const [getBannerContent, setGetBannerContent] = useState([]);
 
     useEffect(() => {
 
-        const fetchBannerItems = async () => {
-            
-            try {
-                
-                const response = await fetch(`http://localhost:3000/api/home/banner`);
+        const bannerContent = async () => {
 
-                if (!response) {
-                    
-                    throw new Error(`HTTP! Status is ${response.status}`);
+            try { 
+
+                const res = await fetch('http://localhost:3000/api/home/banner');
+
+                if(!res.ok){
+
+                    throw new Error(`HTTP! Server response status is ${res.status}`);
 
                 }
 
-                let data = await response.json();
-                setBannerItems(data);
+                let data = await res.json();
+                setGetBannerContent(data);
 
             } catch (error) {
                 
-                console.error(error);
+                console.log(error);
 
             }
 
         }
 
-        fetchBannerItems();
+        bannerContent();
 
-    }, []);
+     }, []);
     
     return (
 
         <>
         
-            <Container>
+            {/** Home Banner Main Section */}
+            <div className={HomeBannerStyle.bannerMainSection}>
 
+                {/** Home Banner Swiper Section*/}
                 <Swiper
-                    
+
                     slidesPerView={1}
-                    loop={true} 
+                    loop={true}
+                    spaceBetween={0}
                     speed={2000}
                     autoplay={{
 
                         delay: 2000,
                         pauseOnMouseEnter: true,
+                        disableOnInteraction: false
 
                     }}
 
                     navigation={{
 
-                        nextEl: "#next",
-                        prevEl: "#prev"
+                        prevEl: "#prev",
+                        nextEl: "#next"
 
                     }}
 
                     modules={[Autoplay, Navigation]}
-                    className={HomeStyle.homeBanner}
-                >
+                    className={HomeBannerStyle.swiperBannerSection}>
 
-                    {bannerItems.map((item) => {
+                    {/** Home Banner Swiper Slide Section */}
+                    
+                    {getBannerContent.map((item, idx) => (
 
-                        return (
+                        <SwiperSlide className={HomeBannerStyle.swiperBannerSlideSection} key={idx}>
 
-                            <SwiperSlide className={HomeStyle.bannerSlider}>
+                            {/** Home Banner Image */}
+                            <HomeBannerImage
+                            
+                                itemImage={item}
+                                
+                            />
 
-                                {/** Banner Content Section */}
-                                <div className={HomeStyle.bannerContent}>
+                            {/** Home Banner Swiper Slide Content */}                        
+                            <div className={HomeBannerStyle.swiperSlideContent}>
 
-                                    {/** Banner Content Inner div */}
-                                    <div className={HomeStyle.contentDiv}>
-
-                                        <HomeBannerContent
-                                        
-                                            bannerContent={item}
-                                            
-                                        />
-
-                                    </div>
-
-                                </div>
-
-                                {/** Banner Image Section */}
-                                <div className={HomeStyle.bannerImage}>
-
-                                    <HomeBannerImage
+                                {/** Home Banner Contents */}
+                                <HomeBannerContent
+                                
+                                    itemContent={item}
                                     
-                                        bannerImage={item}
-                                        
-                                    />
+                                />
 
-                                </div>
+                            </div>
 
-                            </SwiperSlide> 
+                        </SwiperSlide>
 
-                        );
-
-                    })}
-                
+                    ))}
 
                 </Swiper>
 
-                <HomeBannerNavigation
-                
-                    HomeStyle={HomeStyle}
-                    next="next"
-                    previous="prev"
-                    
-                />
+                {/** Home Banner Navigation Section */}
+                <div className={HomeBannerStyle.bannerNavigationSection}>
+
+                    {/** Previous Arrow Main Div */}
+                    <div className={HomeBannerStyle.prevBannerNavigation}>
+
+                        {/** Previous Arrow */}
+                        <div className={HomeBannerStyle.previousArrow} id="prev">
+
+                            <IoIosArrowBack/>
+                            
+                        </div>
+
+                    </div>
+
+                    {/** Next Arrow Main Div */}                    
+                    <div className={HomeBannerStyle.nxtBannerNavigation}>
+
+                        {/** Next Arrow */}
+                        <div className={HomeBannerStyle.nextArrow} id="next">
+
+                            <IoIosArrowForward />
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
             
-            </Container>
-        
         </>
 
     );

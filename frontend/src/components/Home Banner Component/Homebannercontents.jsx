@@ -1,15 +1,14 @@
 import React from 'react';
 
-function Homebannercontent({bannerContent}) {
+function Homebannercontents(props) {
     
     return (
 
         <>
         
-            <span>{bannerContent.spanText}</span>
-            <h1>{bannerContent.title}</h1>
-            <p>{bannerContent.description}</p>
-            <button>{bannerContent.button}</button>
+            <span>{ props.itemContent.spanText }</span>
+            <h2> { props.itemContent.title } </h2>
+            <button> { props.itemContent.button } </button>
             
         </>
 
@@ -17,4 +16,4 @@ function Homebannercontent({bannerContent}) {
 
 }
 
-export default Homebannercontent; 
+export default Homebannercontents;

@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Homebannerimages({bannerImage}) {
+function Homebannerimages(props) {
     
     return (
 
         <>
         
-            <img src={bannerImage.image} alt={bannerImage.altText} />
+            <img src={props.itemImage.image} alt={props.itemImage.altText} />
             
         </>
 
