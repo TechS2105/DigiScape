@@ -1,10 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import HomeBannerStyle from '../../../public/styles/home banner files/Homebanner.module.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { Autoplay, Navigation } from 'swiper/modules';
-import HomeBannerImage from '../Home Banner Component/Homebannerimages';
-import HomeBannerContent from '../Home Banner Component/Homebannercontents';
+import HomeBannerNavigation from '../Home Banner Component/Homebannernavigation';
+import HomeBannerCarousel from '../Home Banner Component/Homeswiper';
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -48,88 +45,24 @@ function Homebanner() {
             {/** Home Banner Main Section */}
             <div className={HomeBannerStyle.bannerMainSection}>
 
-                {/** Home Banner Swiper Section*/}
-                <Swiper
-
-                    slidesPerView={1}
-                    loop={true}
-                    spaceBetween={0}
-                    speed={2000}
-                    autoplay={{
-
-                        delay: 2000,
-                        pauseOnMouseEnter: true,
-                        disableOnInteraction: false
-
-                    }}
-
-                    navigation={{
-
-                        prevEl: "#prev",
-                        nextEl: "#next"
-
-                    }}
-
-                    modules={[Autoplay, Navigation]}
-                    className={HomeBannerStyle.swiperBannerSection}>
-
-                    {/** Home Banner Swiper Slide Section */}
+              {/** Home Banner Carousel */}
+                <HomeBannerCarousel
+                
+                    HomeBannerStyle={HomeBannerStyle}
+                    getBannerContent={getBannerContent}
                     
-                    {getBannerContent.map((item, idx) => (
-
-                        <SwiperSlide className={HomeBannerStyle.swiperBannerSlideSection} key={idx}>
-
-                            {/** Home Banner Image */}
-                            <HomeBannerImage
-                            
-                                itemImage={item}
-                                
-                            />
-
-                            {/** Home Banner Swiper Slide Content */}                        
-                            <div className={HomeBannerStyle.swiperSlideContent}>
-
-                                {/** Home Banner Contents */}
-                                <HomeBannerContent
-                                
-                                    itemContent={item}
-                                    
-                                />
-
-                            </div>
-
-                        </SwiperSlide>
-
-                    ))}
-
-                </Swiper>
+                />
 
                 {/** Home Banner Navigation Section */}
                 <div className={HomeBannerStyle.bannerNavigationSection}>
 
-                    {/** Previous Arrow Main Div */}
-                    <div className={HomeBannerStyle.prevBannerNavigation}>
-
-                        {/** Previous Arrow */}
-                        <div className={HomeBannerStyle.previousArrow} id="prev">
-
-                            <IoIosArrowBack/>
-                            
-                        </div>
-
-                    </div>
-
-                    {/** Next Arrow Main Div */}                    
-                    <div className={HomeBannerStyle.nxtBannerNavigation}>
-
-                        {/** Next Arrow */}
-                        <div className={HomeBannerStyle.nextArrow} id="next">
-
-                            <IoIosArrowForward />
-
-                        </div>
-
-                    </div>
+                    <HomeBannerNavigation
+                    
+                        HomeBannerStyle={HomeBannerStyle}
+                        prevArrow={<IoIosArrowBack />}
+                        nextArrow={<IoIosArrowForward />}
+                        
+                    />
 
                 </div>
 

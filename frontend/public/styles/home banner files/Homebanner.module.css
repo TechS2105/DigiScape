@@ -26,7 +26,6 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    display: block;
     position: relative;
 
 }
@@ -36,7 +35,7 @@
 
     height: 100%;
     position: absolute;
-    display: block;
+    overflow: hidden;
 
 }
 
@@ -159,6 +158,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
 }
 
