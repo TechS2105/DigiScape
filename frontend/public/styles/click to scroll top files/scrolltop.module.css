@@ -1,0 +1,82 @@
+/** Font */
+@font-face {
+    font-family: 'scrolltopcreativefont';
+    src: url('../../fonts/negan-demo/Negan\ DEMO.otf');
+}
+
+/** Scroll top circle box */
+.scrollTopCircleBox{
+
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(150deg, #292929 50%, royalblue 50%);
+    position: fixed;
+    z-index: 9;
+    border-radius: 50%;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+
+}
+
+.scrollTopCircleBox > .scrollTopIconBox{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+}
+
+.scrollTopIconBox > svg{
+
+    font-size: 50px;
+    color: #ffffff;
+    transform: rotate(180deg);
+
+}
+
+/** Scroll top text box */
+.scrollTopIconBox > .scrollTopTextBox{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: textSpiner 10s linear infinite;
+
+}
+
+@keyframes textSpiner {
+    
+    0%{
+
+        transform: rotate(-360deg);
+
+    }100%{
+
+        transform: rotate(0deg);
+
+    }
+
+}
+
+.scrollTopTextBox > p{
+
+    color: royalblue;
+    font-family: 'scrolltopcreativefont';
+
+}
+
+.scrollTopTextBox p > span{
+
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    font-size: 1.1rem;
+    transform-origin: 0px 75px;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
