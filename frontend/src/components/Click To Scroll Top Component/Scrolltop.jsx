@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import ScrollTopStyle from '../../../public/styles/click to scroll top files/scrolltop.module.css';
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import ScrollTopIcon from '../Click To Scroll Top Component/Scrolltopicon';
+import ScrollTopText from '../Click To Scroll Top Component/Scrolltoptext';
 
 function Scrolltop() {
 
@@ -27,7 +29,7 @@ function Scrolltop() {
                 }).join("");
                 
                 scrollTopBox.style.opacity = "1";
-                scrollTopBox.style.transform = "scale(1)"
+                scrollTopBox.style.transform = "scale(1)";
                 scrollTopBox.style.transition = "all 0.8s ease";
 
             } else {
@@ -52,23 +54,41 @@ function Scrolltop() {
 
     }, []);
 
+    function handleClickFun() {
+        
+        window.scrollTo({
+
+            top: 0,
+            behavior: 'smooth'
+
+        });
+
+    }
     
     return (
 
         <>
         
             {/** Scroll Top circle Box */}
-            <div className={ScrollTopStyle.scrollTopCircleBox}>
+            <div className={ScrollTopStyle.scrollTopCircleBox} onClick={handleClickFun}>
 
                 {/** Scroll Top Icon Box */}
                 <div className={ScrollTopStyle.scrollTopIconBox}>
 
-                    <MdKeyboardDoubleArrowDown />
+                    <ScrollTopIcon 
+                    
+                        icon={<MdKeyboardDoubleArrowDown />}
+                        
+                    />
 
                     {/** Scroll Top Text Box */}
                      <div className={ScrollTopStyle.scrollTopTextBox}>
 
-                        <p> Scroll * To * Top * Scroll * To * Top * </p>
+                        <ScrollTopText
+                        
+                            text="Scroll * To * Top * Scroll * To * Top *"
+                            
+                        />
 
                     </div>
 
