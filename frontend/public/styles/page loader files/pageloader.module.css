@@ -1,0 +1,89 @@
+/** Fonts */
+@font-face {
+    font-family: 'pageloadercreativefont';
+    src: url('../../fonts/negan-demo/Negan\ DEMO.otf');
+}
+
+/** Page Loader Main Section */
+.pageLoaderMainSection{
+
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #ffffffff;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/** Page Loader DigiScape Text Section*/
+.pageLoaderMainSection > .pageLoaderFirstSection{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #292929;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/** Page Loader To Text Section */
+.pageLoaderMainSection > .pageLoaderSecondSection{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: royalblue;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/** Page Loader Welcome Text Section */
+.pageLoaderMainSection > .pageLoaderThirdSection{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffff;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.pageLoaderThirdSection > .welcomeBox{
+
+    height: 100%;
+    width: 14.28%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-right: 2px solid #292929;
+
+}
+
+.welcomeBox > span{
+
+    font-size: 200px;
+    font-family: 'pageloadercreativefont';
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #292929;
+    display: inline-flex;
+
+}

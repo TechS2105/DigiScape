@@ -3,6 +3,7 @@ import NavBar from '../components/Navbar';
 import { Outlet } from 'react-router-dom';
 import ScrollableNavbarMenu from '../components/Scrollable Navbar Component/Scrollablenavbar';
 import ScrollTop from '../components/Click To Scroll Top Component/Scrolltop';
+import PageLoader from '../components/Page Loader Component/Pageloader';
 
 function Rootlayout() {
     
@@ -10,6 +11,8 @@ function Rootlayout() {
 
         <>
         
+            <PageLoader />
+            
             <ScrollTop/>
             
             <NavBar />
