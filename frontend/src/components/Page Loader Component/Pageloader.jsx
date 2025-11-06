@@ -24,6 +24,15 @@ function Pageloader() {
         /** Sliding Up Second Page Loader Box */
         secondPageLoaderBox.style.transform = "translateY(-100vh)";
 
+        /** First Page Load Box */
+        let firstPageLoaderBox = document.querySelector(`.${PageLoaderStyle.pageLoaderFirstSection}`);
+        let firstPageLoaderInnerBox = document.querySelectorAll(`.${PageLoaderStyle.pageLoaderFirstSection} .${PageLoaderStyle.digiscapeBox}`);
+        let firstPageLoaderInnerBoxLength = firstPageLoaderInnerBox.length;
+
+        /** Sliding Up Second Page Loader Box */
+        firstPageLoaderBox.style.transform = "translateY(-100vh)";
+
+
         /** Third Page Loader Box For-Loop */
         for (let i = 0; i < thirdPageLoaderInnerBoxLength; i++){
 
