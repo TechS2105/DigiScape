@@ -33,6 +33,73 @@
 
 }
 
+.pageLoaderFirstSection > .digiscapeBox{
+
+    width: 11.1%;
+    height: 100%;
+    /* background-color: royalblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid #ffffffff; */
+
+}
+
+.digiscapeBox > span{
+
+    font-size: 30vmin;
+    font-family: 'pageloadercreativefont';
+
+}
+
+.digiscapeBox:nth-child(even){
+
+    background-color: #ffffff;
+
+}
+
+.digiscapeBox:nth-child(even) > span{
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to top, #292929, royalblue);
+
+}
+
+.digiscapeBox:nth-child(odd) {
+
+    background-image: linear-gradient(to right, #ffffff, royalblue, #ffffff, royalblue, #ffffff, royalblue, #ffffff, royalblue, #ffffff, royalblue);
+    background-size: 250% 250%;
+    animation: graident-anime 15s linear infinite;
+
+}
+
+@keyframes graident-anime {
+    
+    0%{
+
+        background-position: 0% 0%;
+
+    }
+    100%{
+
+        background-position: 100% 50%;
+
+    }
+
+}
+
+.digiscapeBox:nth-child(odd) > span{
+
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #ffffff;
+    position: relative;
+    z-index: 9;
+
+}
+
 /** Page Loader To Text Section */
 .pageLoaderMainSection > .pageLoaderSecondSection{
 
@@ -41,11 +108,54 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: royalblue;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+
+}
+
+.pageLoaderSecondSection > .toBox:nth-child(1){
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.pageLoaderSecondSection>.toBox:nth-child(2) {
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #292929;
+
+}
+
+.toBox:nth-child(1) > span{
+
+    font-size: 700px;
+    display: inline-flex;
+    font-family: 'pageloadercreativefont';
+    margin-top: 100px;
+   color: #292929;
+
+}
+
+.toBox:nth-child(2) > span{
+
+    font-size: 700px;
+    font-family: 'pageloadercreativefont';
+    margin-top: 100px;
+    color: #292929;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #ffffffff;
 
 }
 
