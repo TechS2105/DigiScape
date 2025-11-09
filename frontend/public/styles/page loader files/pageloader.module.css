@@ -4,177 +4,156 @@
     src: url('../../fonts/negan-demo/Negan\ DEMO.otf');
 }
 
+@font-face {
+    font-family: 'pageloadermainfont';
+    src: url('../../fonts/poltab/Poltab-SemiBold.ttf');
+}
+
+/** Body */
+body{
+
+    overflow-y: hidden;
+
+}
+
 /** Page Loader Main Section */
 .pageLoaderMainSection{
 
     width: 100%;
     height: 100vh;
     position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999999999;
     background-color: #ffffffff;
-    z-index: 9999999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
 
 }
 
-/** Page Loader DigiScape Text Section*/
-.pageLoaderMainSection > .pageLoaderFirstSection{
+/** Page Loader Main Section Inner Box */
+.pageLoaderMainSection > .pageLoaderInnerBox{
 
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: transparent;
+    overflow: hidden;
 
 }
 
-.pageLoaderFirstSection > .digiscapeBox{
+/** Page Loader Welcome Div */
+.pageLoaderInnerBox > .pageLoaderWelcomeDiv{
 
-    width: 11.1%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 80px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 5px solid #ffffffff;
+    border-right: 5px solid #ffffffff;
+
+}
+
+/** Page Loader Welcome Div */
+.pageLoaderWelcomeDiv > p{
+
+    font-size: 30px;
+    font-family: 'pageloadermainfont';
+    color: #ffffffff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+
+}
+
+/** Page Loader DigiScape Div */
+.pageLoaderInnerBox > .pageLoaderDigiscapeDiv{
+
+    width: 100%;;
     height: 100%;
-    /* background-color: royalblue; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #292929;
+    z-index: -2;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+/** Page Loader DigiScape Div */
+.pageLoaderDigiscapeDiv > .digiscapeBox{
+
+    height: 100%;
+    background-color: royalblue;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid #ffffffff; */
-
-}
-
-.digiscapeBox > span{
-
-    font-size: 30vmin;
+    width: 11.2%;
+    color: #ffffffff;
+    font-size: 200px;
     font-family: 'pageloadercreativefont';
+    overflow: hidden;
 
 }
 
-.digiscapeBox:nth-child(even){
+.digiscapeBox:nth-child(odd){
 
-    background-color: #ffffff;
-
-}
-
-.digiscapeBox:nth-child(even) > span{
-
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-image: linear-gradient(to top, rgba(65, 105, 225, 0), royalblue);
-
-}
-
-.digiscapeBox:nth-child(odd) {
-
-    background-image: linear-gradient(to top, #ffffff, royalblue, rgba(65, 105, 225, 0.278));
-    background-size: 150% 150%;
+    background-image: linear-gradient(36deg, #ffffffff, royalblue, #ffffffff);
 
 }
 
 .digiscapeBox:nth-child(odd) > span{
 
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 5px;
-    -webkit-text-stroke-color: #ffffff;
-
-}
-
-/** Page Loader To Text Section */
-.pageLoaderMainSection > .pageLoaderSecondSection{
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-
-}
-
-.pageLoaderSecondSection > .toBox:nth-child(1){
-
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-
-}
-
-.pageLoaderSecondSection>.toBox:nth-child(2) {
-
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #292929;
-
-}
-
-.toBox:nth-child(1) > span{
-
-    font-size: 700px;
-    display: inline-flex;
-    font-family: 'pageloadercreativefont';
-    margin-top: 100px;
-   color: #292929;
-
-}
-
-.toBox:nth-child(2) > span{
-
-    font-size: 700px;
-    font-family: 'pageloadercreativefont';
-    margin-top: 100px;
-    color: #292929;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to top, #ffffff, royalblue 50%, #ffffff);
     -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: #ffffffff;
 
 }
 
-/** Page Loader Welcome Text Section */
-.pageLoaderMainSection > .pageLoaderThirdSection{
+.digiscapeBox:nth-child(even){
+
+    border: 2px solid #ffffffff;
+
+}
+
+/** DigiScape Quote */
+.pageLoaderInnerBox > .pageLoaderDigiscapeQuoteDiv{
 
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 1000px;
+    border-radius: 50px;
+    background-color: transparent;
+    backdrop-filter: blur(1.5px);
+    padding: 20px;
     overflow: hidden;
 
 }
 
-.pageLoaderThirdSection > .welcomeBox{
+.pageLoaderDigiscapeQuoteDiv > p{
 
-    height: 100%;
-    width: 14.28%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-right: 2px solid #292929;
-
-}
-
-.welcomeBox > span{
-
-    font-size: 200px;
-    font-family: 'pageloadercreativefont';
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: #292929;
-    display: inline-flex;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'pageloadermainfont';
+    letter-spacing: 2px;
+    line-height: 25px;
+    font-size: 18px;
+    text-transform: capitalize;
 
 }
+
+
+
