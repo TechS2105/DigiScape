@@ -25,7 +25,7 @@ body{
     top: 0;
     left: 0;
     z-index: 99999999999999;
-    background-color: #ffffffff;
+    background-color: #292929;
     overflow: hidden;
 
 }
@@ -92,7 +92,6 @@ body{
 .pageLoaderDigiscapeDiv > .digiscapeBox{
 
     height: 100%;
-    background-color: royalblue;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,7 +136,6 @@ body{
     width: 1000px;
     border-radius: 50px;
     background-color: transparent;
-    backdrop-filter: blur(1.5px);
     padding: 20px;
     overflow: hidden;
 
