@@ -105,7 +105,7 @@ body{
 
 .digiscapeBox:nth-child(odd){
 
-    background-image: linear-gradient(36deg, #ffffffff, royalblue, #ffffffff);
+    background-image: linear-gradient(-326deg, #ffffffff, royalblue);
 
 }
 

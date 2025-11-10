@@ -5,12 +5,13 @@ function Pageloader() {
     
     useEffect(() => {
 
-        let pageLoaderMainDiv = document.querySelector(`.${PageLoaderStyle.pageLoaderMainSection}`); // Page Loader Main Div
+        // let pageLoaderMainDiv = document.querySelector(`.${PageLoaderStyle.pageLoaderMainSection}`); // Page Loader Main Div
         let pageLoaderInnerDiv = document.querySelector(`.${PageLoaderStyle.pageLoaderInnerBox}`); // Page Loader Inner Div
         let welcomeDiv = document.querySelector(`.${PageLoaderStyle.pageLoaderWelcomeDiv}`); // Weolcome Div
         let welcomeDivText = document.querySelector(`.${PageLoaderStyle.pageLoaderWelcomeDiv} p`); // Welcome Div Text
-        let digiscapeBox = document.querySelectorAll(`.${PageLoaderStyle.pageLoaderDigiscapeDiv} .${PageLoaderStyle.digiscapeBox}`);
-        let digiscapeBoxText = document.querySelectorAll(`.${PageLoaderStyle.digiscapeBox} span`);
+        let digiscapeBox = document.querySelectorAll(`.${PageLoaderStyle.pageLoaderDigiscapeDiv} .${PageLoaderStyle.digiscapeBox}`); // Digiscape box
+        let digiscapeBoxText = document.querySelectorAll(`.${PageLoaderStyle.digiscapeBox} span`); // Digiscape box text
+        let digiscapeQuoteDiv = document.querySelector(`.${PageLoaderStyle.pageLoaderDigiscapeQuoteDiv} p`);
 
         // Sliding up the page loader main div
         pageLoaderInnerDiv.style.transform = "translateY(-100vh)";
@@ -24,6 +25,10 @@ function Pageloader() {
         welcomeDivText.style.transform = "scaleX(0)";
         welcomeDivText.style.opacity = "0";
         welcomeDivText.style.filter = "blur(20px)";
+
+        // Zooming Out Digiscape quote div
+        digiscapeQuoteDiv.style.transform = "scaleX(0)";
+        digiscapeQuoteDiv.style.filter = "blur(20px)";
 
         // Selecting Digiscape div odd and even inner boxes and sliding them up and down words
         digiscapeBox.forEach((item, id) => {
@@ -120,7 +125,12 @@ function Pageloader() {
 
                     }
 
-                })
+                });
+
+                // Zoom In Digiscape quote div
+                digiscapeQuoteDiv.style.transform = "scale(1)";
+                digiscapeQuoteDiv.style.filter = "blur(0px)";
+                digiscapeQuoteDiv.style.transition = "all 2s ease 4s";
 
             });
 
