@@ -5,7 +5,7 @@ function Pageloader() {
     
     useEffect(() => {
 
-        // let pageLoaderMainDiv = document.querySelector(`.${PageLoaderStyle.pageLoaderMainSection}`); // Page Loader Main Div
+        let pageLoaderMainDiv = document.querySelector(`.${PageLoaderStyle.pageLoaderMainSection}`); // Page Loader Main Div
         let pageLoaderInnerDiv = document.querySelector(`.${PageLoaderStyle.pageLoaderInnerBox}`); // Page Loader Inner Div
         let welcomeDiv = document.querySelector(`.${PageLoaderStyle.pageLoaderWelcomeDiv}`); // Weolcome Div
         let welcomeDivText = document.querySelector(`.${PageLoaderStyle.pageLoaderWelcomeDiv} p`); // Welcome Div Text
@@ -135,23 +135,47 @@ function Pageloader() {
             });
 
             /** Use setTimeOut */
-            // setTimeout(() => {
+            setTimeout(() => {
+
+                // Sliding down odd number digiscape div's
+                digiscapeBox.forEach((item, id) => {
+
+                    if (id % 2 === 1) {
+                        
+                        item.style.transform = `translateY(${1000 + (id + 5)}px)`;
+                        item.style.opacity = "0";
+                        item.style.transition = `all 2s ease ${id * 0.2}s`;
+
+                    }else{
+
+                        item.style.transform = `translateY(-${1000 + (id + 5)}px)`;
+                        item.style.opacity = "0";
+                        item.style.transition = `all 2s ease ${id * 0.3}s`;
+
+                    }
+
+                })
+
+            }, 7000);
+
+
+            setTimeout(() => {
 
                 // Sliding down the page loader inner div
-                // pageLoaderInnerDiv.style.transform = "translateY(100vh)";
+                pageLoaderInnerDiv.style.transform = "translateY(100vh)";
 
 
-            // }, 5000);
+            }, 10000);
 
-            // setTimeout(() => {
+            setTimeout(() => {
 
                 // Sliding up the the page loader main div
-                // pageLoaderMainDiv.style.opacity = "0";
-                // pageLoaderMainDiv.style.transform = "translateY(-100vh)";
-                // pageLoaderMainDiv.style.transition = "all 0.8s ease";
+                pageLoaderMainDiv.style.opacity = "0";
+                pageLoaderMainDiv.style.transform = "translateY(-100vh)";
+                pageLoaderMainDiv.style.transition = "all 0.8s ease";
                 
 
-            // }, 5800);
+            }, 12000);
 
         });
         
