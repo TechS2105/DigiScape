@@ -128,13 +128,23 @@ function Pageloader() {
                 });
 
                 // Zoom In Digiscape quote div
-                digiscapeQuoteDiv.style.transform = "scale(1)";
+                digiscapeQuoteDiv.style.transform = "scaleX(1)";
                 digiscapeQuoteDiv.style.filter = "blur(0px)";
                 digiscapeQuoteDiv.style.transition = "all 2s ease 4s";
 
             });
 
             /** Use setTimeOut */
+
+            setTimeout(() => {
+
+                // Selecting Digiscape quote div text
+                digiscapeQuoteDiv.style.transform = "scaleY(0)";
+                digiscapeQuoteDiv.style.filter = "blur(20px)";
+                digiscapeQuoteDiv.style.transition = "all 1s ease 2s";
+
+             }, 7000);
+
             setTimeout(() => {
 
                 // Sliding down odd number digiscape div's
@@ -146,7 +156,7 @@ function Pageloader() {
                         item.style.opacity = "0";
                         item.style.transition = `all 2s ease ${id * 0.2}s`;
 
-                    }else{
+                    } else {
 
                         item.style.transform = `translateY(-${1000 + (id + 5)}px)`;
                         item.style.opacity = "0";
@@ -154,10 +164,47 @@ function Pageloader() {
 
                     }
 
-                })
+                });
 
-            }, 7000);
+            }, 9000);
+            
+            setTimeout(() => {
 
+                // Hidding Digiscape box text
+                digiscapeBoxText.forEach((txt, id) => {
+
+                    // Selecting Odd and Even number boxes text
+                    if (id % 2 === 1) {
+                        
+                        txt.style.opacity = "0";
+                        txt.style.filter = "blur(20px)";
+                        txt.style.transition = `all 2s ease ${id * 0.2}s`;
+
+                    } else {
+                        
+                        txt.style.opacity = "0";
+                        txt.style.filter = "blur(20px)";
+                        txt.style.transition = `all 2s ease ${id * 0.3}s`;
+
+                    }
+
+                });
+
+            }, 8900);
+
+            setTimeout(() => {
+
+                // Hidding Digiscape welcome box
+                welcomeDiv.style.transform = "scaleY(0) translate(-50%, -50%)";
+                welcomeDiv.style.filter = "blur(20px)";
+                welcomeDiv.style.transition = "all 2s ease 0.8s";
+
+                // Hidding Digiscape welcome box text
+                welcomeDivText.style.transform = "scaleX(0)";
+                welcomeDivText.style.filter = "blur(20px)";
+                welcomeDivText.style.transition = "all 2s ease"
+
+            }, 10000);
 
             setTimeout(() => {
 
@@ -165,17 +212,21 @@ function Pageloader() {
                 pageLoaderInnerDiv.style.transform = "translateY(100vh)";
 
 
-            }, 10000);
+            }, 12000);
 
             setTimeout(() => {
 
                 // Sliding up the the page loader main div
                 pageLoaderMainDiv.style.opacity = "0";
+                pageLoaderMainDiv.style.filter = "blur(20px)";
                 pageLoaderMainDiv.style.transform = "translateY(-100vh)";
                 pageLoaderMainDiv.style.transition = "all 0.8s ease";
+
+                // Selecting body 
+                document.querySelector("body").style.overflowY = "scroll";
                 
 
-            }, 12000);
+            }, 12500);
 
         });
         
