@@ -9,6 +9,7 @@ import HomeSecondTextScroller from '../components/Home Second Text Scroller Comp
 import HomeServices from '../components/Home Services Component/Homeservices';
 import HomeMissionVission from './Home Mission and Vission Component/Missionvission';
 import HomePortfolioSection from './Home Portfolio Component/Homeportfolio';
+import HomeWhyChooseUs from './Home Why Choose Us Component/Whychooseus';
 
 function Home() {
 
@@ -46,6 +47,9 @@ function Home() {
           
             {/** Home Portfolio Section */}
             <HomePortfolioSection />
+
+            {/** Home Why Choose Us Section */}
+            <HomeWhyChooseUs />
               
           </main>
           

@@ -1,0 +1,41 @@
+/** Fonts */
+@font-face {
+    font-family: 'whychooseusmediumfont';
+    src: url('../../fonts/poltab/Poltab-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'whychooseusregularfont';
+    src: url('../../fonts/poltab/Poltab-Regular.ttf');
+}
+
+/** Why Choose Us Main Section */
+.whyChooseUsMainDiv{
+
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/** Why Choose Us Image Div */
+.whyChooseUsMainDiv > .whyChooseUsImageDiv{
+
+    width: 50%;
+    height: 100%;
+    background-color: antiquewhite;
+
+}
+
+/** Why Choose Us Content Div */
+.whyChooseUsMainDiv > .whyChooseUsContentDiv{
+
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+
+}

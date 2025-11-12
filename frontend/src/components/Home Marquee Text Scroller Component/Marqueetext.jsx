@@ -11,7 +11,7 @@ function Marqueetext({ scrollerTextStyle }) {
 
             try { 
 
-                const response = await fetch('http://localhost:3000/api/home/textscroller');
+                const response = await fetch('https://digiscape.onrender.com/api/home/textscroller');
 
                 if (!response) {
                     
