@@ -10,6 +10,7 @@ import HomeServices from '../components/Home Services Component/Homeservices';
 import HomeMissionVission from './Home Mission and Vission Component/Missionvission';
 import HomePortfolioSection from './Home Portfolio Component/Homeportfolio';
 import HomeWhyChooseUs from './Home Why Choose Us Component/Whychooseus';
+import PageLoader from '../components/Page Loader Component/Pageloader';
 
 function Home() {
 
@@ -18,6 +19,9 @@ function Home() {
       <>
           <main>
           
+            {/** Page Loader */}
+            <PageLoader />
+
             {/** Home Hero/Banner Section */}
             <HomeBanner />
           
