@@ -36,7 +36,7 @@ function Missionvissionsubsectioncontent({MissionVissionStyle}) {
             {/** Second Div */}
             <div className={MissionVissionStyle.missionVissionInnerSecondDiv}>
 
-                <model-viewer src="../../../public/images/Home Mission Vission 3D Model Image/Robo_Buddy_1010053817_texture.glb" shadow-intensity="1" camera-controls touch-action="pan-y" ar ar-modes="webxr scene-viewer" disable-zoom auto-rotate camera-orbit="auto 90deg 90deg"></model-viewer>
+                <model-viewer src="/images/Home Mission Vission 3D Model Image/Robo_Buddy_1010053817_texture.glb" shadow-intensity="1" camera-controls touch-action="pan-y" ar ar-modes="webxr scene-viewer" disable-zoom auto-rotate camera-orbit="auto 90deg 90deg"></model-viewer>
 
             </div>
 
