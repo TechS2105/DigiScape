@@ -13,7 +13,7 @@ function Howwework() {
 
             try {
                 
-                const response = await fetch('https://digiscape.onrender.com/api/home/howwework');
+                const response = await fetch('https://digiscape-backend.onrender.com/api/home/howwework');
 
                 if (!response) {
                     

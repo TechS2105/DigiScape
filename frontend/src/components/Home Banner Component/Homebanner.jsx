@@ -15,7 +15,7 @@ function Homebanner() {
 
             try { 
 
-                const res = await fetch('https://digiscape.onrender.com/api/home/banner');
+                const res = await fetch('https://digiscape-backend.onrender.com/api/home/banner');
 
                 if(!res.ok){
 

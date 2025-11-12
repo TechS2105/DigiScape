@@ -18,7 +18,7 @@ function Homeportfolio() {
 
             try { 
 
-                const response = await fetch('https://digiscape.onrender.com/api/home/portfolio'); // fetch portfolio contents
+                const response = await fetch('https://digiscape-backend.onrender.com/api/home/portfolio'); // fetch portfolio contents
 
                 if (!response.ok) {
                     
