@@ -1,7 +1,25 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import WhyChooseUsStyle from '../../../public/styles/home why choose us files/whychooseus.module.css';
 
 function Whychooseus() {
+
+    useEffect(() => {
+
+        let text = document.querySelector(`.${WhyChooseUsStyle.textSpinnerText} p`);
+        console.log(text);
+        
+        text.innerHTML = text.innerText.split("").map((char, i) => {
+
+            return (
+                
+                `<span style="transform: rotate(${i * 7.5}deg)">${char}</span>`
+
+            )
+
+
+        }).join("");
+
+    }, [])
     
     return (
 
@@ -33,6 +51,13 @@ function Whychooseus() {
 
                             <span> DS </span>
 
+                            {/** Text */}
+                            <div className={WhyChooseUsStyle.textSpinnerText}>
+
+                                <p> Digital * Creative * Agency * </p>
+
+                            </div>
+
                         </div>
 
                     </div>
@@ -42,7 +67,18 @@ function Whychooseus() {
                 {/** Content Div */}
                 <div className={WhyChooseUsStyle.whyChooseUsContentDiv}>
 
-                    
+                    {/** Inner Content Div */}
+                    <div className={WhyChooseUsStyle.whyChooseUsInnerContentDiv}>
+
+                        {/** Title & Subtitle Div */}
+                        <div className={WhyChooseUsStyle.titleSubtitleDiv}>
+
+                            <span> Why Choose Us for Quality Services </span>
+                            <h2> Why You Should Choose Our Agency for Trusted Services </h2>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
