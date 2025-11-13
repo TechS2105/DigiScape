@@ -9,16 +9,22 @@
     src: url('../../fonts/poltab/Poltab-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'whychooseuscreativefont';
+    src: url('../../fonts/negan-demo/Negan\ DEMO.otf');
+}
+
 /** Why Choose Us Main Section */
 .whyChooseUsMainDiv{
 
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
     background-size: contain;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50rem;
 
 }
 
@@ -27,7 +33,92 @@
 
     width: 50%;
     height: 100%;
-    background-color: antiquewhite;
+    background: #292929;
+    position: relative;
+
+}
+
+.whyChooseUsImageDiv > .textSpinner{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffffff;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 10px solid royalblue;
+
+}
+
+.textSpinner > .textSpinnerLogo{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.textSpinnerLogo > span{
+
+    font-family: 'whychooseuscreativefont';
+    font-size: 90px;
+    display: inline-flex;
+    margin-top: 20px;
+
+}
+
+/** Image Inner Div */
+.whyChooseUsImageDiv > .innerImageDiv{
+
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+
+}
+
+/** First Image Div */
+.innerImageDiv > .firstImageDiv{
+
+    background-color: red;
+    grid-row: 4 / 16;
+    grid-column: 2 / 8;
+    border-radius: 20px;
+    background-image: url('https://images.unsplash.com/photo-1666698809123-44e998e93f23?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    border: 3px solid #ffffffff;
+
+}
+
+/** Second Image Div */
+.innerImageDiv > .secondImageDiv{
+
+    background-color: #ffffffff;
+    grid-row: 2 / 9 ;
+    grid-column: 9 / 15;
+    border-radius: 20px;
+    background-image: url('https://images.unsplash.com/photo-1647371349667-72a6c995784d?q=80&w=1071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    border: 3px solid #ffffffff;
+
+}
+
+/** Third Image Div */
+.innerImageDiv > .thirdImageDiv{
+
+    background-color: royalblue;
+    grid-row: 16 / 10;
+    grid-column: 9 / 15;
+    border-radius: 20px;
+    background-image: url('https://images.unsplash.com/photo-1758873268528-af4613d099b6?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    border: 3px solid #ffffffff;
 
 }
 
@@ -36,6 +127,6 @@
 
     width: 50%;
     height: 100%;
-    background-color: aqua;
+    background-color: transparent;
 
 }

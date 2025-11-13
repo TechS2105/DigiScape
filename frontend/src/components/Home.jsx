@@ -1,4 +1,5 @@
 import React from "react";
+import PageLoader from '../components/Page Loader Component/Pageloader';
 import HomeBanner from "../components/Home Banner Component/Homebanner";
 import MarqueeTextScroller from "./Home Marquee Text Scroller Component/Marqueetextscroller";
 import QuickView from "../components/Home Quickoverview Component/Quickview";
@@ -10,7 +11,6 @@ import HomeServices from '../components/Home Services Component/Homeservices';
 import HomeMissionVission from './Home Mission and Vission Component/Missionvission';
 import HomePortfolioSection from './Home Portfolio Component/Homeportfolio';
 import HomeWhyChooseUs from './Home Why Choose Us Component/Whychooseus';
-import PageLoader from '../components/Page Loader Component/Pageloader';
 
 function Home() {
 
