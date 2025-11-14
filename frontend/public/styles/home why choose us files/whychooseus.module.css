@@ -260,7 +260,8 @@
     height: 70%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-content: flex-start;
+    row-gap: 20px;
 
 }
 
@@ -269,6 +270,46 @@
 
     width: 50%;
     height: 200px;
+
+}
+
+.whyChooseUsServicesBox:nth-child(2){
+
+    background-color: royalblue;
+    border-radius: 20px 0px 0px 20px;
+
+}
+
+.whyChooseUsServicesBox:nth-child(2) .whyChooseUsTitleSvgBlock .whyChooseUseTitle > h3{
+
+    color: #ffffffff;
+
+}
+
+.whyChooseUsServicesBox:nth-child(2) > .whyChooseUsParaBlock p{
+
+    color: #ffffffff;
+    font-size: 15px;
+
+}
+
+.whyChooseUsServicesBox:nth-child(3){
+
+    background-color: royalblue;
+    border-radius: 0px 20px 20px 0px;
+
+}
+
+.whyChooseUsServicesBox:nth-child(3) .whyChooseUsTitleSvgBlock .whyChooseUseTitle > h3{
+
+    color: #ffffffff;
+
+}
+
+.whyChooseUsServicesBox:nth-child(3) > .whyChooseUsParaBlock p{
+
+    color: #ffffffff;
+    font-size: 15px;
 
 }
 
