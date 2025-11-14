@@ -2,6 +2,7 @@ import HomeBannerApi from '../objects/Homebannerapi.js';
 import TextScroller from '../objects/Textscrollerapitext.js';
 import HomeHowWeWork from '../objects/Homehowwework.js';
 import HomePorttfolio from '../objects/Homeportfolio.js'; 
+import HomeWhyChooseUs from '../objects/Homewhychooseusecategorycontent.js';
 
 const getDefaultRouter = (req, res) => {
 
@@ -35,6 +36,13 @@ const getHomePortfolioRouter = (req, res) => {
 
 }
 
+/** Home Why Choose Us */
+const getHomeWhyChooseUs = (req, res) => {
+
+    res.status(200).json(HomeWhyChooseUs);
+
+}
+
 
 export default {
 
@@ -43,5 +51,6 @@ export default {
     getHomeTextScroller,
     getHomeHowWeWorkAPI,
     getHomePortfolioRouter,
+    getHomeWhyChooseUs
 
 }

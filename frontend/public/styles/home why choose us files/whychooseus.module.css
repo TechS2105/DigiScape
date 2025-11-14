@@ -25,6 +25,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 50rem;
+    padding: 150px 0px 150px 0px;
 
 }
 
@@ -35,6 +36,7 @@
     height: 100%;
     background: #292929;
     position: relative;
+    border-radius: 0px 90px 90px 0px;
 
 }
 
@@ -147,7 +149,7 @@
 .innerImageDiv > .firstImageDiv{
 
     background-color: red;
-    grid-row: 4 / 16;
+    grid-row: 4 / 17;
     grid-column: 2 / 8;
     border-radius: 50px 0px 50px 0px;
     background-image: url('https://images.unsplash.com/photo-1666698809123-44e998e93f23?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
@@ -248,5 +250,96 @@
     background-color: royalblue;
     content: "";
     border-radius: 50%;
+
+}
+
+/** Why Choose Us Services Div */
+.whyChooseUsInnerContentDiv > .whyChooseUsServices{
+
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+/** Why Choose Us Services Div Inner Boxes */
+.whyChooseUsServices > .whyChooseUsServicesBox{
+
+    width: 50%;
+    height: 200px;
+
+}
+
+.whyChooseUsServicesBox > .whyChooseUsTitleSvgBlock{
+
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px 10px 10px;
+    gap: 10px;
+
+}
+
+.whyChooseUsTitleSvgBlock > .whyChooseUseSvgIcon{
+
+    width: 20%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 3px #292929 inset;
+
+}
+
+.whyChooseUseSvgIcon > svg{
+
+    font-size: 40px;
+    color: #292929;
+
+}
+
+.whyChooseUsTitleSvgBlock > .whyChooseUseTitle{
+
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.whyChooseUseTitle > h3{
+
+    font-size: 20px;
+    font-family: 'whychooseusmediumfont';
+    letter-spacing: 2px;
+    color: royalblue;
+    width: 280px;
+
+}
+
+/** Why Choose Us Services Box */
+.whyChooseUsServicesBox > .whyChooseUsParaBlock{
+
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.whyChooseUsParaBlock > p{
+
+    padding-left: 30px;
+    font-size: 15px;
+    font-family: 'whychooseusregularfont';
+    letter-spacing: 2px;
 
 }
