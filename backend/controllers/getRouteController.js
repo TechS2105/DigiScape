@@ -36,14 +36,6 @@ const getHomePortfolioRouter = (req, res) => {
 
 }
 
-/** Home Why Choose Us */
-const getHomeWhyChooseUs = (req, res) => {
-
-    res.status(200).json(HomeWhyChooseUs);
-
-}
-
-
 export default {
 
     getDefaultRouter,
