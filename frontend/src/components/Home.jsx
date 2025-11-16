@@ -11,6 +11,7 @@ import HomeServices from '../components/Home Services Component/Homeservices';
 import HomeMissionVission from './Home Mission and Vission Component/Missionvission';
 import HomePortfolioSection from './Home Portfolio Component/Homeportfolio';
 import HomeWhyChooseUs from './Home Why Choose Us Component/Whychooseus';
+import HomeTestimonial from './Testimonial Component/Testimonial';
 
 function Home() {
 
@@ -54,6 +55,9 @@ function Home() {
 
             {/** Home Why Choose Us Section */}
             <HomeWhyChooseUs />
+          
+            {/** Home Testimonial */}
+            <HomeTestimonial />
               
           </main>
           

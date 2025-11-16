@@ -2,7 +2,6 @@ import HomeBannerApi from '../objects/Homebannerapi.js';
 import TextScroller from '../objects/Textscrollerapitext.js';
 import HomeHowWeWork from '../objects/Homehowwework.js';
 import HomePorttfolio from '../objects/Homeportfolio.js'; 
-import HomeWhyChooseUs from '../objects/Homewhychooseusecategorycontent.js';
 
 const getDefaultRouter = (req, res) => {
 
@@ -42,7 +41,6 @@ export default {
     getHomeBannerApi,
     getHomeTextScroller,
     getHomeHowWeWorkAPI,
-    getHomePortfolioRouter,
-    getHomeWhyChooseUs
+    getHomePortfolioRouter
 
 }
