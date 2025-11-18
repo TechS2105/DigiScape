@@ -8,5 +8,6 @@ router.get('/api/home/banner', getRouterController.getHomeBannerApi); // GET Hom
 router.get('/api/home/textscroller', getRouterController.getHomeTextScroller); // GET Home Text Scroller Router
 router.get('/api/home/howwework', getRouterController.getHomeHowWeWorkAPI); // GET How We Work Router
 router.get('/api/home/portfolio', getRouterController.getHomePortfolioRouter); // GET Home Portfolio Router
+router.get('/api/testimonial/contents', getRouterController.getTestimonialContents); // GET Testimonial Content Router
 
 export default router;
