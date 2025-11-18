@@ -206,7 +206,17 @@
     letter-spacing: 1.5px;
     width: 430px;
     line-height: 25px;
-    font-size: 15px;
+    font-size: 18px;
+
+}
+
+.reviewContentContainer p > svg{
+
+    position: absolute;
+    top: -100px;
+    left: -30px;
+    z-index: 2;
+    font-size: 100px;
 
 }
 

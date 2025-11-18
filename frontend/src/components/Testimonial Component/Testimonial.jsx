@@ -140,7 +140,8 @@ function Testimonial() {
             try {
                 
                 // fetch testimonial content
-                const response = await fetch('https://digiscape-backend.onrender.com/api/testimonial/contents');
+                // const response = await fetch('https://digiscape-backend.onrender.com/api/testimonial/contents');
+                const response = await fetch('http://localhost:3000/api/testimonial/contents');
 
                 console.log(response);
                 
@@ -191,7 +192,7 @@ function Testimonial() {
                     {/** Testimonial Review Box  */}
                     <div className={TestimonialStyle.testimonialReviewBox}>
 
-                      {/** Testimonial Review Swiper Section */}
+                        {/** Testimonial Review Swiper Section */}
                         <Swiper
                             
                             slidesPerView={1}
@@ -223,7 +224,7 @@ function Testimonial() {
                                             {/** Review Content Container */}
                                             <div className={TestimonialStyle.reviewContentContainer}>
 
-                                                <p>{ content.reviewText}</p>
+                                                <p><BiSolidQuoteLeft />{content.reviewText}</p>
 
                                                 {/** Owner Name Section */}
                                                 <div className={TestimonialStyle.ownerNameDiv}>
