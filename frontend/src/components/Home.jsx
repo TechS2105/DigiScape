@@ -1,5 +1,5 @@
 import React from "react";
-// import PageLoader from '../components/Page Loader Component/Pageloader';
+import PageLoader from '../components/Page Loader Component/Pageloader';
 import HomeBanner from "../components/Home Banner Component/Homebanner";
 import MarqueeTextScroller from "./Home Marquee Text Scroller Component/Marqueetextscroller";
 import QuickView from "../components/Home Quickoverview Component/Quickview";
@@ -21,7 +21,7 @@ function Home() {
           <main>
           
             {/** Page Loader */}
-            {/* <PageLoader /> */}
+            <PageLoader />
 
             {/** Home Hero/Banner Section */}
             <HomeBanner />
