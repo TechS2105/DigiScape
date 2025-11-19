@@ -108,24 +108,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(-50deg, rgba(65, 105, 225, 0.373) 50%, #ffffff 50%);
+    background-image: linear-gradient(-50deg, rgba(65, 105, 225, 0.305) 50%, #ffffff 50%);
     position: relative;
 
 }
 
+/** Robot PNG Image */
 .testimonialPersonImage > img:nth-child(2){
 
     position: absolute;
     z-index: 2;
-    height: 755px;
+    height: 855px;
     width: 700px;
     object-fit: contain;
-    top: -100px;
-    filter: brightness(120%) contrast(110%);
-    
+    top: -180px;
+    right: 120px;
+    filter: brightness(120%) contrast(100%);
 
 }
 
+/** Circuit PNG Image */
 .testimonialPersonImage > img:nth-child(1){
 
     width: 700px;
@@ -135,6 +137,7 @@
     position: absolute;
     z-index: 2;
     top: -100px;
+    right: 0px;
 
 }
 

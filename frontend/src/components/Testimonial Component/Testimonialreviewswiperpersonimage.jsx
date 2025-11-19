@@ -1,12 +1,17 @@
 import React from 'react';
 
-function Testimonialreviewswiperpersonimage() {
+function Testimonialreviewswiperpersonimage({content, zoomingImage, TestimonialStyle}) {
     
     return (
 
         <>
         
-            <h3> Testimonial Review Person Image </h3>
+            {/** Owner Image Div */}
+            <div className={TestimonialStyle.ownerImageDiv}>
+            
+                <img src={content.image} alt={content.altText} style={zoomingImage} />
+            
+            </div>
             
         </>
 

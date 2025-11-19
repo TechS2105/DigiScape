@@ -1,12 +1,24 @@
 import React from 'react';
 
-function Testimonialreviewswipercontents() {
+function Testimonialreviewswipercontents({TestimonialStyle, content, testimonialQuote, checkMarkAsAdmin}) {
     
     return (
 
         <>
         
-            <h2> Textimonial Review Box Contents </h2>
+            {/** Review Content Container */}
+            <div className={TestimonialStyle.reviewContentContainer}>
+            
+                <p>{ testimonialQuote} {content.reviewText}</p>
+            
+                {/** Owner Name Section */}
+                <div className={TestimonialStyle.ownerNameDiv}>
+            
+                    <span>{checkMarkAsAdmin} {content.reviewOwnerName}</span> * <span>{content.reviewOwnerDesignation}</span>
+                                                                
+                </div>
+            
+            </div>
             
         </>
 

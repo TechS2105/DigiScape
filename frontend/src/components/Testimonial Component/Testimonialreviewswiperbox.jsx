@@ -2,6 +2,8 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
+import TestimonialReviewSwiperContent from '../Testimonial Component/Testimonialreviewswipercontents';
+import TestimonialReviewSwiperPersonImage from './Testimonialreviewswiperpersonimagecontainer';
 
 function Testimonialreviewswiperbox({TestimonialStyle, handleImageOnMouseEnter, handleImageOnMouseOut, getTestimonialData, zoomingImage, testimonialQuote, checkMarkAsAdmin}) {
     
@@ -39,30 +41,24 @@ function Testimonialreviewswiperbox({TestimonialStyle, handleImageOnMouseEnter, 
                             <div className={TestimonialStyle.testimonialSwiperSliderInnerReviewBox} onMouseOver={handleImageOnMouseEnter} onMouseOut={handleImageOnMouseOut}>
             
                                 {/** Review Content Container */}
-                                <div className={TestimonialStyle.reviewContentContainer}>
-            
-                                    <p>{ testimonialQuote} {content.reviewText}</p>
-            
-                                    {/** Owner Name Section */}
-                                    <div className={TestimonialStyle.ownerNameDiv}>
-            
-                                        <span>{checkMarkAsAdmin} {content.reviewOwnerName}</span> * <span>{content.reviewOwnerDesignation}</span>
-                                                                
-                                    </div>
-            
-                                </div>
+                                <TestimonialReviewSwiperContent
+                                
+                                    TestimonialStyle={TestimonialStyle}
+                                    content={content}
+                                    checkMarkAsAdmin={checkMarkAsAdmin}
+                                    testimonialQuote={testimonialQuote}
+                                    
+                                />
             
                                 {/** Review Owner Image Container */}
-                                <div className={TestimonialStyle.reviewOwnerImageContainer}>
-            
-                                    {/** Owner Image Div */}
-                                    <div className={TestimonialStyle.ownerImageDiv}>
-            
-                                        <img src={content.image} alt={content.altText} style={zoomingImage} />
-            
-                                    </div>
-            
-                                </div>
+                                <TestimonialReviewSwiperPersonImage
+                                
+                                    TestimonialStyle={TestimonialStyle}
+                                    zoomingImage={zoomingImage}
+                                    content={content}
+                                    
+                                />
+                                
             
                             </div>
             
