@@ -1,0 +1,264 @@
+/** Fonts */
+@font-face {
+    font-family: 'homefaqboldfont';
+    src: url('../../fonts/poltab/Poltab-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'homefaqmediumfont';
+    src: url('../../fonts/poltab/Poltab-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'homefaqregularfont';
+    src: url('../../fonts/poltab/Poltab-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'homefaqcreativefont';
+    src: url('../../fonts/negan-demo/Negan\ DEMO.otf');
+}
+
+/** Home FAQ Section */
+.faqMainContainer{
+
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+    background-size: contain;
+    margin-top: 100px;
+
+}
+
+/** FAQ's Background Image */
+.faqMainContainer > img{
+
+    position: absolute;
+    top: 55%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    width: 1900px;
+    height: 1000px;
+    object-position: center;
+    object-fit: cover;
+    filter: brightness(20%);
+    /* opacity: 0.2; */
+
+}
+
+/** FAQ's Content Box */
+.faqMainContainer > .faqContentBox{
+
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.57);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+/** FAQ's Inner Div Box */
+.faqContentBox > .faqInnerDivBox{
+
+    position: absolute;
+    z-index: 2;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+/** FAQ's Inner Title Section */
+.faqInnerDivBox > .faqInnerDivTitleSection{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.faqInnerDivTitleSection > span{
+
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'homefaqmediumfont';
+    color: #ffffffff;
+    letter-spacing: 2px;
+
+}
+
+.faqInnerDivTitleSection > h2{
+
+    font-size: 80px;
+    font-family: 'homefaqboldfont';
+    line-height: 80px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    color: #292929;
+    position: relative;
+
+}
+
+.faqInnerDivTitleSection > p{
+
+    font-family: 'homefaqregularfont';
+    font-size: 20px;
+
+}
+
+/** Inner FAQ's Section */
+.faqInnerDivBox > .innerFaqSection{
+
+    width: 100%;
+    background-color: #292929;
+    margin-top: 20px;
+    border-radius: 50px;
+
+}
+
+/** Inner FAQ's Question Div */
+.innerFaqSection > .faqQuestionBox{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+
+}
+
+.faqQuestionBox > .faqQuestionDiv{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    padding: 5px;
+
+}
+
+.faqQuestionDiv > span{
+
+    color: #ffffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+
+}
+
+.faqQuestionDiv > h3{
+
+    color: #ffffffff;
+    font-size: 17px;
+    font-family: 'homefaqregularfont';
+    font-weight: 500;
+    letter-spacing: 2px;
+
+}
+
+.faqQuestionBox > .faqOpenCloseIconDiv{
+
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid #ffffffff;
+
+}
+
+.faqOpenCloseIconDiv > svg{
+
+    color: #ffffffff;
+    font-size: 25px;
+    background-color: royalblue;
+    padding: 5px;
+    border-radius: 50%;
+
+}
+
+/** FAQ's Side Image Box */
+.faqMainContainer > .faqSideImageBox{
+
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    background-image: url('https://images.unsplash.com/photo-1726594692111-7939325c616d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    filter: brightness(120%);
+
+}
+
+/** FAQ's Sider Image Box Inner Text Marquee */
+.faqSideImageBox > .faqTextMarquee{
+
+    position: absolute;
+    top: 50%;
+    left: -72.3%;
+    width: 1200px;
+    height: 100px;
+    transform: rotate(90deg);
+    overflow: hidden;
+
+}
+
+.faqTextMarquee > .faqMarquee{
+
+    height: 100%;
+    display: inline-block;
+    background-color: #292929;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.faqMarquee > .slidingContainer{
+
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    animation: textMarquee 40s linear infinite;
+
+}
+
+.slidingContainer > span{
+
+    display: inline-flex;
+    margin-right: 50px;
+    font-family: 'homefaqcreativefont';
+    color: #ffffffff;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    font-size: 130px;
+    margin-top: 10px;
+
+}
+
+@keyframes textMarquee {
+    
+    0%{
+
+        transform: translateX(0%);
+
+    }100%{
+
+        transform: translateX(-100%);
+
+    }
+
+}
+

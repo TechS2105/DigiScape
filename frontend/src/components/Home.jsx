@@ -1,5 +1,5 @@
 import React from "react";
-import PageLoader from '../components/Page Loader Component/Pageloader';
+// import PageLoader from '../components/Page Loader Component/Pageloader';
 import HomeBanner from "../components/Home Banner Component/Homebanner";
 import MarqueeTextScroller from "./Home Marquee Text Scroller Component/Marqueetextscroller";
 import QuickView from "../components/Home Quickoverview Component/Quickview";
@@ -12,6 +12,7 @@ import HomeMissionVission from './Home Mission and Vission Component/Missionviss
 import HomePortfolioSection from './Home Portfolio Component/Homeportfolio';
 import HomeWhyChooseUs from './Home Why Choose Us Component/Whychooseus';
 import HomeTestimonial from './Testimonial Component/Testimonial';
+import HomeFaqSection from '../components/Home FAQ Folder Component/Homefaqsection';
 
 function Home() {
 
@@ -21,7 +22,7 @@ function Home() {
           <main>
           
             {/** Page Loader */}
-            <PageLoader />
+            {/* <PageLoader /> */}
 
             {/** Home Hero/Banner Section */}
             <HomeBanner />
@@ -58,6 +59,9 @@ function Home() {
           
             {/** Home Testimonial */}
             <HomeTestimonial />
+          
+            {/** Home FAQ Section */}
+            <HomeFaqSection />
               
           </main>
           
