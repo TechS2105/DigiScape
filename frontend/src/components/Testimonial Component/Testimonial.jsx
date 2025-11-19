@@ -140,8 +140,8 @@ function Testimonial() {
             try {
                 
                 // fetch testimonial content
-                // const response = await fetch('https://digiscape-backend.onrender.com/api/testimonial/contents');
-                const response = await fetch('http://localhost:3000/api/testimonial/contents');
+                const response = await fetch('https://digiscape-backend.onrender.com/api/testimonial/contents');
+                // const response = await fetch('http://localhost:3000/api/testimonial/contents');
 
                 console.log(response);
                 
