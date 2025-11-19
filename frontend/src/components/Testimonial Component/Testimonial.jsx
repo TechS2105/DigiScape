@@ -19,6 +19,7 @@ function Testimonial() {
     const [nxtSVG, setNxtSVG] = useState(); // next arrow svg
     const [changePrevIconStatus, setChangePrevIconStatus] = useState(); // prev arrow background color state
     const [prevSVG, setPrevSVG] = useState(); // prev arrow svg
+    const [zoomingImage, setZoomingImage] = useState(); // zooming testimonial person image
 
     /** Next Arrow Mouse Over Fun */
     const controllColourOnMouseOver = () => {
@@ -132,6 +133,32 @@ function Testimonial() {
 
     }
 
+    /** Zooming testimonial image when mouser enter */
+    const handleImageOnMouseEnter = () => {
+
+        setZoomingImage({
+
+            transform: "scale(1.2)",
+            transition: "all 0.8s ease",
+            objectPosition: "top",
+            filter: "brightness(120%) sepia(0%)"
+
+        });
+
+    }
+
+    const handleImageOnMouseOut = () => {
+
+        setZoomingImage({
+
+            transform: "scale(1)",
+            transition: "all 0.8s ease",
+            objectPosition: "top"
+
+        })
+
+    }
+
     useEffect(() => {
 
         /** Create a testimonial content function */
@@ -141,7 +168,6 @@ function Testimonial() {
                 
                 // fetch testimonial content
                 const response = await fetch('https://digiscape-backend.onrender.com/api/testimonial/contents');
-                // const response = await fetch('http://localhost:3000/api/testimonial/contents');
 
                 console.log(response);
                 
@@ -219,7 +245,7 @@ function Testimonial() {
                                     <SwiperSlide className={TestimonialStyle.testimonialSwiperSliderReviewBox}>
 
                                         {/** Testimonial Swiper Slider Inner section */}
-                                        <div className={TestimonialStyle.testimonialSwiperSliderInnerReviewBox}>
+                                        <div className={TestimonialStyle.testimonialSwiperSliderInnerReviewBox} onMouseOver={handleImageOnMouseEnter} onMouseOut={handleImageOnMouseOut}>
 
                                             {/** Review Content Container */}
                                             <div className={TestimonialStyle.reviewContentContainer}>
@@ -241,7 +267,7 @@ function Testimonial() {
                                                 {/** Owner Image Div */}
                                                 <div className={TestimonialStyle.ownerImageDiv}>
 
-                                                    <img src={content.image} alt={content.altText} />
+                                                    <img src={content.image} alt={content.altText} style={zoomingImage}/>
 
                                                 </div>
 

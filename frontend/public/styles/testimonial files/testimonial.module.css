@@ -270,7 +270,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(50deg, royalblue, #ffffffff, royalblue);
+    background-image: linear-gradient(50deg, royalblue, #ffffffff, royalblue, #ffffffff, royalblue, #ffffffff, royalblue);
     background-size: 200% 200%;
     content: "";
     z-index: -2;
@@ -311,7 +311,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: top;
+    filter: brightness(120%) sepia(50%);
 
 }
 
