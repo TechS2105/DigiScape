@@ -48,6 +48,13 @@ function Homefaqsection() {
 
                             </div>
 
+                            {/** First FAQ Answar Div */}
+                            <div className={HomeFaqSection.faqAnswarDiv}>
+
+                                
+
+                            </div>
+
                             {/** Second FAQ */}
                             <div className={HomeFaqSection.faqQuestionBox}></div>
 
