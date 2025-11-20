@@ -12,7 +12,7 @@ function Homefaqsection() {
             <div className={HomeFaqSection.faqMainContainer}>
 
                 {/** Background Image */}
-                <img src="../../../public/images/Home FAQ Images/world_map.png" alt="" />
+                <img src="/images/Home FAQ Images/world_map.png" alt="" />
                 
                 {/** FAQ's Content Box */}
                 <div className={HomeFaqSection.faqContentBox}>

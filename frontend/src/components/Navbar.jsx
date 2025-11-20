@@ -292,7 +292,8 @@ function Navbar() {
             {/** Logo Div */}
             <div className={NavbarStyle.logoDiv}>
 
-                <h1> Digi<span style={{color: "royalblue"}}>S</span>cape </h1>
+                {/* <h1> Digi<span style={{color: "royalblue"}}>S</span>cape </h1> */}
+                <img src="../../public/images/DigiScape Logo Images/DigiScape logo 2.png" alt="" />
 
             </div>
 

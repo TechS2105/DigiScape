@@ -29,6 +29,17 @@ header > .logoDiv{
     display: flex;
     align-items: center;
     border-right: 1px solid black;
+    position: relative;
+
+}
+
+.logoDiv > img{
+
+    position: absolute;
+    left: -30px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
 
 }
 
