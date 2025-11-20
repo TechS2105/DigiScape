@@ -51,7 +51,7 @@ function Homefaqsection() {
                             {/** First FAQ Answar Div */}
                             <div className={HomeFaqSection.faqAnswarDiv}>
 
-                                
+                                <p>Yes. We handle everything from building or upgrading your website to running SEO, paid ads, social media, content, branding and analytics. This gives you a unified strategy instead of juggling multiple agencies.</p>
 
                             </div>
 
