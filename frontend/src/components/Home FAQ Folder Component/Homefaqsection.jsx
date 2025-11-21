@@ -13,6 +13,7 @@ function Homefaqsection() {
         setIsActiveSecondBoxClick((prev) => (prev === !prev)); // Second
         setIsActiveThirdBoxClick((prev) => (prev === !prev)); // Third
         setIsActiveFourthBoxClick((prev) => (prev === !prev)); // Fourth
+        setIsActiveFifthBoxClick((prev) => (prev === !prev)); // Fifth
 
     }
 
@@ -66,6 +67,7 @@ function Homefaqsection() {
     
     function handleSecondFaqClick() {
         
+        setIsActiveFifthBoxClick((prev) => (prev === !prev)); // Fifth
         setIsActiveFourthBoxClick((prev) => (prev === !prev)); // Fourth
         setIsActiveThirdBoxClick((prev) => (prev === !prev)); // Third
         setIsActiveSecondBoxClick((prev) => !prev); // Second 
@@ -123,6 +125,7 @@ function Homefaqsection() {
 
     function handleThirdFaqClick() {
 
+        setIsActiveFifthBoxClick((prev) => (prev === !prev)); // Fifth
         setIsActiveFourthBoxClick((prev) => (prev === !prev)); // Fourth
         setIsActiveThirdBoxClick((prev) => !prev); // Third
         setIsActiveSecondBoxClick((prev) => (prev === !prev)); // Second
@@ -180,6 +183,7 @@ function Homefaqsection() {
 
     const handleFourthFaqClick = () => {
 
+        setIsActiveFifthBoxClick((prev) => (prev === !prev)); // Fifth
         setIsActiveFourthBoxClick((prev) => !prev); // Fourth
         setIsActiveThirdBoxClick((prev) => (prev === !prev)); // Third
         setIsActiveSecondBoxClick((prev) => (prev === !prev)); // Second
@@ -216,13 +220,70 @@ function Homefaqsection() {
     }
 
     // Question Box SVG
-
     const faqFourthQuestionBoxSVG = isActiveFourthBoxClick ? {
 
         transform: "rotate(45deg)",
         backgroundColor: "#ffffffff",
         color: "royalblue",
         transition: "all 0.8s ease"
+
+    } : {
+
+        transform: "rotate(0deg)",
+        backgroundColor: "royalblue",
+        color: "#ffffffff",
+        transition: "all 0.8s ease"
+
+    }
+
+    /** FAQ Fifth Box Click Animation */
+    const [isActiveFifthBoxClick, setIsActiveFifthBoxClick] = useState(false);
+
+    function handleFifthFaqClick() {
+        
+        setIsActiveFifthBoxClick((prev) => !prev);
+        setIsActiveFourthBoxClick((prev) => (prev === !prev));
+        setIsActiveThirdBoxClick((prev) => (prev === !prev));
+        setIsActiveSecondBoxClick((prev) => (prev === !prev));
+        setIsActiveClick((prev) => !(prev && !prev));
+
+    }
+
+    // Answer Box
+    const hideFifthFaqAnswerBox = isActiveFifthBoxClick ? {
+
+        height: "7rem",
+        opacity: "1",
+        transition: "all 0.8s ease"
+
+    } : {
+
+        height: "0rem",
+        opacity: "0",
+        transition: "all 0.8s ease"
+
+    }
+
+    // Question Box
+    const faqFifthQuestionBoxStyle = isActiveFifthBoxClick ? {
+
+        borderRadius: "20px 20px 0px 0px",
+        transition: "all 0.8s ease"
+
+    } : {
+
+        borderRadius: "0px",
+        transition: "all 0.8s ease"
+
+    }
+
+    // Question Box SVG 
+    const faqFifthQuestionSVG = isActiveFifthBoxClick ? {
+
+        transform: "rotate(45deg)",
+        backgroundColor: "#ffffffff",
+        color: "royalblue",
+        transition: 'all 0.8s ease'
 
     } : {
 
@@ -314,6 +375,20 @@ function Homefaqsection() {
                                 faqSerialNo="4."
                                 faqQuestionTitle="How do you make sure a website is marketing-ready before launching campaigns?"
                                 faqAnswerContent="We set up essential elements like SEO-friendly pages, fast performance, secure hosting, clear navigation, analytics tracking and conversion-optimized layouts. This saves time later and helps your marketing campaigns perform more efficiently."
+                                
+                            />
+
+                            {/** Fifth FAQ Question Answer Box */}
+                            <HomeFaqQuestionAnswer
+                            
+                                HomeFaqSection={HomeFaqSection}
+                                handleFaqClick={handleFifthFaqClick}
+                                hideFaqAnswerBox={hideFifthFaqAnswerBox}
+                                faqQuestionBoxStyle={faqFifthQuestionBoxStyle}
+                                faqQuestionSVG={faqFifthQuestionSVG}
+                                faqSerialNo="5."
+                                faqQuestionTitle="How do you decide which digital marketing channels will work best for my business?"
+                                faqAnswerContent="We look at your goals, budget, competition and customer behavior. Based on this, we create a customized plan that may include SEO, Google Ads, Facebook/Instagram ads, social media management, email marketing or content creation. Each suggestion is driven by ROI, not guesswork."
                                 
                             />
 
