@@ -1,9 +1,107 @@
-import React from 'react';
+import React, {useState} from 'react';
 import HomeFaqSection from '../../../public/styles/home faq section files/Homefaq.module.css';
-import { FaPlus } from "react-icons/fa";
+import HomeFaqQuestionAnswer from '../Home FAQ Folder Component/Homefaqquestionanswersection';
 
 function Homefaqsection() {
+
+    /** FAQ First Box Click Animation */
+    const [isActiveClick, setIsActiveClick] = useState(false);
+
+    function handleFaqClick() {
+        
+        setIsActiveClick((prev) => !prev);
+        setIsActiveSecondBoxClick((prev) => (prev === !prev));
+        setIsActiveThirdBoxClick((prev) => (prev === !prev));
+
+    }
+
+    /** Answer Div */
+    const hideFaqAnswerBox = isActiveClick ? {
+
+        height: "0rem",
+        transition: "all 0.8s ease",
+        opacity: "0",
+
+    } : {
+
+        height: "7rem",
+        transition: "all 0.8s ease",
+        opacity: "1"
+
+    }
+
+    /** Question Div */
+    const faqQuestionBoxStyle = isActiveClick ? {
+
+        borderRadius: "0px",
+        transition: "all 0.8s ease"
+
+    } : {
+
+        borderRadius: "20px 20px 0px 0px",
+        transition: "all 0.8s ease"
+
+    }
+
+    /** Question Box SVG Icon */
+    const faqQuestionSVG = isActiveClick ? {
+
+        transform: "rotate(0deg)",
+        transition: "all 0.8s ease"
+
+    } : {
+        
+        transform: "rotate(-50deg)",
+        transition: 'all 0.8s ease'
+
+    }
+
+    /** FAQ Second Box Click Animation */
+    const [isActiveSecondBoxClick, setIsActiveSecondBoxClick] = useState(false);
     
+    function handleSecondFaqClick() {
+        
+        setIsActiveSecondBoxClick((prev) => !prev);
+        setIsActiveClick((prev) => !(prev && !prev));
+        setIsActiveThirdBoxClick((prev) => (prev === !prev));
+
+    }
+
+    const hideSecondFaqAnswerBox = isActiveSecondBoxClick ? {
+
+        height: "7rem",
+        transition: "all 0.8s ease"
+
+    } : {
+
+        height: "0rem",
+        transition: "all 0.8s ease"
+
+    }
+
+    /** FAQ Third Box Click Animation */
+    const [isActiveThirdBoxClick, setIsActiveThirdBoxClick] = useState(false);
+
+    function handleThirdFaqClick(){
+
+        setIsActiveThirdBoxClick((prev) => !prev);
+        setIsActiveSecondBoxClick((prev) => (prev === !prev));
+        setIsActiveClick((prev) => !(prev && !prev));
+
+    }
+
+    const hideThirdFaqAnswerBox = isActiveThirdBoxClick ? {
+
+        height: "7rem",
+        transition: "all 0.8s ease"
+
+    } : {
+
+        height: "0rem",
+        transition: "all 0.8s ease"
+
+    }
+
     return (
 
         <>
@@ -32,40 +130,43 @@ function Homefaqsection() {
                         {/** Inner FAQ's Section */}
                         <div className={HomeFaqSection.innerFaqSection}>
 
-                            {/** First FAQ */}
-                            <div className={HomeFaqSection.faqQuestionBox}>
+                            {/** First FAQ Question Answer Box */}
+                            <HomeFaqQuestionAnswer
+                            
+                                HomeFaqSection={HomeFaqSection}
+                                faqQuestionBoxStyle={faqQuestionBoxStyle}
+                                hideFaqAnswerBox={hideFaqAnswerBox}
+                                faqQuestionSVG={faqQuestionSVG}
+                                handleFaqClick={handleFaqClick}
+                                faqSerialNo="1."
+                                faqQuestionTitle="Do you provide complete digital solutions, including both marketing and website development?"
+                                faqAnswerContent="Yes. We handle everything from building or upgrading your website to running SEO, paid ads, social media, content, branding and analytics. This gives you a unified strategy instead of juggling multiple agencies"
+                                
+                            />
 
-                                {/** Question Div */}
-                                <div className={HomeFaqSection.faqQuestionDiv}>
+                            {/** Second FAQ Question Answer Box */}
+                            <HomeFaqQuestionAnswer
+                            
+                                HomeFaqSection={HomeFaqSection}    
+                                handleFaqClick={handleSecondFaqClick}
+                                hideFaqAnswerBox={hideSecondFaqAnswerBox}
+                                faqSerialNo="2."
+                                faqQuestionTitle="How do you approach a new project when a business needs both web development and marketing?"
+                                faqAnswerContent="We start with a discovery session to understand your goals, audience and current challenges. Then we plan the website structure and marketing roadmap together so both support each other. This helps avoid technical gaps and ensures smoother growth."
+                                
+                            />
 
-                                    <span>1.</span>
-                                    <h3>Do you provide complete digital solutions, including both marketing and website development?</h3>
-
-                                </div>
-
-                                {/** Open & Close Div */}
-                                <div className={HomeFaqSection.faqOpenCloseIconDiv}> <FaPlus /> </div>
-
-                            </div>
-
-                            {/** First FAQ Answar Div */}
-                            <div className={HomeFaqSection.faqAnswarDiv}>
-
-                                <p>Yes. We handle everything from building or upgrading your website to running SEO, paid ads, social media, content, branding and analytics. This gives you a unified strategy instead of juggling multiple agencies.</p>
-
-                            </div>
-
-                            {/** Second FAQ */}
-                            <div className={HomeFaqSection.faqQuestionBox}></div>
-
-                            {/** Third FAQ */}
-                            <div className={HomeFaqSection.faqQuestionBox}></div>
-
-                            {/** Fourth FAQ */}
-                            <div className={HomeFaqSection.faqQuestionBox}></div>
-
-                            {/** Fifth FAQ */}
-                            <div className={HomeFaqSection.faqQuestionBox}></div>
+                            {/** Third FAQ Question Answer Box */}
+                            <HomeFaqQuestionAnswer
+                            
+                                HomeFaqSection={HomeFaqSection}
+                                handleFaqClick={handleThirdFaqClick}
+                                hideFaqAnswerBox={hideThirdFaqAnswerBox}
+                                faqSerialNo="3."
+                                faqQuestionTitle="What if I already have a website but it's not performing well?"
+                                faqAnswerContent="We run a full audit to check design issues, loading speed, mobile responsiveness, SEO health, broken pages and conversion flow. After the review, we suggest either targeted fixes or a full rebuild depending on what will help you get results faster."
+                                
+                            />
 
                         </div>                      
 
