@@ -9,13 +9,14 @@ function Homefaqsection() {
 
     function handleFaqClick() {
         
-        setIsActiveClick((prev) => !prev);
-        setIsActiveSecondBoxClick((prev) => (prev === !prev));
-        setIsActiveThirdBoxClick((prev) => (prev === !prev));
+        setIsActiveClick((prev) => !prev); // First
+        setIsActiveSecondBoxClick((prev) => (prev === !prev)); // Second
+        setIsActiveThirdBoxClick((prev) => (prev === !prev)); // Third
+        setIsActiveFourthBoxClick((prev) => (prev === !prev)); // Fourth
 
     }
 
-    /** Answer Div */
+    // Answer Div
     const hideFaqAnswerBox = isActiveClick ? {
 
         height: "0rem",
@@ -30,7 +31,7 @@ function Homefaqsection() {
 
     }
 
-    /** Question Div */
+    // Question Div
     const faqQuestionBoxStyle = isActiveClick ? {
 
         borderRadius: "0px",
@@ -40,18 +41,22 @@ function Homefaqsection() {
 
         borderRadius: "20px 20px 0px 0px",
         transition: "all 0.8s ease"
-
+        
     }
 
-    /** Question Box SVG Icon */
+    // Question Box SVG
     const faqQuestionSVG = isActiveClick ? {
 
         transform: "rotate(0deg)",
+        backgroundColor: "royalblue",
+        color: "#ffffffff",
         transition: "all 0.8s ease"
 
     } : {
         
-        transform: "rotate(-50deg)",
+        transform: "rotate(45deg)",
+        backgroundColor: "#ffffffff",
+        color: "royalblue",
         transition: 'all 0.8s ease'
 
     }
@@ -61,20 +66,54 @@ function Homefaqsection() {
     
     function handleSecondFaqClick() {
         
-        setIsActiveSecondBoxClick((prev) => !prev);
-        setIsActiveClick((prev) => !(prev && !prev));
-        setIsActiveThirdBoxClick((prev) => (prev === !prev));
+        setIsActiveFourthBoxClick((prev) => (prev === !prev)); // Fourth
+        setIsActiveThirdBoxClick((prev) => (prev === !prev)); // Third
+        setIsActiveSecondBoxClick((prev) => !prev); // Second 
+        setIsActiveClick((prev) => !(prev && !prev)); // First
 
     }
 
+    // Answer Box
     const hideSecondFaqAnswerBox = isActiveSecondBoxClick ? {
 
         height: "7rem",
-        transition: "all 0.8s ease"
+        transition: "all 0.8s ease",
+        opacity: "1"
 
     } : {
 
         height: "0rem",
+        transition: "all 0.8s ease",
+        opacity: "0"
+
+    }
+
+    // Question Box
+    const faqSecondQuestionBoxStyle = isActiveSecondBoxClick ? {
+
+        borderRadius: "20px 20px 0px 0px",
+        transition: "all 0.8s ease"
+
+    } : {
+
+        borderRadius: "0px",
+        transition: "all 0.8s ease"
+
+    }
+
+    // Question Box SVG 
+    const faqSecondQuestionSVG = isActiveSecondBoxClick ? {
+
+        transform: "rotate(45deg)",
+        backgroundColor: "#ffffffff",
+        color: "royalblue",
+        transition: "all 0.8s ease"
+
+    } : {
+
+        transform: "rotate(0deg)",
+        backgroundColor: "royalblue",
+        color: "#ffffffff",
         transition: "all 0.8s ease"
 
     }
@@ -82,22 +121,114 @@ function Homefaqsection() {
     /** FAQ Third Box Click Animation */
     const [isActiveThirdBoxClick, setIsActiveThirdBoxClick] = useState(false);
 
-    function handleThirdFaqClick(){
+    function handleThirdFaqClick() {
 
-        setIsActiveThirdBoxClick((prev) => !prev);
-        setIsActiveSecondBoxClick((prev) => (prev === !prev));
-        setIsActiveClick((prev) => !(prev && !prev));
+        setIsActiveFourthBoxClick((prev) => (prev === !prev)); // Fourth
+        setIsActiveThirdBoxClick((prev) => !prev); // Third
+        setIsActiveSecondBoxClick((prev) => (prev === !prev)); // Second
+        setIsActiveClick((prev) => !(prev && !prev)); // First
 
     }
 
+    // Answar Box 
     const hideThirdFaqAnswerBox = isActiveThirdBoxClick ? {
 
         height: "7rem",
-        transition: "all 0.8s ease"
+        transition: "all 0.8s ease",
+        opacity: "1",
 
     } : {
 
         height: "0rem",
+        transition: "all 0.8s ease",
+        opacity: "0",
+
+    }
+
+    // Question Box
+    const faqThirdQuestionBoxStyle = isActiveThirdBoxClick ? {
+
+        borderRadius: "20px 20px 0px 0px",
+        transition: "all 0.8s ease"
+
+    } : {
+
+        borderRadius: "0px",
+        transition: "all 0.8s ease"
+
+    }
+
+    // Question Box SVG
+    const faqThirdQuestionSVG = isActiveThirdBoxClick ? {
+
+        transform: "rotate(45deg)",
+        backgroundColor: "#ffffffff",
+        color: "royalblue",
+        transition: "all 0.8s ease"
+
+    } : {
+
+        transform: "rotate(0deg)",
+        backgroundColor: "royalblue",
+        color: "#ffffffff",
+        transition: "all 0.8s ease"
+
+    }
+
+    /** FAQ Fourth Box Click Animation */
+    const [isActiveFourthBoxClick, setIsActiveFourthBoxClick] = useState(false);
+
+    const handleFourthFaqClick = () => {
+
+        setIsActiveFourthBoxClick((prev) => !prev); // Fourth
+        setIsActiveThirdBoxClick((prev) => (prev === !prev)); // Third
+        setIsActiveSecondBoxClick((prev) => (prev === !prev)); // Second
+        setIsActiveClick((prev) => (!(prev && !prev))); // first
+
+    }
+
+    // Answer Box
+    const hideFourthFaqAnswerBox = isActiveFourthBoxClick ? {
+
+        height: "7rem",
+        opacity: "1",
+        transition: 'all 0.8s ease'
+
+    } : {
+
+        height: "0rem",
+        opacity: "0",
+        transition: "all 0.8s ease"
+
+    }
+
+    // Question Box 
+    const faqFourthQuestionBoxStyle = isActiveFourthBoxClick ? {
+
+        borderRadius: "20px 20px 0px 0px",
+        transition: "all 0.8s ease"
+
+    } : {
+
+        borderRadius: "0px",
+        transition: 'all 0.8s ease'
+
+    }
+
+    // Question Box SVG
+
+    const faqFourthQuestionBoxSVG = isActiveFourthBoxClick ? {
+
+        transform: "rotate(45deg)",
+        backgroundColor: "#ffffffff",
+        color: "royalblue",
+        transition: "all 0.8s ease"
+
+    } : {
+
+        transform: "rotate(0deg)",
+        backgroundColor: "royalblue",
+        color: "#ffffffff",
         transition: "all 0.8s ease"
 
     }
@@ -150,6 +281,8 @@ function Homefaqsection() {
                                 HomeFaqSection={HomeFaqSection}    
                                 handleFaqClick={handleSecondFaqClick}
                                 hideFaqAnswerBox={hideSecondFaqAnswerBox}
+                                faqQuestionBoxStyle={faqSecondQuestionBoxStyle}
+                                faqQuestionSVG={faqSecondQuestionSVG}
                                 faqSerialNo="2."
                                 faqQuestionTitle="How do you approach a new project when a business needs both web development and marketing?"
                                 faqAnswerContent="We start with a discovery session to understand your goals, audience and current challenges. Then we plan the website structure and marketing roadmap together so both support each other. This helps avoid technical gaps and ensures smoother growth."
@@ -162,9 +295,25 @@ function Homefaqsection() {
                                 HomeFaqSection={HomeFaqSection}
                                 handleFaqClick={handleThirdFaqClick}
                                 hideFaqAnswerBox={hideThirdFaqAnswerBox}
+                                faqQuestionBoxStyle={faqThirdQuestionBoxStyle}
+                                faqQuestionSVG={faqThirdQuestionSVG}
                                 faqSerialNo="3."
                                 faqQuestionTitle="What if I already have a website but it's not performing well?"
                                 faqAnswerContent="We run a full audit to check design issues, loading speed, mobile responsiveness, SEO health, broken pages and conversion flow. After the review, we suggest either targeted fixes or a full rebuild depending on what will help you get results faster."
+                                
+                            />
+
+                            {/** Forth FAQ Question Answer Box */}
+                            <HomeFaqQuestionAnswer
+                            
+                                HomeFaqSection={HomeFaqSection}
+                                handleFaqClick={handleFourthFaqClick}
+                                hideFaqAnswerBox={hideFourthFaqAnswerBox}
+                                faqQuestionBoxStyle={faqFourthQuestionBoxStyle}
+                                faqQuestionSVG={faqFourthQuestionBoxSVG}
+                                faqSerialNo="4."
+                                faqQuestionTitle="How do you make sure a website is marketing-ready before launching campaigns?"
+                                faqAnswerContent="We set up essential elements like SEO-friendly pages, fast performance, secure hosting, clear navigation, analytics tracking and conversion-optimized layouts. This saves time later and helps your marketing campaigns perform more efficiently."
                                 
                             />
 
