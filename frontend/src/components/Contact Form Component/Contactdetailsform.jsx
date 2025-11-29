@@ -31,7 +31,11 @@ function Contactdetailsform({ContactFormStyle}) {
                     {/** Form Div */}
                     <div className={ContactFormStyle.formDiv}>
 
-                        <ContactForm />
+                        <ContactForm
+                        
+                            ContactFormStyle={ContactFormStyle}
+                            
+                        />
 
                     </div>
 

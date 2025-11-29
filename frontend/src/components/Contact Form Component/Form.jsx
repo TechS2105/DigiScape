@@ -1,45 +1,111 @@
 import React from 'react'; 
 import { useForm } from 'react-hook-form';
+import { GrSend } from "react-icons/gr";
 
-function Form() {
+function Form({ ContactFormStyle }) {
+    
+    const {
+
+        register,
+        handleSubmit,
+        reset,
+        formState: {errors, isSubmitting}
+
+    } = useForm();
+
+    const delay = (d) => {
+
+        return new Promise((resolve, reject) => {
+
+            setTimeout(() => {
+
+                try {
+                    
+                    resolve();
+
+                } catch (error) {
+                    
+                    reject(error);
+
+                }
+
+            }, d * 1000);
+
+        })
+
+    }
+
+    const onSubmit = async (data) => {
+
+        await delay(2); 
+        console.log(data);
+        reset();
+
+    }
     
     return (
 
         <>
         
-            {/** Form */}
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
 
-                {/** Table */}
-                <table>
+                {/** First Input Div */}
+                <div className={ContactFormStyle.firstInputDiv}>
 
-                    <tbody>
+                    {/** Name */}
+                    <div className={ContactFormStyle.nameDiv}>
 
-                        <tr>
-                            
-                            <td><input type="text" placeholder='Full Name' id='fullname' name='fullname' required/></td>
-                            <td><input type="email" placeholder='Email' id='email' name='email' required/></td>
+                        <input type='text' placeholder='First Name' {...register("firstname", { required: { value: true, message: "This field is required" }, minLength: { value: 3, message: "Min Length Is 3" } })} /><br/>
+                        {errors.firstname && <span className={ContactFormStyle.errorMessage}>{errors.firstname.message}</span>}
 
-                        </tr>
+                    </div>
 
-                        <tr>
+                    {/** Email */}
+                    <div className={ContactFormStyle.emailDiv}>
 
-                            <td><input type="tel" placeholder='Mobile' id='mobile' name='mobile' required/></td>
-                            <td><input type="text" placeholder='Type Your Subject' name='text' id='text' required/></td>
+                        <input type="email" placeholder='Email' {...register("email", { required: { value: true, message: "This field is required" }, maxLength: { value: 20, message: "Min length is 20" } })} /><br />
+                        {errors.email && <span className={ContactFormStyle.errorMessage}>{ errors.email.message}</span>}
 
-                        </tr>
+                    </div>
 
-                        <tr>
+                </div>
 
-                            <td colSpan="2"><textarea name="message" id="message" placeholder='Type Your Message...' cols={100} rows={10} required></textarea></td>
+                {/** Second Input Div */}
+                <div className={ContactFormStyle.secondInputDiv}>
 
-                        </tr>
-                        
-                    </tbody>
+                    {/** Mobile */}
+                    <div className={ContactFormStyle.mobileDiv}>
 
-                </table>
+                        <input type="tel" placeholder='Mobile' maxLength={10} {...register("mobile", { required: { value: true, message: "This field is required" }, maxLength: { value: 10, message: "Max length is 10" } })} /><br />
+                        {errors.mobile && <span className={ContactFormStyle.errorMessage}>{errors.mobile.message}</span>}
 
-                <button type='submit'> Submit </button>
+                    </div>
+
+                    {/** Subject */}
+                    <div className={ContactFormStyle.subjectDiv}>
+
+                        <input type="text" placeholder='Type Your Subject' {...register("subject", { required: { value: true, message: "This field is required" }, maxLength: { value: 30, message: "Max length is 30" } })} /><br />
+                        {errors.subject && <span className={ContactFormStyle.errorMessage}>{ errors.subject.message }</span>}
+
+                    </div>
+
+                </div>
+
+                {/** Third Input Div */}
+                <div className={ContactFormStyle.thirdInputDiv}>
+
+                    <textarea placeholder='Type Your Message...' cols={87} rows={10} {...register("message", { required: { value: true, message: "This field is required" } })}></textarea>
+                    {errors.message && <span className={ContactFormStyle.errorMessage}>{errors.message.message}</span>}
+
+                </div>
+
+                {/** Submit Button Div */}
+                <div className={ContactFormStyle.submitButtonDiv}>
+
+                    <button type='submit' disabled={isSubmitting}> Submit <GrSend /> </button><br/>
+                    {isSubmitting && <span className={ContactFormStyle.submitMessage}> Form is submitting... </span>}
+
+                </div>
 
             </form>
             

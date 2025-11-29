@@ -130,76 +130,146 @@
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
+    gap: 30px;
 
 }
 
-.formDiv form > table, tr, td{
+/** First Input Div */
+form > .firstInputDiv{
 
-    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 30px;
+    
+}
 
-} 
+.firstInputDiv .nameDiv > input{
 
-.formDiv form table tr td > input {
-
-    width: 320px;
-    height: 40px;
-    padding: 0px 0px 0px 20px;
-    font-family: 'contactmediumfont';
+    width: 300px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: 'contactregularfont';
 
 }
 
-.formDiv form table tr td > textarea{
+.firstInputDiv .emailDiv > input{
 
-    resize: none;
+    width: 300px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: 'contactregularfont';
+
+}
+
+/** Second Input Div */ 
+form > .secondInputDiv{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+
+}
+
+.secondInputDiv .mobileDiv > input{
+
+    width: 300px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: 'contactregularfont';
+
+}
+
+.secondInputDiv .subjectDiv > input{
+
+    width: 300px;
+    height: 50px;
+    padding-left: 20px;
+    font-family: 'contactregularfont';
+
+}
+
+/** Third Input Div */
+form > .thirdInputDiv{
+
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.thirdInputDiv > textarea{
+
     padding: 20px 0px 0px 20px;
-    font-family: 'contactmediumfont';
-    letter-spacing: 2px;
-
-} 
-
-.formDiv form table tr td > input::placeholder{
-
-    font-family: 'contactmediumfont';
-    letter-spacing: 2px;
+    resize: none;
 
 }
 
-.formDiv form > button {
+/** Submit Button */
+form > .submitButtonDiv{
 
-    width: 200px;
+    width: 100%;
+
+}
+
+.submitButtonDiv > button{
+
+    width: 30%;
     height: 50px;
     cursor: pointer;
     background-color: #292929;
+    border: none;
+    outline: none;
     color: #ffffffff;
+    font-family: 'contactmediumfont';
     font-size: 20px;
     text-transform: uppercase;
-    font-family: 'contactmediumfont';
     letter-spacing: 10px;
+    padding-top: 5px;
+    transition: all 0.8s ease;
     position: relative;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     overflow: hidden;
+
+}
+
+.submitButtonDiv button > svg{
+
+    font-size: 25px;
     transition: all 0.8s ease;
-    border: none;
 
 }
 
-.formDiv form > button:hover{
+.submitButtonDiv > button:hover{
 
+    box-shadow: 5px 5px 5px #29292950;
     background-color: transparent;
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    box-shadow: 5px 5px 10px #29292967;
-    letter-spacing: 2px;
 
 }
 
-.formDiv form > button::after{
+.submitButtonDiv button:hover > svg{
+
+    font-size: 30px;
+    filter: drop-shadow(5px 5px 2px #292929);
+
+}
+
+.submitButtonDiv > button::after{
 
     position: absolute;
-    left: 0;
     top: 0;
-    width: 0%;
+    left: 0;
     height: 100%;
+    width: 0%;
     content: "";
     background-color: royalblue;
     transition: all 0.8s ease;
@@ -207,9 +277,32 @@
 
 }
 
-.formDiv form > button:hover::after{
+.submitButtonDiv > button:hover::after{
 
     width: 100%;
+
+}
+
+::placeholder{
+
+    font-family: 'contactmediumfont';
+    font-size: 15px;
+    letter-spacing: 2px;
+
+}
+
+.errorMessage{
+
+    color: red;
+    font-family: 'contactregularfont';
+    letter-spacing: 1px;
+
+}
+
+.submitButtonDiv > .submitMessage{
+
+    font-family: 'contactregularfont';
+    letter-spacing: 2px;
 
 }
 
