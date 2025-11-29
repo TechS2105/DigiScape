@@ -1,5 +1,7 @@
 import React from 'react';
 import ContactFormStyle from '../../../public/styles/contact form files/Contactform.module.css';
+import ContactGetInTouchSection from '../Contact Form Component/Contactgetintouchsection';
+import ContactFormSection from '../Contact Form Component/Contactdetailsform';
 
 function Contactfrom() {
     
@@ -10,7 +12,21 @@ function Contactfrom() {
             {/** Contact Form Main Section */}
             <div className={ContactFormStyle.contactFormMainSection}>
 
-                <h1> Contact Section</h1>
+                {/** Contact Form Section */}
+                <ContactFormSection
+                
+                    ContactFormStyle={ContactFormStyle}
+                    
+                />
+
+                {/** Contact Get In Touch Section */}
+                <ContactGetInTouchSection
+
+                    ContactFormStyle={ContactFormStyle}
+                    
+                />
+
+
 
             </div>
             

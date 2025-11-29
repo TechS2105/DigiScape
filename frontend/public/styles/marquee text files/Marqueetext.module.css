@@ -82,7 +82,7 @@
     left: -50px;
     width: 150%;
     height: 50%;
-    background-color: #fefefe;
+    background-color: #292929;
     transform: rotate(-10deg);
     display: inline-flex;
     align-items: center;
@@ -99,8 +99,6 @@
     align-items: center;
     justify-content: center;
     animation: secondMarqueeTextScroller 150s linear infinite;
-    border: 5px dashed #292929;
-    border-radius: 50px;
     padding: 0px 50px 0px 50px;
 
 }
@@ -127,8 +125,8 @@
     margin-top: 30px;
     letter-spacing: 20px;
     color: #ffffffff;
-    -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: #292929;
+    -webkit-text-stroke: 20px;
+    -webkit-text-stroke-color: #ffffffff;
     font-style: italic;
     display: inline-flex;
     align-items: center;
