@@ -13,32 +13,18 @@ function Form({ ContactFormStyle }) {
 
     } = useForm();
 
-    const delay = (d) => {
-
-        return new Promise((resolve, reject) => {
-
-            setTimeout(() => {
-
-                try {
-                    
-                    resolve();
-
-                } catch (error) {
-                    
-                    reject(error);
-
-                }
-
-            }, d * 1000);
-
-        })
-
-    }
-
     const onSubmit = async (data) => {
 
-        await delay(2); 
-        console.log(data);
+        const res = await fetch("http://localhost:3000/home/contact/form", {
+
+            headers: {"Content-Type" : "application/json; charset=utf-8"},
+            method: "POST",
+            body: JSON.stringify(data)
+
+        }); 
+
+        let responseData = await res.json();
+        console.log(responseData);
         reset();
 
     }
