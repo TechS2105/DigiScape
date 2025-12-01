@@ -1,7 +1,7 @@
 import React from 'react';
 import { PiArrowFatLinesRight } from "react-icons/pi";
 
-function Contactgetintouchsection({ContactFormStyle}) {
+function Contactgetintouchsection({ContactFormStyle, handleContactFromSection}) {
     
     return (
 
@@ -15,7 +15,7 @@ function Contactgetintouchsection({ContactFormStyle}) {
 
                     <span>Talk To Our Team</span>
                     <h2> Get Expert Help With Marketing And Web Development </h2>
-                    <button> Proceed To Contact Form <PiArrowFatLinesRight /> </button>
+                    <button onClick={() => (handleContactFromSection())}> Proceed To Contact Form <PiArrowFatLinesRight /> </button>
                     
                 </div>
 

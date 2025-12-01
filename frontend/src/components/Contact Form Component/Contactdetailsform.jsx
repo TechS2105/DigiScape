@@ -1,19 +1,29 @@
 import React from 'react';
 import ContactForm from '../Contact Form Component/Form';
+import ContactFromImage from '../Contact Form Component/Contactformimage';
+import InnerContactFormTitles from '../Contact Form Component/Innercontactformtitles';
 
-function Contactdetailsform({ContactFormStyle}) {
+const image = "../../../public/images/Home Contact Form Image/photo-1643139863038-7355941e9e89-removebg-preview.png";
+
+function Contactdetailsform({ContactFormStyle, hideContactFromSection, imageAnime, contactFormSpanTitleAnime, contactFormTitleAnime, getInTouchFormAnime}) {
     
     return (
 
         <>
         
             {/** Contact Form Section */}
-            <div className={ContactFormStyle.contactFormSection}>
+            <div className={ContactFormStyle.contactFormSection} style={hideContactFromSection}>
 
                 {/** Contact Form Section Inner Image Div */}
                 <div className={ContactFormStyle.contactFormInnerImageDiv}>
 
-                    <img src="https://images.unsplash.com/photo-1643139863038-7355941e9e89?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Get In Touch Image" />
+                    <ContactFromImage
+                    
+                        contactFormImage={image}
+                        contactFormImageAltText="Get In Touch Image"
+                        imageAnime={imageAnime}
+                        
+                    />
 
                 </div>
 
@@ -23,8 +33,15 @@ function Contactdetailsform({ContactFormStyle}) {
                    {/** Inner Form Content Div */}
                     <div className={ContactFormStyle.innerFormContentDiv}>
                         
-                        <span> We’re Here To Help </span>
-                        <h3>Get In Touch For Growth-Focused Digital Strategies</h3>
+                        <InnerContactFormTitles
+                        
+                            spanTitle="We’re Here To Help"
+                            headingTitle="Get In Touch For Growth-Focused Digital Strategies"
+                            contactFormSpanTitleAnime={contactFormSpanTitleAnime}
+                            contactFormTitleAnime={contactFormTitleAnime}
+
+                            
+                        />
 
                     </div>
                     
@@ -34,6 +51,7 @@ function Contactdetailsform({ContactFormStyle}) {
                         <ContactForm
                         
                             ContactFormStyle={ContactFormStyle}
+                            getInTouchFormAnime={getInTouchFormAnime}
                             
                         />
 

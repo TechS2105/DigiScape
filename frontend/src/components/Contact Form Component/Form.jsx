@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { GrSend } from "react-icons/gr";
 
-function Form({ ContactFormStyle }) {
+function Form({ ContactFormStyle, getInTouchFormAnime }) {
     
     const {
 
@@ -33,7 +33,7 @@ function Form({ ContactFormStyle }) {
 
         <>
         
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} style={getInTouchFormAnime}>
 
                 {/** First Input Div */}
                 <div className={ContactFormStyle.firstInputDiv}>
