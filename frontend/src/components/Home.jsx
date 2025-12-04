@@ -15,6 +15,7 @@ import HomeTestimonial from './Testimonial Component/Testimonial';
 import HomeFaqSection from '../components/Home FAQ Folder Component/Homefaqsection';
 import HomeMarqueeText from '../components/Marquee Text Component/Marqueetext';
 import HomeContactSection from '../components/Contact Form Component/Contactfrom'; 
+import HomeBlog from '../components/Home Blog Component/Homeblog';
 
 function Home() {
 
@@ -65,11 +66,14 @@ function Home() {
             {/** Home FAQ Section */}
             <HomeFaqSection />
           
-           {/** Home Marquee Text */}
+            {/** Home Marquee Text */}
             <HomeMarqueeText />
           
             {/** Home Get In Touch Section */}
             <HomeContactSection />
+          
+            {/** Home Blog Section */}
+            <HomeBlog />
               
           </main>
           
