@@ -3,7 +3,7 @@ import ContactForm from '../Contact Form Component/Form';
 import ContactFromImage from '../Contact Form Component/Contactformimage';
 import InnerContactFormTitles from '../Contact Form Component/Innercontactformtitles';
 
-const image = "../../../public/images/Home Contact Form Image/photo-1643139863038-7355941e9e89-removebg-preview.png";
+const image = "/images/Home Contact Form Image/photo-1643139863038-7355941e9e89-removebg-preview.png";
 
 function Contactdetailsform({ContactFormStyle, hideContactFromSection, imageAnime, contactFormSpanTitleAnime, contactFormTitleAnime, getInTouchFormAnime}) {
     
