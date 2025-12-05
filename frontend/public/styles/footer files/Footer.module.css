@@ -38,16 +38,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-image: linear-gradient(360deg, #292929, rgb(65, 105, 225)); */
     background-image: url('../../images/Footer\ Background\ Image/Footer_Background_image.png');
     background-size: cover;
     background-position: bottom;
     filter: brightness(100%);
     background-repeat: no-repeat;
-    gap: 50px;
 
 }
-
 
 /** Footer Color Overlay */
 .footerLinks > .footerColorOverlay{
@@ -55,8 +52,442 @@
     width: 100%;
     height: 100%;
     background-image: linear-gradient(360deg, #292929fe, #ffffff00);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 
 }
+
+/** Footer Quick Link Div */
+.footerColorOverlay > .footerQuickLink{
+
+    width: 25%;
+    height: 100%;
+
+}
+
+/** Footer Quick Link Div Title */
+.footerQuickLink > .footerQuickLinkTitle{
+
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+}
+
+.footerQuickLinkTitle > h4{
+
+    font-size: 30px;
+    color: #ffffff;
+    font-family: 'footermediumfont';
+    letter-spacing: 3px;
+    position: relative;
+    padding-left: 20px;
+    position: relative;
+
+}
+
+.footerQuickLinkTitle > h4::after{
+
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 120%;
+    height: 2px;
+    content: "";
+    background-color: #ffffff;
+
+}
+
+/** Footer Quick Links Div */
+.footerQuickLink > .quickLinks{
+
+    height: 70%;;
+    width: 100%;
+
+}
+
+.quickLinks > ul{
+
+    padding-top: 50px;
+    list-style-type: none;
+    width: 100%;
+    padding-left: 20px;
+
+}
+
+.quickLinks ul > li{
+
+    margin-bottom: 30px;
+    width: 100%;
+
+}
+
+.quickLinks ul li > a{
+
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'footerregularfont';
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    letter-spacing: 2px;
+    transition: all 0.8s ease;
+
+}
+
+.quickLinks ul li:hover > a{
+
+    transform: translateX(20px);
+
+}
+
+.quickLinks ul li > a::after{
+
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    content: "";
+    border-radius: 50px;
+    transition: all 0.8s ease;
+
+}
+
+.quickLinks ul li > a:hover::after{
+
+    width: 70%;
+
+}
+
+/** Footer Services Div */
+.footerColorOverlay > .footerServices{
+
+    width: 25%;
+    height: 100%;
+
+}
+
+/** Footer Services Div Title */
+.footerServices > .footerServicesTitle{
+
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.footerServicesTitle > h4{
+
+    font-size: 30px;
+    font-family: 'footermediumfont';
+    letter-spacing: 3px;
+    color: #ffffff;
+    position: relative;
+
+}
+
+.footerServicesTitle > h4::after{
+
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 120%;
+    height: 2px;
+    content: "";
+    background-color: #ffffffff;
+
+}
+
+/** Footer Services Link */
+.footerServices > .footerServicesLink{
+
+    height: 70%;
+    width: 100%;
+
+}
+
+.footerServicesLink > ul{
+
+    width: 100%;
+    padding-top: 50px;
+    list-style-type: none;
+
+}
+
+.footerServicesLink ul > li{
+
+    margin-bottom: 30px;
+    width: 100%;
+
+}
+
+.footerServicesLink ul li > a{
+
+    font-family: 'footerregularfont';
+    text-decoration: none;
+    color: #ffffffff;
+    letter-spacing: 2px;
+    font-size: 17px;
+    position: relative;
+    width: 120%;
+    display: inline-flex;
+    transition: all 0.8s ease;
+
+}
+
+.footerServicesLink ul li > a:hover{
+
+    transform: translateX(20px);
+
+}
+
+.footerServicesLink ul li > a::after{
+
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ffffffff;
+    content: "";
+    transition: all 0.8s ease;
+
+}
+
+.footerServicesLink ul li > a:hover::after{
+
+    width: 80%;
+
+}
+
+/** Footer Others Div */
+.footerColorOverlay > .othersDiv{
+
+    width: 25%;
+    height: 100%;
+
+}
+
+/** Footer Others Title */
+.othersDiv > .othersTitle{
+
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+}
+
+.othersTitle > h4{
+
+    font-size: 30px;
+    color: #ffffffff;
+    font-family: 'footermediumfont';
+    letter-spacing: 3px;
+    position: relative;
+    padding-left: 100px;
+
+}
+
+.othersTitle > h4::after{
+
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    width: 90%;
+    height: 2px;
+    content: "";
+    background-color: #ffffff;
+
+}
+
+/** Footer Others Link */
+.othersDiv > .footerOthersLink{
+
+    width: 100%;
+    height: 70%;
+
+}
+
+.footerOthersLink > ul{
+
+    padding-top: 50px;
+    list-style-type: none;
+    width: 100%;
+    padding-left: 100px;
+
+}
+
+.footerOthersLink ul > li{
+
+    margin-bottom: 30px;
+    width: 100%;
+
+}
+
+.footerOthersLink ul li > a{
+
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'footerregularfont';
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    transition: all 0.8s ease;
+
+}
+
+.footerOthersLink ul li > a:hover{
+
+    transform: translateX(20px);
+
+}
+
+.footerOthersLink ul li > a::after{
+
+    position: absolute;
+    top: 30px;
+    left: 0;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.8s ease;
+
+}
+
+.footerOthersLink ul li > a:hover::after{
+
+    width: 70%;
+
+}
+
+/** Footer Get In Touch Section */
+.footerColorOverlay > .footerGetInTouch{
+
+    width: 25%;
+    height: 100%;
+
+}
+
+/** Footer Get In Touch Title Div */
+.footerGetInTouch > .footerGetInTouchTitle{
+
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+}
+
+.footerGetInTouchTitle > h4{
+
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'footermediumfont';
+    letter-spacing: 3px;
+    padding-left: 30px;
+    position: relative;
+
+}
+
+.footerGetInTouchTitle > h4::after{
+
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: #ffffffff;
+
+}
+
+/** Footer Get In Touch Details */
+.footerGetInTouch > .getInTouchDetails{
+
+    width: 100%;
+    height: 70%;
+
+}
+
+.getInTouchDetails > ul{
+
+    margin-top: 50px;
+    padding-left: 30px;
+    list-style-type: none;
+
+}
+
+.getInTouchDetails ul > li{
+
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-family: 'footerregularfont';
+    letter-spacing: 2px;
+    font-size: 17px;
+
+}
+
+/** Footer Get In Touch Social Links */
+.getInTouchDetails > .footerSocialLinks{
+
+    width: 90%;
+    height: 50px;
+    margin-left: 30px;
+
+}
+
+.footerSocialLinks > ul{
+
+    height: 100%;
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+
+}
+
+.footerSocialLinks ul > li{
+
+    height: 100%;
+
+}
+
+.footerSocialLinks ul li > a{
+
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footerSocialLinks ul li a > svg{
+
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    transition: all 0.5s ease;
+
+}
+
+.footerSocialLinks ul li a:hover > svg{
+
+    transform: scale(2) translateY(-5px) rotate(-360deg);
+
+}
+
 
 /** Footer Copyright Section */
 .footerSection > .copyrightSection{
