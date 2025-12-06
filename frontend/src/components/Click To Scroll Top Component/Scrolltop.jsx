@@ -50,7 +50,26 @@ function Scrolltop() {
 
             }
 
-        })
+            /** When Meet This ScrollToTop Buttion At The Before Of The Footer */
+            if (window.scrollY >= 12200) {
+                
+                text.innerHTML = text.innerText.split("").map((char, id) => {
+
+                    return (
+                        
+                        `<span style="transform: rotate(${id * 6.4}deg)">${char}</span>`
+
+                    )
+
+                }).join("");
+
+                scrollTopBox.style.opacity = "0";
+                scrollTopBox.style.transform = "scale(0)";
+                scrollTopBox.style.transition = "all 0.8s ease";
+
+            } 
+
+        });
 
     }, []);
 
