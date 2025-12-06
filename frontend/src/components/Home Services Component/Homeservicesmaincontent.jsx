@@ -1,6 +1,6 @@
 import React, {useRef, useEffect, useState} from 'react';
 import HomeServiceInnerContent from '../Home Services Component/Homeserviceinnercontent';
-import { FaHandHoldingUsd } from "react-icons/fa";
+import { MdCurrencyRupee } from "react-icons/md";
 import { LuChartNoAxesCombined } from "react-icons/lu";
 import { LuCodeXml } from "react-icons/lu";
 import HomeServiceInnerContentSection from '../Home Services Component/Homeserviceinnercontentsection';
@@ -304,7 +304,7 @@ function Homeservicesmaincontent({HomeServicesStyle}) {
                         HomeServicesStyle={HomeServicesStyle}
                         HomeListHeading="Digital Marketing Services"
                         ServiceId="{01}"
-                        SVGIcon={<FaHandHoldingUsd />}
+                        SVGIcon={<MdCurrencyRupee />}
                         handleBoxeHeightOnClick={() => handleServiceBoxContent1()}
                         serviceIdStyle={firstServiceId}
                         serviceBoxIcon={firstServiceBoxIcon}
