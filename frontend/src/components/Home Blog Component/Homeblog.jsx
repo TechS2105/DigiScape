@@ -1,5 +1,7 @@
 import React from 'react';
 import HomeBlogStyle from '../../../public/styles/home blog files/Homeblog.module.css';
+import HomeBlogTitle from '../Home Blog Component/Homeblogtitlesection';
+import HomeBlogSection from '../Home Blog Component/Homeblogsection';
 
 function Homeblog() {
     
@@ -10,7 +12,19 @@ function Homeblog() {
             {/** Home Blog Section */}
             <div className={HomeBlogStyle.homeBlogMainSection}>
 
-                <h1> Home Blog </h1>
+                {/** Home Blog Title Section */}
+                <HomeBlogTitle
+                
+                    HomeBlogStyle={HomeBlogStyle}
+                    
+                />
+
+                {/** Home Blog Section */}
+                <HomeBlogSection
+                
+                    HomeBlogStyle={HomeBlogStyle}
+                    
+                />
 
             </div>
             

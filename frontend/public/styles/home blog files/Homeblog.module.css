@@ -18,20 +18,97 @@
 .homeBlogMainSection{
 
     width: 100%;
-    height: 120vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 150vh;
     background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
     background-size: contain;
     background-position: center;
 
 }
 
-.homeBlogMainSection > h1{
+/** Title Section */
+.homeBlogMainSection > .blogTitle{
 
-    font-size: 100px;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background-color: #ffffffff;
+}
+
+.blogTitle > span{
+
+    padding-left: 70px;
+    color: #292929;
+    font-family: 'homeblogmediumfont';
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: inline-flex;
+    position: relative;
+
+
+}
+
+.blogTitle > span::after{
+
+    position: absolute;
+    top: 10px;
+    left: 55px;
+    transform: translate(-50%, -50%);
+    content: "";
+    background-color: royalblue;
+    width: 10px;
+    height: 10px;
+    /* border-radius: 50px; */
+
+}
+
+.blogTitle > h2{
+
+    padding-left: 50px;
+    color: #292929;
+    font-family: 'homeblogboldfont';
+    font-size: 120px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    line-height: 100px;
+    letter-spacing: 2px;
+    position: relative;
+
+}
+
+/* .blogTitle > h2::after{
+
+    position: absolute;
+    top: 65px;
+    left: 50px;
+    width: 30%;
+    height: 5px;
+    content: "";
+    background-color: royalblue;
+    border-radius: 50%;
+
+} */
+
+.blogTitle > p{
+
+    color: #292929;
+    padding-left: 50px;
+    font-family: 'homeblogregularfont';
+    width: 1200px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 25px;
+
+}
+
+/** Blog Section */
+.homeBlogMainSection > .blogSection{
+
+    width: 100%;
+    height: 60%;
 
 }
