@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeBlogStyle from '../../../public/styles/home blog files/Homeblog.module.css';
-import HomeBlogTitle from '../Home Blog Component/Homeblogtitlesection';
+import HomeBlogTitleSection from '../Home Blog Component/Homeblogtitlesection';
 import HomeBlogSection from '../Home Blog Component/Homeblogsection';
 
 function Homeblog() {
@@ -13,7 +13,7 @@ function Homeblog() {
             <div className={HomeBlogStyle.homeBlogMainSection}>
 
                 {/** Home Blog Title Section */}
-                <HomeBlogTitle
+                <HomeBlogTitleSection
                 
                     HomeBlogStyle={HomeBlogStyle}
                     

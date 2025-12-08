@@ -99,5 +99,174 @@
 
     width: 100%;
     height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.blogSection > .blogInnerSection{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.blogInnerSection > .swiperBlogSection{
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.swiperBlogSection > .blogDiv{
+
+    width: 700px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #2929292f;
+    overflow: hidden;
+
+}
+
+/** Blog Image Div  */
+.blogDiv > .blogImageDiv{
+
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+
+}
+
+.blogImageDiv > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.8s ease;
+
+}
+
+.blogDiv:hover > .blogImageDiv img{
+
+    transform: scale(1.5) rotate(5deg);
+    filter: saturate(110%) brightness(110%);
+
+}
+
+/** Blog Content Div */
+.blogDiv > .blogContentDiv{
+
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    background-color: #ffffffff;
+
+}
+
+.blogContentDiv > h4{
+
+    position: absolute;
+    top: -79px;
+    padding: 20px 0px 0px 20px;
+    background-color: #ffffff;
+    font-size: 25px;
+    font-family: 'homeblogboldfont';
+    letter-spacing: 1px;
+    border-top-right-radius: 5px;
+    width: 550px;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.blogContentDiv h4 > svg{
+
+    color: royalblue;
+    font-size: 35px;
+    animation: blogSVGAnime 5s linear infinite
+
+}
+
+@keyframes blogSVGAnime {
+    
+    0%{
+
+        transform: rotate(360deg);
+
+    }100%{
+
+        transform: rotate(0deg);
+
+    }
+
+}
+
+.blogContentDiv > p{
+
+    padding-left: 20px;
+    font-family: 'homeblogregularfont';
+    letter-spacing: 1px;
+    font-size: 15px;
+
+}
+
+.blogContentDiv > a{
+
+    width: 100%;
+    display: inline-flex;
+    text-decoration: none;
+    font-family: 'homeblogmediumfont';
+    color: #292929;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 15px;
+    padding-left: 100px;
+    position: relative;
+    left: 20px;
+    transition: all 0.8s ease;
+
+}
+
+.blogContentDiv > a:hover{
+
+    padding-left: 0px;
+    color: rgb(255, 255, 255);
+    background-color: royalblue;
+    padding-top: 5px;
+    padding-left: 20px;
+    font-size: 18px;
+
+}
+
+.blogContentDiv > a::after{
+
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    width: 10%;
+    height: 3px;
+    content: "";
+    background-color: royalblue;
+    transition: all 0.8s ease;
+
+}
+
+.blogContentDiv > a:hover::after{
+
+    width: 0%;
+    top: 13px;
 
 }

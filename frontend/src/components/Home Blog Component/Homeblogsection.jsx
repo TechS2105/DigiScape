@@ -1,4 +1,5 @@
 import React from 'react';
+import HomeBlogs from '../Home Blog Component/Homeblogs';
 
 function Homeblogsection({HomeBlogStyle}) {
     
@@ -9,6 +10,11 @@ function Homeblogsection({HomeBlogStyle}) {
             {/** Home Blog Section */}
             <div className={HomeBlogStyle.blogSection}>
 
+                <HomeBlogs
+                
+                    HomeBlogStyle={HomeBlogStyle}
+                    
+                />
 
             </div>
             
