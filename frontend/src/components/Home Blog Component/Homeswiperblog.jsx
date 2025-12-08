@@ -27,7 +27,7 @@ function Homeswiperblog({HomeBlogStyle}) {
                     <div className={HomeBlogStyle.blogContentDiv}>
 
                         <h4> <GiSevenPointedStar /> Why SEO Still Drives the Most Reliable Long-Term Growth </h4>
-                        <p>Medium Description: SEO brings steady customers without depending on ads. This blog covers simple SEO techniques that help any business appear higher on Google searches in their local market.</p>
+                        <p>SEO brings steady customers without depending on ads. This blog covers simple SEO techniques that help any business appear higher on Google searches in their local market.</p>
                         <a href="#">Read More</a>
 
                     </div>
