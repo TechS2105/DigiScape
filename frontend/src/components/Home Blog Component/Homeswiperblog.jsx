@@ -19,7 +19,7 @@ function Homeswiperblog({HomeBlogStyle}) {
                     {/** Blog Image Div */}
                     <div className={HomeBlogStyle.blogImageDiv}>
 
-                        <img src="../../../public/images/Blog Images/first_blog_image(1).png" alt="" />
+                        <img src="/images/Blog Images/first_blog_image(1).png" alt="" />
 
                     </div>
 
