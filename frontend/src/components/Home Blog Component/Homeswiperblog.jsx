@@ -39,7 +39,24 @@ function Homeswiperblog({HomeBlogStyle}) {
                     {/** Blog Content Div */}
                     <div className={HomeBlogStyle.blogContentDiv}>
 
-                        <h4> <GiSevenPointedStar /> How Local Businesses Grow Faster with Practical Digital Marketing </h4>
+                        {/** Blog Content Title Div */}
+                        <div className={HomeBlogStyle.blogContentTitleDiv}>
+
+                            {/** Blog Content SVG Div */}
+                            <div className={HomeBlogStyle.blogContentSVGDiv}>
+
+                                <GiSevenPointedStar />
+
+                            </div>
+
+                            {/** Blog Title */}
+                            <div className={HomeBlogStyle.blogContentTitle}>
+
+                                <h4> How Local Businesses Grow Faster with Practical Digital Marketing </h4>
+
+                            </div>
+
+                        </div>
                         <p>Local businesses often struggle to reach consistent customers. This blog explains how simple digital marketing steps help small brands improve visibility, build trust, and convert more people without huge budgets.</p>
                         <a href="#">Read More</a>
 
@@ -59,8 +76,25 @@ function Homeswiperblog({HomeBlogStyle}) {
                     {/** Blog Content Div */}
                     <div className={HomeBlogStyle.blogContentDiv}>
 
-                        <h4> <GiSevenPointedStar /> What Makes a Website Convert Visitors Into Customers </h4>
-                        <p>A conversion focused website helps customers understand your service quickly and trust your brand enough to take action. This blog explains how small design improvements create big business results.</p>
+                        {/** Blog Content Title Div */}
+                        <div className={HomeBlogStyle.blogContentTitleDiv}>
+
+                            {/** Blog Content SVG Div */}
+                            <div className={HomeBlogStyle.blogContentSVGDiv}>
+
+                                <GiSevenPointedStar />
+
+                            </div>
+
+                            {/** Blog Title */}
+                            <div className={HomeBlogStyle.blogContentTitle}>
+
+                                <h4> What Makes a Website Convert Visitors Into Customers </h4>
+
+                            </div>
+
+                        </div>
+                        <p>A conversion-focused website helps customers understand your service quickly and trust your brand enough to take action. This blog explains how small design improvements create big business results.</p>
                         <a href="#">Read More</a>
 
                     </div>
@@ -79,7 +113,24 @@ function Homeswiperblog({HomeBlogStyle}) {
                     {/** Blog Content Div */}
                     <div className={HomeBlogStyle.blogContentDiv}>
 
-                        <h4> <GiSevenPointedStar /> Why SEO Still Drives the Most Reliable Long Term Growth </h4>
+                        {/** Blog Content Title Div */}
+                        <div className={HomeBlogStyle.blogContentTitleDiv}>
+
+                            {/** Blog Content SVG Div */}
+                            <div className={HomeBlogStyle.blogContentSVGDiv}>
+
+                                <GiSevenPointedStar />
+
+                            </div>
+
+                            {/** Blog Title */}
+                            <div className={HomeBlogStyle.blogContentTitle}>
+
+                                <h4> Why SEO Still Drives the Most Reliable Long-Term Growth </h4>
+
+                            </div>
+
+                        </div>
                         <p>SEO brings steady customers without depending on ads. This blog covers simple SEO techniques that help any business appear higher on Google searches in their local market.</p>
                         <a href="#">Read More</a>
 
@@ -99,7 +150,24 @@ function Homeswiperblog({HomeBlogStyle}) {
                     {/** Blog Content Div */}
                     <div className={HomeBlogStyle.blogContentDiv}>
 
-                        <h4> <GiSevenPointedStar /> Social Media Strategies That Build Real Engagement </h4>
+                        {/** Blog Content Title Div */}
+                        <div className={HomeBlogStyle.blogContentTitleDiv}>
+
+                            {/** Blog Content SVG Div */}
+                            <div className={HomeBlogStyle.blogContentSVGDiv}>
+
+                                <GiSevenPointedStar />
+
+                            </div>
+
+                            {/** Blog Title */}
+                            <div className={HomeBlogStyle.blogContentTitle}>
+
+                                <h4> Social Media Strategies That Build Real Engagement </h4>
+
+                            </div>
+
+                        </div>
                         <p>Social media works best when brands communicate authentically. This blog shares practical ways to grow with real content, meaningful interactions, and consistent posting.</p>
                         <a href="#">Read More</a>
 
@@ -119,7 +187,24 @@ function Homeswiperblog({HomeBlogStyle}) {
                     {/** Blog Content Div */}
                     <div className={HomeBlogStyle.blogContentDiv}>
 
-                        <h4> <GiSevenPointedStar /> How Paid Ads Help You Get Customers Without Wasting Budget </h4>
+                        {/** Blog Content Title Div */}
+                        <div className={HomeBlogStyle.blogContentTitleDiv}>
+
+                            {/** Blog Content SVG Div */}
+                            <div className={HomeBlogStyle.blogContentSVGDiv}>
+
+                                <GiSevenPointedStar />
+
+                            </div>
+
+                            {/** Blog Title */}
+                            <div className={HomeBlogStyle.blogContentTitle}>
+
+                                <h4> How Paid Ads Help You Get Customers Without Wasting Budget </h4>
+
+                            </div>
+
+                        </div>
                         <p>Paid ads can deliver quick results when used correctly. This blog explains how to plan campaigns that generate leads and avoid unnecessary spending.</p>
                         <a href="#">Read More</a>
 
