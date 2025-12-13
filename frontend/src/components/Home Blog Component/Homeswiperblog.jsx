@@ -1,10 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import { GiSevenPointedStar } from "react-icons/gi";
 
-function Homeswiperblog({HomeBlogStyle}) {
+function Homeswiperblog({HomeBlogStyle, blogs}) {
     
     return (
 
@@ -15,7 +15,7 @@ function Homeswiperblog({HomeBlogStyle}) {
                 
                 slidesPerView={2}
                 spaceBetween={60}
-                loop={true}
+                loop={true} 
                 speed={3000}
                 autoplay={{
 
@@ -27,190 +27,50 @@ function Homeswiperblog({HomeBlogStyle}) {
                 className={HomeBlogStyle.swiperBlogSection}>
 
                 {/** Swiper Slider */}
-                <SwiperSlide className={HomeBlogStyle.blogDiv}>
+                {blogs.map((blogItem, id) => {
 
-                    {/** Blog Image Div */}
-                    <div className={HomeBlogStyle.blogImageDiv}>
+                    return (
 
-                        <img src="/images/Blog Images/first_blog_image.png" alt="" />
+                        <SwiperSlide className={HomeBlogStyle.blogDiv} key={id}>
 
-                    </div>
+                            {/** Blog Image Div */}
+                            <div className={HomeBlogStyle.blogImageDiv}>
 
-                    {/** Blog Content Div */}
-                    <div className={HomeBlogStyle.blogContentDiv}>
-
-                        {/** Blog Content Title Div */}
-                        <div className={HomeBlogStyle.blogContentTitleDiv}>
-
-                            {/** Blog Content SVG Div */}
-                            <div className={HomeBlogStyle.blogContentSVGDiv}>
-
-                                <GiSevenPointedStar />
+                                <img src={blogItem.frontBlogDetails.image} alt={blogItem.frontBlogDetails.altText} />
 
                             </div>
 
-                            {/** Blog Title */}
-                            <div className={HomeBlogStyle.blogContentTitle}>
+                            {/** Blog Content Div */}
+                            <div className={HomeBlogStyle.blogContentDiv}>
 
-                                <h4> How Local Businesses Grow Faster with Practical Digital Marketing </h4>
+                                {/** Blog Content Title Div */}
+                                <div className={HomeBlogStyle.blogContentTitleDiv}>
 
-                            </div>
+                                    {/** Blog Content SVG Div */}
+                                    <div className={HomeBlogStyle.blogContentSVGDiv}>
 
-                        </div>
-                        <p>Local businesses often struggle to reach consistent customers. This blog explains how simple digital marketing steps help small brands improve visibility, build trust, and convert more people without huge budgets.</p>
-                        <a href="#">Read More</a>
+                                        <GiSevenPointedStar />
 
-                    </div>
+                                    </div>
 
-                </SwiperSlide>
+                                    {/** Blog Title */}
+                                    <div className={HomeBlogStyle.blogContentTitle}>
 
-                <SwiperSlide className={HomeBlogStyle.blogDiv}>
+                                        <h4> {blogItem.frontBlogDetails.title} </h4>
 
-                    {/** Blog Image Div */}
-                    <div className={HomeBlogStyle.blogImageDiv}>
+                                    </div>
 
-                        <img src="/images/Blog Images/second_blog_image(1).png" alt="" />
-
-                    </div>
-
-                    {/** Blog Content Div */}
-                    <div className={HomeBlogStyle.blogContentDiv}>
-
-                        {/** Blog Content Title Div */}
-                        <div className={HomeBlogStyle.blogContentTitleDiv}>
-
-                            {/** Blog Content SVG Div */}
-                            <div className={HomeBlogStyle.blogContentSVGDiv}>
-
-                                <GiSevenPointedStar />
+                                </div>
+                                <p> {blogItem.frontBlogDetails.description} </p>
+                                <a href="#">{blogItem.frontBlogDetails.buttonText}</a>
 
                             </div>
 
-                            {/** Blog Title */}
-                            <div className={HomeBlogStyle.blogContentTitle}>
+                        </SwiperSlide>
 
-                                <h4> What Makes a Website Convert Visitors Into Customers </h4>
+                    );
 
-                            </div>
-
-                        </div>
-                        <p>A conversion-focused website helps customers understand your service quickly and trust your brand enough to take action. This blog explains how small design improvements create big business results.</p>
-                        <a href="#">Read More</a>
-
-                    </div>
-
-                </SwiperSlide>
-
-                <SwiperSlide className={HomeBlogStyle.blogDiv}>
-
-                    {/** Blog Image Div */}
-                    <div className={HomeBlogStyle.blogImageDiv}>
-
-                        <img src="/images/Blog Images/third_blog_image.png" alt="" />
-
-                    </div>
-
-                    {/** Blog Content Div */}
-                    <div className={HomeBlogStyle.blogContentDiv}>
-
-                        {/** Blog Content Title Div */}
-                        <div className={HomeBlogStyle.blogContentTitleDiv}>
-
-                            {/** Blog Content SVG Div */}
-                            <div className={HomeBlogStyle.blogContentSVGDiv}>
-
-                                <GiSevenPointedStar />
-
-                            </div>
-
-                            {/** Blog Title */}
-                            <div className={HomeBlogStyle.blogContentTitle}>
-
-                                <h4> Why SEO Still Drives the Most Reliable Long-Term Growth </h4>
-
-                            </div>
-
-                        </div>
-                        <p>SEO brings steady customers without depending on ads. This blog covers simple SEO techniques that help any business appear higher on Google searches in their local market.</p>
-                        <a href="#">Read More</a>
-
-                    </div>
-
-                </SwiperSlide>
-
-                <SwiperSlide className={HomeBlogStyle.blogDiv}>
-
-                    {/** Blog Image Div */}
-                    <div className={HomeBlogStyle.blogImageDiv}>
-
-                        <img src="/images/Blog Images/fourth_blog_image.png" alt="" />
-
-                    </div>
-
-                    {/** Blog Content Div */}
-                    <div className={HomeBlogStyle.blogContentDiv}>
-
-                        {/** Blog Content Title Div */}
-                        <div className={HomeBlogStyle.blogContentTitleDiv}>
-
-                            {/** Blog Content SVG Div */}
-                            <div className={HomeBlogStyle.blogContentSVGDiv}>
-
-                                <GiSevenPointedStar />
-
-                            </div>
-
-                            {/** Blog Title */}
-                            <div className={HomeBlogStyle.blogContentTitle}>
-
-                                <h4> Social Media Strategies That Build Real Engagement </h4>
-
-                            </div>
-
-                        </div>
-                        <p>Social media works best when brands communicate authentically. This blog shares practical ways to grow with real content, meaningful interactions, and consistent posting.</p>
-                        <a href="#">Read More</a>
-
-                    </div>
-
-                </SwiperSlide>
-
-                <SwiperSlide className={HomeBlogStyle.blogDiv}>
-
-                    {/** Blog Image Div */}
-                    <div className={HomeBlogStyle.blogImageDiv}>
-
-                        <img src="/images/Blog Images/fifth_blog_image.png" alt="" />
-
-                    </div>
-
-                    {/** Blog Content Div */}
-                    <div className={HomeBlogStyle.blogContentDiv}>
-
-                        {/** Blog Content Title Div */}
-                        <div className={HomeBlogStyle.blogContentTitleDiv}>
-
-                            {/** Blog Content SVG Div */}
-                            <div className={HomeBlogStyle.blogContentSVGDiv}>
-
-                                <GiSevenPointedStar />
-
-                            </div>
-
-                            {/** Blog Title */}
-                            <div className={HomeBlogStyle.blogContentTitle}>
-
-                                <h4> How Paid Ads Help You Get Customers Without Wasting Budget </h4>
-
-                            </div>
-
-                        </div>
-                        <p>Paid ads can deliver quick results when used correctly. This blog explains how to plan campaigns that generate leads and avoid unnecessary spending.</p>
-                        <a href="#">Read More</a>
-
-                    </div>
-
-                </SwiperSlide>
+                })}
 
             </Swiper>
             

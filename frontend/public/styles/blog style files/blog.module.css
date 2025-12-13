@@ -1,0 +1,288 @@
+/** Fonts */
+@font-face {
+    font-family: 'blogpageboldfont';
+    src: url('../../fonts/poltab/Poltab-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'blogpagemediumfont';
+    src: url('../../fonts/poltab/Poltab-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'blogpageregularfont';
+    src: url('../../fonts/poltab//Poltab-Regular.ttf');
+}
+
+/** Blog Main Container */
+.blogMainContainer{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/** Blog Section */
+.blogMainContainer > .blogSection{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/** Blog Title Section */
+.blogSection > .blogTitleSection{
+
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.blogTitleSection > span{
+
+    font-size: 20px;
+    font-family: 'blogpagemediumfont';
+    margin: 0px 0px 20px 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-flex;
+    position: relative;
+
+}
+
+.blogTitleSection > span::before{
+
+    position: absolute;
+    top: 0px;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+    background-color: royalblue;
+    content: "";
+    
+}
+
+.blogTitleSection > h1{
+
+    color: #292929;
+    font-size: 150px;
+    text-transform: uppercase;
+    font-family: 'blogpageboldfont';
+    letter-spacing: 2px;
+    line-height: 140px;
+
+}
+
+.blogTitleSection > p{
+
+    font-size: 20px;
+    width: 1400px;
+    margin-left: 10px;
+    font-family: 'blogpageregularfont';
+    line-height: 30px;
+
+}
+
+/** Blog Banner Image Section */
+.blogSection > .blogBannerImageSection{
+
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../images/Blog\ Images/blog_page_banner_image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    filter: grayscale(150%)  brightness(100%);
+    box-shadow: -5px 10px 200px #292929c3 inset;
+
+}
+
+/** All Blog Section */
+.blogSection > .allBlogSection{
+
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+    background-size: contain;
+    
+
+}
+
+.allBlogSection > .allBlogs{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    padding: 150px 0px;
+
+}
+
+.allBlogs > .blogDiv{
+
+    width: 700px;
+    height: 650px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #29292961;
+
+}
+
+/** Blog Image */
+.blogDiv > .blogImage{
+
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
+
+}
+
+.blogImage > .blogCategory{
+
+    position: absolute;
+    top: 180px;
+    left: -160px;
+    z-index: 2;
+    background-color: #ffffffff;
+    width: 50%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 20px;
+    border-radius: 50px;
+    transform: rotate(90deg);
+
+}
+
+.blogCategory > svg{
+
+    color: #ffffff;
+    background-color: royalblue;
+    padding: 2px;
+    border-radius: 50px;
+
+}
+
+.blogCategory > span{
+
+  font-size: 20px;
+  color: #292929;
+  font-family: 'blogpagemediumfont';
+  letter-spacing: 2px;
+  padding-top: 4px;
+
+}
+
+.blogImage > img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s ease;
+    filter: grayscale(100%);
+
+} 
+
+/** Zoom Blog Image */
+.blogDiv:hover > .blogImage img{
+
+    transform: scale(1.3) rotate(5deg);
+    filter: grayscale(0) brightness(120%) sepia(20%);
+
+}
+
+/** Blog Content */
+.blogDiv > .blogContent{
+
+    width: 100%;
+    height: 35%;
+    background-color: #ffffffff;
+    display: flex;
+    align-items: center;
+
+}
+
+.blogContent > .contentDiv{
+
+    margin-left: 20px;
+
+}
+
+.contentDiv > h3{
+
+    font-size: 30px;
+    font-family: 'blogpageboldfont';
+    letter-spacing: 2px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    color: #292929;
+
+}
+
+.contentDiv > p{
+
+    font-family: 'blogpageregularfont';
+    font-size: 17px;
+    margin-bottom: 10px;
+    width: 650px;
+
+}
+
+.contentDiv > button{
+
+    width: 250px;
+    height: 35px;
+    border: 1px solid #292929;
+    background-color: transparent;
+    color: #292929;
+    outline: none;
+    font-size: 18px;
+    font-family: 'blogpageregularfont';
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.8s ease;
+
+}
+
+.contentDiv > button:hover{
+
+    transform: scale(1.05) translateX(8px);
+    border: 1px solid #ffffffff;
+    color: #ffffffff;
+
+}
+
+.contentDiv > button::after{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    content: "";
+    background-color: royalblue;
+    transition: all 0.8s ease;
+    z-index: -2;
+
+}
+
+.contentDiv > button:hover::after{
+
+    width: 100%;
+
+}

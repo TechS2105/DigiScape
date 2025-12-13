@@ -10,6 +10,8 @@ router.get('/api/home/textscroller', getRouterController.getHomeTextScroller); /
 router.get('/api/home/howwework', getRouterController.getHomeHowWeWorkAPI); // GET How We Work Router
 router.get('/api/home/portfolio', getRouterController.getHomePortfolioRouter); // GET Home Portfolio Router
 router.get('/api/testimonial/contents', getRouterController.getTestimonialContents); // GET Testimonial Content Router
+router.get('/api/home/blogs', getRouterController.getHomeBlogs); // GET Home Blogs Router
+router.get('/api/blogpage/content', getRouterController.getBlogPageContent);
 router.post('/home/contact/form', postRouterController.postContactFormData) // POST Home Contact Form Router
 
 export default router;

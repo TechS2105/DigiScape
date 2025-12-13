@@ -3,6 +3,8 @@ import TextScroller from '../objects/Textscrollerapitext.js';
 import HomeHowWeWork from '../objects/Homehowwework.js';
 import HomePorttfolio from '../objects/Homeportfolio.js'; 
 import TestimonialContents from '../objects/Testimonialcontents.js';
+import HomeBlogs from '../objects/Homeblogs.js';
+import BlogPageContent from '../objects/Blogpageblogs.js';
 
 const getDefaultRouter = (req, res) => {
 
@@ -43,6 +45,20 @@ const getTestimonialContents = (req, res) => {
 
 }
 
+/** Home Blogs */
+const getHomeBlogs = (req, res) => {
+
+    res.status(200).json(HomeBlogs);
+
+}
+
+/** Blog Page Blogs */
+const getBlogPageContent = (req, res) => {
+
+    res.status(200).json(BlogPageContent);
+
+}
+
 export default {
 
     getDefaultRouter,
@@ -50,6 +66,8 @@ export default {
     getHomeTextScroller,
     getHomeHowWeWorkAPI,
     getHomePortfolioRouter,
-    getTestimonialContents
+    getTestimonialContents,
+    getHomeBlogs,
+    getBlogPageContent
 
 }
