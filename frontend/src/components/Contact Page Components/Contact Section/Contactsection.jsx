@@ -1,4 +1,8 @@
 import React from 'react';
+import ContactTitleSection from '../Contact Title Section/Contacttitlesection';
+import ContactBannerSection from '../Contact Banner Image Section/Contactbannersection';
+import ContactAdditionalInfoSection from '../Contact Page Additional Info Section/Contactadditionalinfosection';
+import ContactFormSection from '../Contact Form Section/Contactformsection';
 
 function Contactsection({ContactPageStyle}) {
     
@@ -10,29 +14,36 @@ function Contactsection({ContactPageStyle}) {
             <div className={ContactPageStyle.contactSection}>
 
                 {/** Title Section */}
-                <div className={ContactPageStyle.contactPageTitleSection}>
-
-                    {/** Title Div */}
-                    <div className={ContactPageStyle.contactPageTitleDiv}>
-
-                        <span> Contact Us </span>
-                        <h1> Let’s Work Together </h1>
-
-                    </div>
-
-                </div>
+                <ContactTitleSection
+                
+                    ContactPageStyle={ContactPageStyle}
+                    contactSpanTitle="Contact Us"
+                    contactTitle="Let’s Talk About Your Digital Growth"
+                    
+                />
 
                 {/** Banner Image Section */}
-                <div className={ContactPageStyle.contactPageBannerSection}> 
+                <ContactBannerSection
+                
+                    ContactPageStyle={ContactPageStyle}
+                    BannerContent="Have a question, idea, or project in mind? Reach out to DigiScape and start a conversation that focuses on real goals and measurable results. Our team works closely with businesses to understand their challenges, plan the right digital strategy, and deliver solutions that drive visibility, leads, and long-term growth."
+                    
+                />
 
-                    {/** Description */}
-                    <div className={ContactPageStyle.contactPageDescription}>
+                {/** Contact Additional Info Section */}
+                <ContactAdditionalInfoSection
+                
+                    ContactPageStyle={ContactPageStyle}
+                    
+                />
 
-                        <p>Ready to grow your brand online? Get in touch with DigiScape to discuss your goals, challenges, and ideas. Our team is here to offer clear guidance, smart strategies, and results-focused digital marketing solutions tailored to your business.</p>
-                        
-                    </div>
+                {/** Contact Form Section */}
+                <ContactFormSection
+                
+                    ContactPageStyle={ContactPageStyle}
+                    
+                />
 
-                </div>
 
             </div>
             

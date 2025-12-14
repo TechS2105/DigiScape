@@ -67,12 +67,12 @@
 
 .contactPageTitleDiv > h1{
 
-    font-size: 230px;
+    font-size: 170px;
     font-family: 'contactpageboldfont';
     text-transform: uppercase;
-    line-height: 200px;
-    display: inline-flex;
-    letter-spacing: 10px;
+    line-height: 150px;
+    letter-spacing: 3px;
+    font-weight: bolder;
 
 }
 
@@ -95,6 +95,15 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    box-shadow: 5px 30px 20px #2929292a inset;
+    filter: grayscale();
+    transition: all 0.8s ease;
+
+}
+
+.contactPageBannerSection:hover{
+
+    filter: grayscale(0);
 
 }
 
@@ -111,7 +120,7 @@
 .contactPageDescription > p{
 
     font-family: 'contactpageregularfont';
-    font-size: 30px;
+    font-size: 25px;
     line-height: 40px;
     letter-spacing: 2px;
     position: relative;
@@ -145,5 +154,112 @@
         transform: rotate(0deg);
 
     }
+
+}
+
+/** Contact Additional Info Section */
+.contactSection > .contactAdditionalInfo{
+
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+
+}
+
+.contactAdditionalInfo > .infoBox{
+
+    width: 450px;
+    height: 450px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+}
+
+.contactAdditionalInfo > .infoBox:hover {
+
+    transform: translateY(-20px) rotate(-10deg);
+    background-color: royalblue;
+    box-shadow: 10px 10px 10px #29292917;
+
+}
+
+.infoBox:hover > .infoDiv span{
+
+    color: #ffffffff;
+
+}
+
+.infoBox:hover > .infoDiv p{
+
+    color: #ffffffff;
+    transform: scale(1.2);
+
+}
+
+.infoBox > .svgDiv{
+
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.svgDiv > svg{
+
+    font-size: 150px;
+    filter: drop-shadow(5px 5px 5px #29292973);
+    color: #ffffffff;
+
+}
+
+.infoBox > .infoDiv{
+
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.infoDiv > span{
+
+    font-size: 40px;
+    font-family: 'contactpageboldfont';
+    letter-spacing: 2px;
+    display: inline-flex;
+    color: #292929;
+
+}
+
+.infoDiv > p{
+
+    font-size: 20px;
+    font-family: 'contactpageregularfont';
+    letter-spacing: 2px;
+    transition: all 0.5s ease;
+
+}
+
+/** Contact Form Section */
+.contactSection > .contactFormSection{
+
+    width: 100%;
+    height: 120vh;
+    background-image: url('../../images/Contact\ Page\ Images/contact_form_image_1.png');
+    background-attachment: fixed;
+    background-size: cover;
 
 }
