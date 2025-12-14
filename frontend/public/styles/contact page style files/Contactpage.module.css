@@ -1,0 +1,149 @@
+/** Fonts */
+@font-face {
+    font-family: 'contactpageboldfont';
+    src: url('../../fonts/poltab/Poltab-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'contactpagemediumfont';
+    src: url('../../fonts/poltab/Poltab-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'contactpageregularfont';
+    src: url('../../fonts/poltab/Poltab-Regular.ttf');
+}
+
+/** Contact Page Section */
+.contactSection{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/** Contact Page Title Section */
+.contactSection > .contactPageTitleSection{
+
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.contactPageTitleSection > .contactPageTitleDiv{
+
+    padding-left: 10px;
+    position: absolute;
+
+}
+
+.contactPageTitleDiv > span{
+
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    display: inline-flex;
+    font-family: 'contactpagemediumfont';
+    margin-left: 40px;
+    position: relative;
+
+}
+
+.contactPageTitleDiv > span::before{
+
+    position: absolute;
+    top: 3px;
+    left: -25px;
+    width: 15px;
+    height: 15px;
+    background-color: royalblue;
+    content: "";
+
+}
+
+.contactPageTitleDiv > h1{
+
+    font-size: 230px;
+    font-family: 'contactpageboldfont';
+    text-transform: uppercase;
+    line-height: 200px;
+    display: inline-flex;
+    letter-spacing: 10px;
+
+}
+
+.contactPageTitleDiv > p{
+
+    font-size: 18px;
+    font-family: 'contactpageregularfont';
+
+}
+
+/** Banner Image Section */
+.contactSection > .contactPageBannerSection{
+
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../images/Contact\ Page\ Images/contact image 8(1).png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.contactPageBannerSection > .contactPageDescription{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contactPageDescription > p{
+
+    font-family: 'contactpageregularfont';
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    position: relative;
+
+}
+
+.contactPageDescription > p::before{
+
+    position: absolute;
+    top: 5px;
+    left: -65px;
+    content: "";
+    height: 50px;
+    width: 50px;
+    background-image: linear-gradient(50deg, #ffffffff, royalblue, #ffffff, royalblue, #ffffff, royalblue, #ffffffff, royalblue, #ffffffff);
+    background-size: 10vw 50vw;
+    border-radius: 50%;
+    animation: colorGraidentCircle 5s linear infinite;
+    border: 2.5px dashed #ffffffff;
+
+}
+
+@keyframes colorGraidentCircle {
+    
+    0%{
+
+        transform: rotate(360deg);
+
+    }100%{
+
+        transform: rotate(0deg);
+
+    }
+
+}

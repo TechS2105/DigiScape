@@ -1,10 +1,21 @@
 import React from 'react';
+import ContactSection from '../components/Contact Page Components/Contact Section/Contactsection';
+import ContactPageStyle from '../../public/styles/contact page style files/Contactpage.module.css';
 
 function Contact() {
     
     return (
+ 
+        <>
+        
+            {/** Contact Page Section */}
+            < ContactSection
 
-        <h1> Contact Page </h1>
+                ContactPageStyle={ContactPageStyle}
+        
+            />
+
+        </>
 
     );
 
