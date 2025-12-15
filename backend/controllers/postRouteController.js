@@ -1,4 +1,4 @@
-import HomeContactFormMail from '../mail controller/mailcontroller.js';
+import ContactFormMail from '../mail controller/mailcontroller.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -27,7 +27,7 @@ const postContactFormData = (req, res) => {
     }
 
     /** Connect Mail */
-    HomeContactFormMail.sendMail(mail, (error) => {
+    ContactFormMail.sendMail(mail, (error) => {
 
         if (error) {
             
@@ -48,8 +48,53 @@ const postContactFormData = (req, res) => {
 
 }
 
+/** Contact Page Get In Touch Mail Form */
+const postContactPageFormData = (req, res) => {
+
+    const { fullname, email, mobile, subject, companyname, message } = req.body;
+
+    const mail = {
+
+        from: `${fullname}`,
+        to: process.env.Email,
+        subject: `${fullname} send a mail via DigiScape Contact Page Form`,
+        html: `
+        
+            <p>Name: ${fullname}</p>
+            <p>Email: ${email}</p>
+            <p>Mobile: ${mobile}</P>
+            <p>Subject: ${subject}</p>
+            <p>Company Name: ${companyname}</p>
+            <p>Message: ${message}</p>
+
+        `
+
+    };
+
+    ContactFormMail.sendMail(mail, (error) => {
+
+        if (error) {
+            
+            res.status(400).json({ message: `There has something wrong ${error}` });
+
+        } else {
+            
+            res.json({
+
+                status: 200,
+                message: "Mail has been sent successfully..."
+
+            });
+
+        }
+
+    });
+
+}
+
 export default {
 
-    postContactFormData
+    postContactFormData, 
+    postContactPageFormData
 
 }

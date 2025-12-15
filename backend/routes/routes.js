@@ -13,5 +13,6 @@ router.get('/api/testimonial/contents', getRouterController.getTestimonialConten
 router.get('/api/home/blogs', getRouterController.getHomeBlogs); // GET Home Blogs Router
 router.get('/api/blogpage/content', getRouterController.getBlogPageContent);
 router.post('/home/contact/form', postRouterController.postContactFormData) // POST Home Contact Form Router
+router.post('/contact/mail/form', postRouterController.postContactPageFormData); // POST Contact Page Mail Form Router
 
 export default router;

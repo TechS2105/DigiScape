@@ -257,11 +257,13 @@
 .contactSection > .contactFormSection{
 
     width: 100%;
-    height: 120vh;
+    height: 200vh;
     background-image: url('../../images/Contact\ Page\ Images/contact_form_image_1.png');
     background-attachment: fixed;
-    background-size: cover;
-    filter: grayscale() sepia(15%) brightness(70%);
+    background-size: contain;
+    background-position: top right;
+    background-repeat: no-repeat;
+    filter: grayscale() sepia(9%);
     transition: all 2s ease;
     box-shadow: 0px 30px 30px #29292924 inset;
     position: relative;
@@ -269,11 +271,11 @@
 
 }
 
-.contactFormSection::after{
+.contactFormSection::after {
 
     position: absolute;
-    top: -550px;
-    left: -900px;
+    top: -850px;
+    left: -1600px;
     content: "";
     width: 50px;
     height: 300%;
@@ -282,29 +284,413 @@
 
 }
 
-.contactFormSection:hover::after{
+.contactFormSection:hover::after {
 
     animation: replaceLine 3s ease;
 
 }
 
 @keyframes replaceLine {
-    
-    0%{
+
+    0% {
 
         transform: translate(0%) rotate(50deg);
 
-    }100%{
+    }
+
+    100% {
 
         transform: translate(15000%) rotate(50deg);
-        filter: blur(100px);
+        filter: blur(150px);
 
     }
 
 }
 
-.contactFormSection:hover{
+.contactFormSection:hover {
 
-    filter: grayscale(0) sepia(0);
+    filter: grayscale(0) sepia(0) brightness(100.9%);
+
+}
+
+/** Contact Form Div */
+.contactFormSection > .contactForm{
+
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/** Contact Form Title Div */
+.contactForm > .contactFormTitle{
+
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+}
+
+.contactFormTitle > h3{
+
+    font-size: 130px;
+    padding-left: 10px;
+    font-family: 'contactpagemediumfont';
+    letter-spacing: 10px;
+    line-height: 140px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(180deg, #292929 5%, #ECE9E4);
+    position: relative;
+
+}
+
+.contactFormTitle > h3::after{
+
+    position: absolute;
+    top: 430px;
+    left: 25px;
+    content: "";
+    height: 7px;
+    width: 30%;
+    background-image: linear-gradient(to right, royalblue, #ffffff);
+    border-radius: 50%;
+
+}
+
+/** Contact Form Div */
+.contactForm > .formDiv{
+
+    width: 85%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+
+}
+
+.formDiv > form{
+
+    margin-left: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+
+}
+
+/** First Input Section*/
+.formDiv form > .firstInputSection{
+
+    width: 100%;
+    height: 25%;
+    display: flex;
+
+}
+
+/** First Input Box */
+.firstInputSection > .firstInputBox{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.firstInputBox > label{
+
+    font-family: 'contactpagemediumfont';
+    letter-spacing: 2px;
+    font-size: 20px;
+
+}
+
+.firstInputBox > input{
+
+    width: 80%;
+    height: 50px;
+    padding-left: 10px;
+    border: 0.5px solid #292929;
+    outline: none;
+    border-radius: 10px;
+
+}
+
+/** Second Input Box */
+.firstInputSection > .secondInputBox{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.secondInputBox > label{
+
+    font-family: 'contactpagemediumfont';
+    font-size: 20px;
+    letter-spacing: 2px;
+
+}
+
+.secondInputBox > input{
+
+    width: 80%;
+    height: 50px;
+    border: 0.5px solid #292929;
+    outline: none;
+    padding-left: 10px;
+    border-radius: 10px;
+
+}
+
+/** Second Input Section */
+.formDiv form > .secondInputSection{
+
+    width: 100%;
+    height: 25%;
+    display: flex;
+
+}
+
+/** Second Input Section First Input Box */
+.secondInputSection > .sFirstInputBox{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.sFirstInputBox > label{
+
+    font-family: 'contactpagemediumfont';
+    font-size: 20px;
+    letter-spacing: 2px;
+
+}
+
+.sFirstInputBox > input{
+
+    width: 80%;
+    height: 50px;
+    padding-left: 10px;
+    border: 0.5px solid #292929;
+    outline: none;
+    border-radius: 10px;
+
+}
+
+/** Second Input Section Second Input Box */
+.secondInputSection > .sSecondInputBox{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.sSecondInputBox > label{
+
+    font-family: 'contactpagemediumfont';
+    font-size: 20px;
+    letter-spacing: 2px;
+
+}
+
+.sSecondInputBox > input{
+
+    width: 80%;
+    height: 50px;
+    padding-left: 10px;
+    border: 0.5px solid #292929;
+    outline: none;
+    border-radius: 10px;
+
+}
+
+/** Third Input Section */
+.formDiv form > .thirdInputSection{
+
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.thirdInputSection > label{
+
+    font-size: 20px;
+    font-family: 'contactpagemediumfont';
+    letter-spacing: 2px;
+
+}
+
+.thirdInputSection > input{
+
+    width: 90%;
+    padding-left: 10px;
+    height: 50px;
+    border: 0.5px solid #292929;
+    outline: none;
+    border-radius: 10px;
+
+}
+
+/** Fourth Input Section */
+.formDiv form > .fourthInputSection{
+
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.fourthInputSection > label{
+
+    font-size: 20px;
+    font-family: 'contactpagemediumfont';
+    letter-spacing: 2px;
+
+}
+
+.fourthInputSection > textarea{
+
+    width: 89%;
+    padding: 20px 10px;
+    resize: none;
+    outline: none;
+    border-radius: 10px;
+
+}
+
+.formDiv form > button{
+
+    width: 300px;
+    height: 50px;
+    border: 1px solid #292929;
+    background-color: transparent;
+    color: #292929;
+    font-family: 'contactpageregularfont';
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.8s ease;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.formDiv form>button:hover {
+
+    transform: translateY(-10px);
+    box-shadow: 5px 5px 5px #29292946;
+    border: none;
+    color: #ffffffff;
+    font-size: 23px;
+    letter-spacing: 10px;
+
+}
+
+.formDiv form > button::after{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    height: 0%;
+    width: 100%;
+    background-color: royalblue;
+    transition: all 0.8s ease;
+    z-index: -2;
+
+}
+
+.formDiv form > button:hover::after{
+
+    height: 100%;
+
+}
+
+.formDiv form button > span{
+
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+
+}
+
+.formDiv form button > span:nth-child(1){
+
+    margin-top: 5px;
+
+}
+
+.formDiv form button span:nth-child(2) > svg{
+
+    font-size: 25px;
+    transition: all 0.8s ease;
+
+}
+
+.formDiv form button:hover > span:nth-child(2) svg{
+
+    transform: rotateY(360deg) scale(1.2);
+    opacity: 1;
+
+}
+
+::placeholder{
+
+    font-family: 'contactpageregularfont';
+
+}
+
+/** Contact Form Error Message */
+.contactFormErrorMessage{
+
+    color: orangered;
+    font-family: 'contactpageregularfont';
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-top: 5px;
+
+}
+
+/** Contact Form Submitting Message */
+.contactFormSubmittingMessage{
+
+    font-size: 15px;
+    font-family: 'contactpageregularfont';
+    letter-spacing: 2px;
+    margin-top: 5px;
 
 }
