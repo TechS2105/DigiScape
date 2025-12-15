@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const fetchBlogs = createAsyncThunk('blogs/fetchBlogs', async () => {
     
-    const response = await axios.get("http://localhost:3000/api/home/blogs");
+    const response = await axios.get("https://digiscape-backend.onrender.com/api/home/blogs");
     return response.data;
 
 });
