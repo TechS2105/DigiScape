@@ -1,10 +1,21 @@
 import React from 'react';
+import AboutSection from '../components/About Page Components/About Page About Section/Aboutsection';
+import AboutSectionStyle from '../../public/styles/about page styles files/Aboutpage.module.css';
 
 function About() {
     
     return (
 
-        <h1> About Page </h1>
+        <>
+        
+            {/** About Section */}
+            <AboutSection
+            
+                AboutSectionStyle={AboutSectionStyle}
+                
+            />
+            
+        </>
 
     );
 

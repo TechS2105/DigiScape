@@ -1,0 +1,308 @@
+/** About Page Main Section */
+.aboutSection{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/** About Page Title Section */
+.aboutSection > .aboutTitleSection{
+
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/** About Page Section Title */
+.aboutTitleSection > .aboutTitle{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.aboutTitle > span{
+
+    font-family: var(--medium-font);
+    color: var(--third-color);
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+
+}
+
+.aboutTitle > span::after{
+
+    position: absolute;
+    top: 2px;
+    left: -20px;
+    width: 15px;
+    height: 15px;
+    content: "";
+    background-color: royalblue;
+
+}
+
+.aboutTitle > h1{
+
+    font-family: var(--bold-font);
+    letter-spacing: 5px;
+    color: var(--third-color);
+    margin-left: 10px;
+    font-size: 170px;
+    line-height: 150px;
+    text-transform: uppercase;
+
+}
+
+/** About Banner Section */
+.aboutSection > .aboutSectionBanner{
+
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../images/About\ Page\ Images/about_page_image_3.png');;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    filter: brightness(109%);
+
+}
+
+.aboutSectionBanner > .aboutOverlaySection{
+
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #29292958, rgba(255, 255, 255, 0));
+    background-size: cover;
+    background-position: bottom;
+
+}
+
+/** About Marquee Section */
+.aboutSection > .aboutMarqueeSection{
+
+    width: 100%;
+    height: 200px;
+    background-color: var(--third-color);
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    gap: 50px;
+
+}
+
+.aboutMarqueeSection > .marqueeText {
+
+    display: inline-block;   
+    animation: aboutMarqueeText 150s linear infinite;
+  
+}
+
+.aboutMarqueeSection .marqueeText > p{
+
+    color: #ffffffff;
+    font-size: 250px;
+    font-family: var(--creative-font);
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    padding-top: 30px;
+
+}
+
+@keyframes aboutMarqueeText {
+    
+    0%{
+
+        transform: translateX(0%);
+
+    }100%{
+
+        transform: translateX(-100%);
+
+    }
+
+}
+
+/** About Page About Section */
+.aboutSection > .aboutPageAboutSectionDiv{
+
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50rem;
+
+}
+
+/** About Page About Image Section */
+.aboutPageAboutSectionDiv > .aboutPageAboutImageSection{
+
+    width: 50%;
+    height: 100%;
+
+}
+
+.aboutPageAboutImageSection > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/** About Page About Content Section */
+.aboutPageAboutSectionDiv > .aboutPageAboutContentDiv{
+
+    width: 50%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.aboutPageAboutContentDiv > .aboutPageAboutInnerContent{
+
+    margin-left: 20px;
+    width: 100%;
+    height: 100%;
+
+}
+
+/** About Section About Content Section */
+.aboutPageAboutInnerContent > .aboutContentSection{
+
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.aboutContentSection > span{
+
+    font-family: var(--medium-font);
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-left: 5px;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), royalblue);
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    color: #ffffffff;
+
+}
+
+.aboutContentSection > h2{
+
+    font-family: var(--bold-font);
+    font-size: 50px;
+    margin-bottom: 30px;
+    position: relative;
+
+}
+
+.aboutContentSection > h2::after{
+
+    position: absolute;
+    top: 100%;
+    left: 5px;
+    content: "";
+    background-color: royalblue;
+    height: 5px;
+    width: 30%;
+    border-radius: 50%;
+
+}
+
+.aboutContentSection > p{
+
+    font-family: var(--regular-font);
+    font-size: 20px;
+    width: 700px;
+    letter-spacing: 1px;
+    line-height: 30px;
+
+}
+
+/** About Section About Content List Item Section */
+.aboutPageAboutInnerContent > .aboutContentList{
+
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.aboutContentList > h3{
+
+    font-size: 30px;
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    position: relative;
+
+}
+
+.aboutContentList > h3::after{
+
+    position: absolute;
+    top: 38px;
+    left: 5px;
+    content: "";
+    width: 30%;
+    border-radius: 50%;
+    height: 3px;
+    background-color: royalblue;
+
+}
+
+.aboutContentList > ul{
+
+    list-style-type: none;
+
+}
+
+.aboutContentList ul > li{
+
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+
+}
+
+.aboutContentList ul li > svg{
+
+    margin-right: 10px;
+    font-size: 18px;
+    color: royalblue;
+
+}

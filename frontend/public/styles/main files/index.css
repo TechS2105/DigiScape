@@ -1,3 +1,45 @@
+/** Fonts */
+@font-face {
+    font-family: 'poltabboldfont';
+    src: url('../../fonts/poltab/Poltab-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'poltabmediumfont';
+    src: url('../../fonts/poltab/Poltab-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'poltabregularfont';
+    src: url('../../fonts/poltab/Poltab-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'poltabextraboldfont';
+    src: url('../../fonts/poltab/Poltab-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'poltabsemiboldfont';
+    src: url('../../fonts/poltab/Poltab-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'poltablightfont';
+    src: url('../../fonts/poltab/Poltab-Light.ttf');
+}
+
+@font-face {
+    font-family: 'poltabblackfont';
+    src: url('../../fonts/poltab/Poltab-Black.ttf');
+}
+
+@font-face {
+    font-family: 'negandemocreativefont';
+    src: url('../../fonts/negan-demo/Negan\ DEMO.otf');
+}
+
+
 *{
 
     margin: 0;
@@ -9,5 +51,21 @@
 
     background-color: #292929;
     color: #ffffffff;
+
+}
+
+:root{
+
+    --bold-font: 'poltabboldfont';
+    --medium-font: 'poltabmediumfont';
+    --regular-font: 'poltabregularfont';
+    --extra-bold-font: 'poltabextraboldfont';
+    --semi-bold-font: 'poltabsemiboldfont';
+    --light-font: 'poltablightfont';
+    --black-font: 'poltabblackfont';
+    --creative-font: 'negandemocreativefont';
+    --primary-color: royalblue;
+    --secondary-color: #ffffffff;
+    --third-color: #292929;
 
 }
