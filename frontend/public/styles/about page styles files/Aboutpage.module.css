@@ -84,7 +84,7 @@
 
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, #29292958, rgba(255, 255, 255, 0));
+    background-image: linear-gradient(to bottom, #292929a9, rgba(255, 255, 255, 0));
     background-size: cover;
     background-position: bottom;
 
@@ -145,7 +145,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50rem;
 
 }
 
@@ -293,9 +292,12 @@
 
 .aboutContentList ul > li{
 
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px;
     letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    font-family: var(--regular-font);
 
 }
 
@@ -304,5 +306,408 @@
     margin-right: 10px;
     font-size: 18px;
     color: royalblue;
+
+}
+
+/** About Page Mission & Vision Section */
+.aboutSection > .missionVisionSection{
+
+    width: 100%;
+    height: 250vh;
+
+}
+
+.missionVisionSection > .missionVisionTitleDiv{
+
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+
+}
+
+/** About Page Mission & Vision Title Section */
+.missionVisionTitleDiv > .missionVisionTitleSection{
+
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.missionVisionTitleSection > span{
+
+    font-family: var(--medium-font);
+    display: inline-flex;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+
+}
+
+.missionVisionTitleSection > h2{
+
+    font-family: var(--bold-font);
+    font-size: 95px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 100px;
+    position: relative;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to bottom, #292929, #ffffffff);
+
+}
+
+.missionVisionTitleSection > h2::after{
+
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    height: 6px;
+    width: 30%;
+    background-color: royalblue;
+    border-radius: 50%;
+
+}
+
+/** About Page Mission Section */
+.missionVisionSection > .missionVisionMainDiv{
+
+    width: 100%;
+    height: 70%;
+
+}
+
+.missionVisionMainDiv > .aboutSectionMission{
+
+    width: 100%;
+    height: 33.3%;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.aboutSectionMission > .svgIconDiv{
+
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid #292929;
+    background-image: linear-gradient(-50deg, #292929 50%, royalblue)
+
+}
+
+.svgIconDiv > svg{
+
+    font-size: 150px;
+    color: #ffffffff;
+
+}
+
+/** Mission Content Section */
+.aboutSectionMission > .missionContent{
+
+    width: 80%;
+    height: 100%;
+
+}
+
+.missionContent > .contentDiv{
+
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.contentDiv > h4{
+
+    font-size: 100px;
+    margin-left: 10px;
+    font-family: var(--bold-font);
+    letter-spacing: 2px;
+
+}
+
+.contentDiv > p{
+
+    margin-left: 20px;
+    font-family: var(--regular-font);
+    width: 1100px;
+    font-size: 18px;
+    letter-spacing: 2px;
+
+}
+
+.missionContent > .listItemDiv{
+
+    width: 100%;
+    height: 20%;
+    background-image: linear-gradient(to right, #292929, royalblue);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.listItemDiv > ul{
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    list-style-type: none;
+    animation: missionBulletPointScroller 20s linear infinite;
+
+
+}
+
+.listItemDiv ul > li{
+
+    color: #ffffffff;
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    font-size: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.listItemDiv ul li > svg{
+
+    margin-top: -4.5px;
+    margin-left: 50px;
+
+}
+
+@keyframes missionBulletPointScroller {
+
+    0%{
+
+        transform: translateX(0%);
+
+    }100%{
+
+        transform: translateX(-100%);
+
+    }
+    
+}
+
+/** About Page Vision Section */
+.missionVisionMainDiv > .aboutVisionSection{
+
+    width: 100%;
+    height: 33.3%;
+    display: flex;
+
+}
+
+.aboutVisionSection > .aboutSectionSVGSection{
+
+    width: 20%;
+    height: 100%;
+    background-image: linear-gradient(-50deg, rgb(38, 38, 38) 50%, royalblue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.aboutSectionSVGSection > svg{
+
+    font-size: 150px;
+    color: #ffffffff;
+
+}
+
+.aboutVisionSection > .aboutVisionContentSection{
+
+    width: 80%;
+    height: 100%;
+
+}
+
+.aboutVisionContentSection > .aboutVisionInnerContentDiv{
+
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.aboutVisionInnerContentDiv > h4{
+
+    font-size: 100px;
+    margin-right: 10px;
+    font-family: var(--bold-font);
+    letter-spacing: 2px;
+
+}
+
+.aboutVisionInnerContentDiv > p{
+
+    font-family: var(--regular-font);
+    text-align: right;
+    margin-right: 20px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    width: 1100px;
+
+}
+
+/** Vision List Item Section */
+.aboutVisionContentSection > .visionListItemDiv{
+
+    width: 100%;
+    height: 20%;
+    overflow: hidden;
+    background-image: linear-gradient(to left, #292929, royalblue);
+    display: inline-flex;
+    white-space: nowrap;
+    gap: 50px;
+
+}
+
+.visionListItemDiv > .visionInnerListItemDiv{
+
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    animation: aboutPageVisionItemScroller 20s linear infinite;
+
+}
+
+.visionInnerListItemDiv > ul{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    gap: 50px;
+
+}
+
+.visionInnerListItemDiv ul > li{
+
+    color: #ffffffff;
+    font-family: var(--regular-font);
+    letter-spacing: 1px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.visionInnerListItemDiv ul li > svg{
+
+    margin-top: -4.5px;
+    margin-right: 50px;
+
+}
+
+@keyframes aboutPageVisionItemScroller {
+    
+    0%{
+
+        transform: translateX(-100%);
+
+    }100%{
+
+        transform: translateX(0%);
+
+    }
+
+}
+
+/** About Page Core Value Section */
+.missionVisionMainDiv > .aboutPageCoreValueSection{
+
+    width: 100%;
+    height: 33.3%;
+    display: flex;
+    align-items: center;
+
+}
+
+/** About Page Core Value SVG Icon Section */
+.aboutPageCoreValueSection > .aboutPageCoreValueSVGIconDiv{
+
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(-50deg, #292929 50%, royalblue);
+
+}
+
+.aboutPageCoreValueSVGIconDiv > svg{
+
+    font-size: 150px;
+    color: #ffffffff;
+
+}
+
+/** About Page Core Value Content Section */
+.aboutPageCoreValueSection > .aboutPageCoreValueContentSection{
+
+    width: 80%;
+    height: 100%;
+
+}
+
+.aboutPageCoreValueContentSection > .aboutPageCoreValueInnerContentDiv{
+
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-bottom: 2px solid #292929;
+
+}
+
+.aboutPageCoreValueInnerContentDiv > h4{
+
+    margin-left: 10px;
+    font-size: 100px;
+    font-family: var(--bold-font);
+    letter-spacing: 2px;
+
+}
+
+.aboutPageCoreValueInnerContentDiv > p{
+
+    margin-left: 20px;
+    font-size: 18px;
+    font-size: 20px;
+    width: 1100px;
+    letter-spacing: 1px;
+    font-family: var(--regular-font);
 
 }

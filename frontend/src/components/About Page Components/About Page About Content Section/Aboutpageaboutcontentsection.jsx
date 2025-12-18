@@ -18,7 +18,7 @@ function Aboutpageaboutcontentsection({AboutSectionStyle}) {
 
                         <span>Who We Are</span>
                         <h2>Driving Digital Growth With Strategy, Creativity, and Measurable Results</h2>
-                        <p>DigiScape is a results driven digital marketing agency helping brands grow with clarity and confidence in an ever changing digital space. We bring together strategic planning, creative execution, and data led insights to build digital solutions that attract the right audience and convert attention into real business growth. Our work is grounded in transparency, collaboration, and measurable outcomes, ensuring every effort supports long term success rather than short-term wins.</p>
+                        <p>DigiScape is a results driven digital marketing agency helping brands grow with clarity and confidence in an ever changing digital space. We bring together strategic planning, creative execution, and data led insights to build digital solutions that attract the right audience and convert attention into real business growth. Our work is grounded in transparency, collaboration, and measurable outcomes, ensuring every effort supports long term success rather than short term wins.</p>
 
                     </div>
 
