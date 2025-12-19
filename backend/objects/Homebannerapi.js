@@ -3,7 +3,7 @@ const homebanner = [
     {
 
         id: 1,
-        image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+        image: '/images/Home Page Banner Images/image1.png',
         spanText: 'Futuristic Elegance',
         title: 'Premium Digital Marketing & AI Solutions',
         description: 'Discover DigiScape’s high-end digital marketing, web, and AI solutions designed for innovation-driven businesses.',
@@ -15,7 +15,7 @@ const homebanner = [
     {
 
         id: 2, 
-        image: 'https://images.unsplash.com/photo-1630958234938-4f6a4a9dbf3a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        image: '/images/Home Page Banner Images/image2.png',
         spanText: 'Innovation First',
         title: 'Creative AI-Powered Marketing Experts',
         description: 'DigiScape delivers innovative digital marketing, AI solutions, and modern web experiences for ambitious brands.',
@@ -27,7 +27,7 @@ const homebanner = [
     {
 
         id: 3, 
-        image: 'https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        image: '/images/Home Page Banner Images/image3.png',
         spanText: 'Technology Meets Creativity',
         title: 'Next-Gen Web & Marketing Solutions',
         description: 'Elevate your brand with DigiScape’s premium digital marketing, web solutions, and AI innovations.',
@@ -39,7 +39,7 @@ const homebanner = [
     {
 
         id: 4,
-        image: 'https://images.unsplash.com/photo-1568359415705-47e98104af04?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        image: '/images/Home Page Banner Images/image4.png',
         spanText: 'Confidence & Authority',
         title: 'High-End Digital Transformation Experts',
         description: 'Partner with DigiScape for powerful AI solutions, advanced marketing strategies, and world-class web apps.',
@@ -51,7 +51,7 @@ const homebanner = [
     {
 
         id: 5,
-        image: 'https://images.unsplash.com/photo-1632813823643-ca207fa3d34f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        image: '/images/Home Page Banner Images/image5.png',
         spanText: 'Creative Excellence',
         title: 'Smart, Creative & Powerful AI Marketing',
         description: 'DigiScape creates tailored digital marketing, software, and AI solutions with premium results.',

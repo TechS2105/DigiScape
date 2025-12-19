@@ -1,5 +1,7 @@
 import React from 'react';
 import { SiSitecore } from "react-icons/si";
+import { RiCircleLine } from "react-icons/ri";
+import AboutPageCoreValuesTitleSection from '../About Page Mission & Vission Components/Aboutpagecorevaluestitlesection';
 
 function Aboutpagecorevaluesection({AboutSectionStyle}) {
     
@@ -21,10 +23,74 @@ function Aboutpagecorevaluesection({AboutSectionStyle}) {
                 <div className={AboutSectionStyle.aboutPageCoreValueContentSection}>
 
                     {/** About Page Core Value Section Inner Content Div */}
-                    <div className={AboutSectionStyle.aboutPageCoreValueInnerContentDiv}>
+                    <AboutPageCoreValuesTitleSection
+                    
+                        AboutSectionStyle={AboutSectionStyle}
+                    
+                    />
 
-                        <h4> Our Core Values </h4>
-                        <p>Our core values guide every decision we make and every solution we deliver. They shape how we work with clients, partners, and each other.</p>
+                    {/** About Page Core Value Section List Items */}
+                    <div className={AboutSectionStyle.aboutPageCoreValueSectionListItemDiv}>
+
+                        {/** Core Value Section Inner List Items Div */}
+                        <div className={AboutSectionStyle.aboutPageCoreValueSectionInnerListItemDiv}>
+
+                            <ul>
+
+                                <li><RiCircleLine />Integrity: We are honest, transparent, and accountable in everything we do</li>
+                                <li><RiCircleLine />Quality: We prioritize performance, precision, and consistency</li>
+                                <li><RiCircleLine />Collaboration: We work as true partners, not just service providers</li>
+                                <li><RiCircleLine />Innovation: We continuously learn, adapt, and improve our approach</li>
+                                <li><RiCircleLine />Results: We measure success by real business outcomes and growth</li>
+
+                            </ul>
+
+                        </div>
+
+                         {/** Core Value Section Inner List Items Div */}
+                        <div className={AboutSectionStyle.aboutPageCoreValueSectionInnerListItemDiv}>
+
+                            <ul>
+
+                                <li><RiCircleLine />Integrity: We are honest, transparent, and accountable in everything we do</li>
+                                <li><RiCircleLine />Quality: We prioritize performance, precision, and consistency</li>
+                                <li><RiCircleLine />Collaboration: We work as true partners, not just service providers</li>
+                                <li><RiCircleLine />Innovation: We continuously learn, adapt, and improve our approach</li>
+                                <li><RiCircleLine />Results: We measure success by real business outcomes and growth</li>
+
+                            </ul>
+
+                        </div>
+
+                         {/** Core Value Section Inner List Items Div */}
+                        <div className={AboutSectionStyle.aboutPageCoreValueSectionInnerListItemDiv}>
+
+                            <ul>
+
+                                <li><RiCircleLine />Integrity: We are honest, transparent, and accountable in everything we do</li>
+                                <li><RiCircleLine />Quality: We prioritize performance, precision, and consistency</li>
+                                <li><RiCircleLine />Collaboration: We work as true partners, not just service providers</li>
+                                <li><RiCircleLine />Innovation: We continuously learn, adapt, and improve our approach</li>
+                                <li><RiCircleLine />Results: We measure success by real business outcomes and growth</li>
+
+                            </ul>
+
+                        </div>
+
+                         {/** Core Value Section Inner List Items Div */}
+                        <div className={AboutSectionStyle.aboutPageCoreValueSectionInnerListItemDiv}>
+
+                            <ul>
+
+                                <li><RiCircleLine />Integrity: We are honest, transparent, and accountable in everything we do</li>
+                                <li><RiCircleLine />Quality: We prioritize performance, precision, and consistency</li>
+                                <li><RiCircleLine />Collaboration: We work as true partners, not just service providers</li>
+                                <li><RiCircleLine />Innovation: We continuously learn, adapt, and improve our approach</li>
+                                <li><RiCircleLine />Results: We measure success by real business outcomes and growth</li>
+
+                            </ul>
+
+                        </div>
 
                     </div>
 
