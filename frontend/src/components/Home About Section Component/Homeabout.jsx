@@ -3,8 +3,8 @@ import HomeAboutStyle from '../../../public/styles/home about section files/home
 import HomeAboutImage from '../Home About Section Component/Homeaboutimage';
 import HomeAboutContent from '../Home About Section Component/Homeaboutcontent';
 
-let fImage = "https://images.pexels.com/photos/7693719/pexels-photo-7693719.jpeg";
-let sImage = "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg";
+let fImage = "/images/Home About Images/about_image1.png";
+let sImage = "/images/Home About Images/about_image2.png";
 
 function Homeabout() {
     

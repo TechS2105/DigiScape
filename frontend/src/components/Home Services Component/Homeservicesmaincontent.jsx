@@ -5,9 +5,9 @@ import { LuChartNoAxesCombined } from "react-icons/lu";
 import { LuCodeXml } from "react-icons/lu";
 import HomeServiceInnerContentSection from '../Home Services Component/Homeserviceinnercontentsection';
 
-let sImage1 = "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-let sImage2 = "https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-let sImage3 = "https://plus.unsplash.com/premium_photo-1733353204288-ba5c8ba3ad7d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+let sImage1 = "/images/Home Service Images/home_service_image1.png";
+let sImage2 = "/images/Home Service Images/home_service_image3.jpg";
+let sImage3 = "/images/Home Service Images/home_service_image2.png";
 
 function Homeservicesmaincontent({HomeServicesStyle}) {
 
