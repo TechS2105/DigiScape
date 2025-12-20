@@ -356,7 +356,7 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    line-height: 100px;
+    line-height: 120px;
     position: relative;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -368,7 +368,7 @@
 .missionVisionTitleSection > h2::after{
 
     position: absolute;
-    top: 220px;
+    top: 250px;
     left: 50%;
     transform: translate(-50%, -50%);
     content: "";
@@ -441,8 +441,12 @@
     margin-left: 10px;
     font-family: var(--bold-font);
     letter-spacing: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #292929;
 
 }
+
 
 .contentDiv > p{
 
@@ -562,6 +566,9 @@
     margin-right: 10px;
     font-family: var(--bold-font);
     letter-spacing: 2px;
+    -webkit-text-stroke: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #292929;
 
 }
 
@@ -697,6 +704,9 @@
     font-size: 100px;
     font-family: var(--bold-font);
     letter-spacing: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #292929;
 
 }
 
@@ -776,6 +786,271 @@
         transform: translateX(-100%);
 
     }
+
+}
+
+/** About Page Service Section */
+.aboutSection > .aboutPageServiceSection{
+
+    width: 100%;
+    height: 200vh;
+    background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: center;
+
+}
+
+/** About Page Service Title Section */
+.aboutPageServiceSection > .aboutPageServiceTitleSection{
+
+    width: 100%;
+    height: 40%;
+    background-color: #ffffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.aboutPageServiceTitleSection > .titleInnerDiv{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.titleInnerDiv > span{
+
+    font-size: 20px;
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+}
+
+.titleInnerDiv > h2{
+
+    font-size: 100px;
+    line-height: 110px;
+    font-family: var(--bold-font);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to bottom, #292929, #ffffffff);
+    position: relative;
+
+}
+
+.titleInnerDiv > h2::after{
+
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    content: "";
+    height: 5px;
+    width: 30%;
+    background-color: royalblue;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
+}
+
+/** About page services */
+.aboutPageServiceSection > .aboutPageServices{
+
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.aboutPageServices > .aboutPageServicesDiv{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.aboutPageServicesDiv > ul{
+
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+} 
+
+.aboutPageServicesDiv ul > li{
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 33.3%;
+    border-bottom: 2px dashed var(--third-color);
+    position: relative;
+    transition: all 0.8s ease;
+
+}
+
+.aboutPageServicesDiv ul > li::after{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 100%;
+    width: 0%;
+    background-image: linear-gradient(140deg, #292929, royalblue 80%, #ffffffff 20%);
+    z-index: -2;
+    transition: all 0.8s ease;
+    opacity: 0;
+
+}
+
+.aboutPageServicesDiv ul > li:hover{
+
+    border-bottom: 5px dashed #ffffffff;
+
+}
+
+.aboutPageServicesDiv ul > li:hover::after{
+
+    width: 100%;
+    opacity: 1;
+
+}
+
+.aboutPageServicesDiv ul > li:nth-child(3){
+
+    border-bottom: none;
+
+}
+
+.aboutPageServicesDiv ul li > .noDiv{
+
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.noDiv > span{
+
+    color: var(--third-color);
+    font-size: 150px;
+    font-family: var(--creative-font);
+    display: inline-flex;
+    transform: rotate(-90deg);
+    opacity: 0.5;
+
+}
+
+.aboutPageServicesDiv ul li > .serviceNameDiv{
+
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.serviceNameDiv > .serviceNameImageDiv{
+
+    width: 30%;
+    height: 75%;
+    position: relative;
+
+}
+
+.serviceNameImageDiv > img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+
+}
+
+.serviceNameDiv > .serviceTitleDiv{
+
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.serviceTitleDiv > h3{
+
+    font-size: 50px;
+    font-family: var(--bold-font);
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-top: 25px;
+    color: var(--third-color);
+    line-height: 80px;
+    transition: all 0.8s ease;
+    font-weight: 500;
+    
+}
+
+.aboutPageServicesDiv ul li > .serviceNavigationDiv{
+
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.serviceNavigationDiv > button{
+
+    width: 130px;
+    height: 130px;
+    background-image: linear-gradient(to right, royalblue, rgba(65, 105, 225, 0.359));
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.serviceNavigationDiv button > a{
+
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.serviceNavigationDiv button a > svg{
+
+    color: #ffffffff;
+    
 
 }
 

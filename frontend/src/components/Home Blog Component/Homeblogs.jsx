@@ -19,8 +19,8 @@ function Homeblogs({ HomeBlogStyle }) {
 
     }, [status, dispatch]);
 
-    if(status === 'loading') return <p> Product is loading...</p>
-    if(status === 'failed') return <p> Something error. Please try again...</p>
+    if (status === 'loading') return <div className={HomeBlogStyle.blogLoadingMessage}><p> Blogs are loading please wait...</p></div>
+    if(status === 'failed') return <div className={HomeBlogStyle.blogErrorMessage}><p> Something went wrong please try again...</p></div>
     
     return (
 
