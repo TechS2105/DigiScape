@@ -1054,3 +1054,120 @@
 
 }
 
+/** About Page Our Team main Section */
+.aboutPageOurTeamMainSection{
+
+    width: 100%;
+    height: 200vh;
+    margin-bottom: 50rem;
+
+}
+
+/** About Page Our Team Title Section */
+.aboutPageOurTeamMainSection > .aboutPageOurTitleSection{
+
+    width: 100%;
+    height: 40%;
+    background-color: #ffffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.aboutPageOurTitleSection > .aboutPageOurTeamInnerTitleDiv{
+
+    margin-left: 20px;
+    text-align: center;
+
+}
+
+.aboutPageOurTeamInnerTitleDiv > span{
+
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--medium-font);
+    margin-bottom: 20px;
+    display: inline-flex;
+
+}
+
+.aboutPageOurTeamInnerTitleDiv > h2{
+
+    font-size: 100px;
+    line-height: 110px;
+    text-transform: uppercase;
+    font-family: var(--bold-font);
+    letter-spacing: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to bottom, #292929, #ffffff);
+    position: relative;
+
+}
+
+.aboutPageOurTeamInnerTitleDiv > h2::after{
+
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    height: 5px;
+    width: 30%;
+    background-color: royalblue;
+    border-radius: 50%;
+
+}
+
+/** Our Team Profile Section */
+.aboutPageOurTeamMainSection > .ourTeamProfileSection{
+
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.ourTeamProfileSection > .ourTeamInnerProfileSection{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 20px;
+    padding: 0px 50px;
+
+}
+
+.ourTeamInnerProfileSection > .ourTeamFirstProfileDiv{
+
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50px 50px 50px 50px;
+
+}
+
+.ourTeamFirstProfileDiv > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1.5s ease;
+    filter: grayscale() brightness(100%);
+
+}
+
+.ourTeamFirstProfileDiv > img:hover{
+
+    transform: scale(2.2) translate(160px, 100px);
+    filter: grayscale(0) brightness(120%);
+
+}

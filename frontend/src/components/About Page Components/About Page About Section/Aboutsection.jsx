@@ -5,6 +5,7 @@ import AboutMarqueeSection from '../About Page Marquee Text Section/Aboutpagemar
 import AboutPageAboutSection from '../About Page About Content Section/Aboutpageaboutsection';
 import AboutPageMissionVisionSection from '../About Page Mission & Vission Components/Aboutpagemissionvisionsection';
 import AboutPageServiceSection from '../About Page Service Section Components/About Page Service Section/Aboutpageservicesection';
+import AboutPageOurTeamSection from '../About Page Our Team Section Components/About Page Our Team Section/Aboutpageourteamsection';
 
 function Aboutsection({AboutSectionStyle}) {
     
@@ -52,6 +53,13 @@ function Aboutsection({AboutSectionStyle}) {
 
                 {/** About Service Section */}
                 <AboutPageServiceSection
+                
+                    AboutSectionStyle={AboutSectionStyle}
+                    
+                />
+
+                {/** About Our Team Section */}
+                <AboutPageOurTeamSection
                 
                     AboutSectionStyle={AboutSectionStyle}
                     
