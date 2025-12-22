@@ -14,28 +14,27 @@ const service_image_altText_3 = "Web Development & Technology Services";
 
 function Aboutpageservicesection({ AboutSectionStyle }) {
 
-    const [spanAnime, setSpanAnime] = useState(null); // span text anime
-    const [imageAnime, setImageAnime] = useState(null); // image anime
+    const [spanAnime, setSpanAnime] = useState(null); // first span text anime
+    const [imageAnime, setImageAnime] = useState(null); // first image anime
     const [serviceNameAnime, setServiceNameAnime] = useState({
 
         color: "var(--third-color)"
 
-    }); // service name anime
-    const [buttonAnime, setButtonAnime] = useState(null); // button anime
+    }); // first service name anime
+    const [buttonAnime, setButtonAnime] = useState(null); // first service button anime
     const [svgAnime, setSvgAnime] = useState({
 
         fontSize: "100px"
 
-    }); // svg anime
+    }); // first service button svg anime
 
     const [serviceTitleDivAnime, setServiceTitleDivAnime] = useState({
 
         width: "100%",
-        backgroundColor: "red"
 
-    })
+    }); // first service title anime
     
-    /** Mouse Over Anime */
+    /** First Mouse Over Anime Function */
     const handleStyleOnMouseOver = () => {
 
         // Animate Span Text
@@ -52,7 +51,7 @@ function Aboutpageservicesection({ AboutSectionStyle }) {
         // Image Anime
         setImageAnime({
 
-            width: "350px",
+            width: "30%",
             marginRight: "10px",
             transition: "all 0.8s ease",
             opacity: "1",
@@ -68,7 +67,7 @@ function Aboutpageservicesection({ AboutSectionStyle }) {
             width: "70%",
             transition: "all 0.8s ease"
 
-        })
+        });
 
         // Service Name Anime
         setServiceNameAnime({
@@ -96,11 +95,11 @@ function Aboutpageservicesection({ AboutSectionStyle }) {
             fontSize: "70px",
             transition: "all 0.8s ease"
 
-        })
+        }); 
 
     }
 
-    /** Mouse Out Anime */
+    /** First Mouse Out Anime Function */
     const handleStyleOnMouseOut = () => {
 
         // Animate Span Text
@@ -115,7 +114,7 @@ function Aboutpageservicesection({ AboutSectionStyle }) {
         // Image Anime
         setImageAnime({
 
-            width: "0px",
+            width: "0%",
             border: "none",
             marginRight: "0px",
             opacity: "0",
@@ -135,7 +134,7 @@ function Aboutpageservicesection({ AboutSectionStyle }) {
         // Service Name Anime
         setServiceNameAnime({
 
-            fontSize: "100px",
+            fontSize: "40px",
             lineHeight: "90px",
             transition: "all 0.8s ease",
             color: "var(--third-color)",
@@ -158,7 +157,163 @@ function Aboutpageservicesection({ AboutSectionStyle }) {
 
         });
 
+        /** Second Mouse Out Anime */
+
+        // Animate Span Text
+        setSecondSpanAnime({
+
+            transform: "rotate(-90deg)",
+            opacity: "0.5",
+            transition: "all 0.8s ease",
+            color: "#292929",
+            fontSize: "160px"
+
+        });
+
     }
+
+    /** --------------------------------------------------------- */
+
+    /** Second Mouse Over and Out anime */
+    const [secondSpanAnime, setSecondSpanAnime] = useState(null); // second span anime
+    const [secondImageAnime, setSecondImageAnime] = useState(null); // second image anime
+    const [secondServiceTitleDivAnime, setScondServiceTitleDivAnime] = useState(null); // second service div anime
+    const [secondServiceNameAnime, setSecondServiceNameAnime] = useState(null); // second service name anime
+    const [secondButtonAnime, setSecondButtonAnime] = useState(null); // second service button anime
+    const [secondSvgAnime, setSecondSvgAnime] = useState(null); // second service button SVG anime
+    
+    // Second Mouse Over Anime Function 
+    function handleSecondStyleOnMouseOver() {
+        
+        // add anime on second span title
+        setSecondSpanAnime({
+
+            transform: "rotate(0deg)",
+            transition: "all 0.8s ease",
+            fontSize: "100px",
+            color: "#ffffffff",
+            opacity: "1"
+
+        });
+
+        // add anime on second image
+        setSecondImageAnime({
+
+            width: "350px",
+            marginRight: "10px",
+            transition: "all 0.8s ease",
+            opacity: "1",
+            objectFit: "cover",
+            transform: "rotate(-10deg)",
+            border: "3px solid #fff",
+
+        });
+
+        // add anime on second service div
+        setScondServiceTitleDivAnime({
+
+            width: "70%",
+            transition: "all 0.8s ease"
+
+        });
+
+        // add anime on second service title
+        setSecondServiceNameAnime({
+
+            fontSize: "70px",
+            marginLeft: "20px",
+            lineHeight: "70px",
+            color: "var(--secondary-color)",
+            transition: "all 0.8s ease"
+
+        }); 
+
+        // add anime on second sevice button
+        setSecondButtonAnime({
+
+            transform: "rotate(45deg)",
+            transition: "all 0.8s ease",
+            boxShadow: "5px -15px 20px #ffffffff inset"
+
+        });
+
+        // add anime on second service button SVG
+        setSecondSvgAnime({
+
+            fontSize: "70px",
+            transition: "all 0.8s ease"
+
+        });
+
+    }
+
+    // Second Mouse Out Anime Function
+    function handleSecondStyleOnMouseOut() {
+        
+        // remove anime from second span text 
+        setSecondSpanAnime({
+
+            transform: "rotate(-90deg)",
+            transition: "all 0.8s ease",
+            fontSize: "160px",
+            color: "#292929",
+            opacity: "0.5"
+
+        });
+
+        // remove anime from second image
+        setSecondImageAnime({
+
+            transform: "rotate(0deg)",
+            width: "0px",
+            transition: "all 0.8s ease",
+            opacity: "0",
+            marginRight: "0px"
+
+        });
+
+        // remove anime from second service div
+        setScondServiceTitleDivAnime({
+
+            width: "100%",
+            transition: "all 0.8s ease"
+
+        });
+
+        // remove anime from second service title 
+        setSecondServiceNameAnime({
+
+            fontSize: "40px",
+            lineHeight: "100px",
+            marginLeft: "0px",
+            transition: "all 0.8s ease",
+            color: "var(--third-color)"
+
+        });
+
+        // remove anime from second service button
+        setSecondButtonAnime({
+
+            transform: "rotate(0deg)",
+            transition: "all 0.8s ease",
+            boxShadow: "none",
+
+        });
+
+        // remove anime from second service button SVG
+        setSecondSvgAnime({
+
+            fontSize: "100px",
+            transition: "all 0.8s ease"
+
+        });
+
+    }
+
+    /** -------------------------------------------------------- */
+
+    /** Third Mouse Over & Out anime */
+
     
     return (
 
@@ -209,16 +364,16 @@ function Aboutpageservicesection({ AboutSectionStyle }) {
                                 serviceSpanNo="{02}"
                                 serviceTitle="Specialised Digital Growth Services"
                                 serviceImage={service_image_2}
-                                handleStyleOnMouseOver={handleStyleOnMouseOver}
-                                handleStyleOnMouseOut={handleStyleOnMouseOut}
-                                spanAnime={spanAnime}
-                                imageAnime={imageAnime}
+                                handleStyleOnMouseOver={handleSecondStyleOnMouseOver}
+                                handleStyleOnMouseOut={handleSecondStyleOnMouseOut}
+                                spanAnime={secondSpanAnime}
+                                imageAnime={secondImageAnime}
                                 serviceSVGIcon={<CgArrowsExpandUpRight />}
-                                buttonAnime={buttonAnime}
-                                svgAnime={svgAnime}
-                                serviceNameAnime={serviceNameAnime}
+                                buttonAnime={secondButtonAnime}
+                                svgAnime={secondSvgAnime}
+                                serviceNameAnime={secondServiceNameAnime}
                                 serviceImageAltText={service_image_altText_2}
-                                serviceTitleDivAnime={serviceTitleDivAnime}
+                                serviceTitleDivAnime={secondServiceTitleDivAnime}
                                 
                             />
                             
@@ -229,7 +384,7 @@ function Aboutpageservicesection({ AboutSectionStyle }) {
                                 serviceSpanNo="{03}"
                                 serviceTitle="Web Development & Technology Services"
                                 serviceImage={service_image_3}
-                                handleStyleOnMouseOver={handleStyleOnMouseOver}
+                                handleStyleOnMouseOver={handleSecondStyleOnMouseOver}
                                 handleStyleOnMouseOut={handleStyleOnMouseOut}
                                 spanAnime={spanAnime}
                                 imageAnime={imageAnime}

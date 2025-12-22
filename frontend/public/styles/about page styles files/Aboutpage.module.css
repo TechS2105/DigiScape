@@ -973,7 +973,7 @@
 
 .serviceNameDiv > .serviceNameImageDiv{
 
-    width: 30%;
+    width: 0%;
     height: 75%;
     position: relative;
 
@@ -1004,7 +1004,7 @@
 
 .serviceTitleDiv > h3{
 
-    font-size: 50px;
+    font-size: 40px;
     font-family: var(--bold-font);
     letter-spacing: 2px;
     font-weight: 500;
