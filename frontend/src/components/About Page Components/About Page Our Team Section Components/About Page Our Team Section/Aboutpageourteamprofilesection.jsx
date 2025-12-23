@@ -21,22 +21,25 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
     
     const [firstProfileDetailsName, setFirstProfileDetailsName] = useState({
     
-        transform: "translateX(-500px)",
+        transform: "translateX(-100px)",
         opacity: "0",
+        filter: "blur(50px)",
     
     }); // first profile details name
     
     const [firstProfileDetailsDesignation, setFirstProfileDetailsDesignation] = useState({
     
-        transform: "translateX(-1000px)",
-        opacity: "0"
+        transform: "translateX(-500px)",
+        opacity: "0",
+        filter: "blur(50px)"
     
     }); // first profile details designation
     
     const [firstProfileDetailsRole, setFirstProfileDetailsRole] = useState({
     
-        transform: "translateX(-2000px)",
+        transform: "translateX(-1000px)",
         opacity: "0",
+        filter: "blur(50px)"
     
     }); // first profile details role
     
@@ -46,7 +49,7 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
         opacity: "0",
         filter: "blur(50px)",
         position: "absolute",
-        top: "0",
+        top: "-15px",
         left: "0"
     
     }); // first profile details social icons
@@ -54,39 +57,47 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
     // First Profile Mouse Over Anime
     const handleFirstProfileAnimeOnMouseOver = () => {
     
+        // add anime on the first profile details div
         setFirstProfileDetails({
     
             height: "30%",
-            transition: "all 2s ease",
+            transition: "all 1s ease",
             opacity: "1",
             filter: "blur(0px)"
     
         });
     
+        // add anime on the first profile details name
         setFirstProfileDetailsName({
     
             transform: "translateX(0px)",
             opacity: "1",
-            transition: "all 0.8s ease 0.5s"
+            transition: "all 0.8s ease 1s",
+            filter: "blur(0px)",
     
         });
     
+        // add anime on the first profile details designation
         setFirstProfileDetailsDesignation({
     
             transform: "translateX(0px)",
             opacity: "1",
-            transition: "all 0.8s ease 0.6s"
+            transition: "all 0.8s ease 1.2s",
+            filter: "blur(0px)"
     
         });
     
+        // add anime on the first profile details role
         setFirstProfileDetailsRole({
     
             transform: "translateX(0px)",
             opacity: "1",
-            transition: "all 0.8s ease 0.5s"
+            transition: "all 0.8s ease 1.3s",
+            filter: "blur(0px)",
     
         });
 
+        // add anime on the first profile details SVG icons
         setFirstProfileSocialIcon({
     
             transform: "translateX(0px)",
@@ -94,7 +105,7 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
             opacity: "1",
             filter: "blur(0px)",
             position: "absolute",
-            top: "0",
+            top: "-15px",
             left: "0"
     
         });
@@ -104,40 +115,48 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
     // First Profile Mouse Out Anime
     const handleFirstProfileAnimeOnMouseOut = () => {
     
+        // remove anime from the first profile details div
         setFirstProfileDetails({
     
             height: "0%",
-            transition: "all 2s ease 1s",
+            transition: "all 1s ease 0.8s",
             opacity: "0",
             filter: "blur(50px)"
     
                 
         });
     
+        // remove anime from the first profile details name
         setFirstProfileDetailsName({
     
-            transform: "translateX(-500px)",
+            transform: "translateX(-100px)",
             opacity: "0",
+            filter: "blur(50px)",
             transition: "all 0.8s ease 0.3s"
     
         });
     
+        // remove anime from the first profile details designation
         setFirstProfileDetailsDesignation({
     
-            transform: "translateX(-1000px)",
+            transform: "translateX(-500px)",
             opacity: "0",
+            filter: "blur(50px)",
             transition: "all 0.8s ease 0.2s"
     
         });
     
+        // remove anime from the first profile details role
         setFirstProfileDetailsRole({
     
-            transform: "translateX(-2000px)",
+            transform: "translateX(-1000px)",
             opacity: "0",
+            filter: "blur(50px)",
             transition: "all 0.8s ease 0.1s"
     
         });
     
+        // remove anime from the first profile details SVG icon
         setFirstProfileSocialIcon({
     
             transform: "translateX(-500px)",
@@ -145,7 +164,7 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
             filter: "blur(50px)",
             transition: "all 1s ease",
             position: "absolute",
-            top: "0",
+            top: "-15px",
             left: "0"
     
         });
@@ -191,15 +210,16 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
         opacity: "0",
         filter: "blur(50px)",
         position: "absolue",
-        top: "0",
+        top: "-15px",
         left: "0"
 
-    });
+    }); // second profile details SVG icons
 
 
     // Second Profile Mouse Over Anime
     function handleSecondProfileAnimeOnMouseOver() {
 
+        // add anime on the second profile details div
         setSecondProfileDetails({
 
             height: "30%",
@@ -209,6 +229,7 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
 
         });
 
+        // add an anime on the second profile details name
         setSecondProfileDetailsName({
 
             transform: "translateX(0px)",
@@ -218,6 +239,7 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
 
         });
 
+        // add an anime on the second profile details designation
         setSecondProfileDetailsDesignation({
 
             transform: "translateX(0px)",
@@ -227,6 +249,8 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
 
         });
 
+
+        // add an anime on the second profile details role
         setSecondProfileDetailsRole({
 
             transform: "translateX(0px)",
@@ -236,6 +260,7 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
 
         });
 
+        // add an anime on the second profile details SVG Icons
         setSecondProfileSocialIcon({
 
             transform: "translateX(0px)",
@@ -253,6 +278,7 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
     // Second Profile Mouse Out Anime
     function handleSecondProfileAnimeOnMouseOut() {
         
+        // remove an anime from the second profile details div
         setSecondProfileDetails({
 
             height: "0%",
@@ -262,6 +288,7 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
 
         });
 
+        // remove an anime from the second profile details name
         setSecondProfileDetailsName({
 
             transform: "translateX(-100px)",
@@ -271,6 +298,7 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
 
         });
 
+        // remove an anime from the second profile details designation
         setSecondProfileDetailsDesignation({
 
             transform: "translateX(-500px)",
@@ -280,6 +308,7 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
 
         });
 
+        // remove an anime from the second profile details role
         setSecondProfileDetailsRole({
 
             transform: "translateX(-1000px)",
@@ -289,13 +318,14 @@ function Aboutpageourteamprofilesection({ AboutSectionStyle }) {
 
         });
 
+        // remove an anime from the second profile details SVG icon
         setSecondProfileSocialIcon({
 
             transform: "translateX(-100px)",
             opacity: "0",
             filter: "blur(50px)",
             position: "absolute",
-            top: "0",
+            top: "-15px",
             left: "0",
             transition: "all 0.8s ease"
 
