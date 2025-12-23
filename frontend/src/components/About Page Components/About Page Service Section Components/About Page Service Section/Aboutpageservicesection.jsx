@@ -3,13 +3,13 @@ import AboutPageServiceTitleSection from '../About Page Service Title Section/Ab
 import { CgArrowsExpandUpRight } from "react-icons/cg";
 import AboutPageServiceSectionListItem from '../About Page Service Section List Items/Aboutpageservicesectionlistitems';
 
-const service_image_1 = '../../../../../public/images/About Page Service Section Images/about_page_services_image3.png';
+const service_image_1 = '/images/About Page Service Section Images/about_page_services_image3.png';
 const service_image_altText_1 = "Digital Marketing Services";
 
-const service_image_2 = '../../../../../public/images/About Page Service Section Images/about_page_services_image4.png';
+const service_image_2 = '/images/About Page Service Section Images/about_page_services_image4.png';
 const service_image_altText_2 = "Specialised Digital Growth Services";
 
-const service_image_3 = '../../../../../public/images/About Page Service Section Images/about_page_services_image5.png';
+const service_image_3 = '/images/About Page Service Section Images/about_page_services_image5.png';
 const service_image_altText_3 = "Web Development & Technology Services";
 
 function Aboutpageservicesection({ AboutSectionStyle }) {

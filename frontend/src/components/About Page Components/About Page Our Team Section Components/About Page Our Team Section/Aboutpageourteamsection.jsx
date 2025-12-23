@@ -26,14 +26,14 @@ function Aboutpageourteamsection({AboutSectionStyle}) {
                         {/** First Profile */}
                         <div className={AboutSectionStyle.ourTeamFirstProfileDiv}>
 
-                            <img src="../../../../../public/images/About Page Our Team Images/team_member_1.png" alt="" />
+                            <img src="/images/About Page Our Team Images/team_member_1.png" alt="" />
 
                         </div>
 
                         {/** Second Profile */}
                         <div className={AboutSectionStyle.ourTeamFirstProfileDiv}>
 
-                            <img src="../../../../../public/images/About Page Our Team Images/team_member_2.png" alt="" />
+                            <img src="/images/About Page Our Team Images/team_member_2.png" alt="" />
 
                         </div>
 
