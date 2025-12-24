@@ -8,12 +8,17 @@ function About() {
 
         <>
         
-            {/** About Section */}
-            <AboutSection
-            
-                AboutSectionStyle={AboutSectionStyle}
+            <main>
+
+                {/** About Section */}
+                <AboutSection
                 
-            />
+                    AboutSectionStyle={AboutSectionStyle}
+                    
+                />
+
+            </main>
+            
             
         </>
 

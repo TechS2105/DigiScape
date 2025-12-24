@@ -6,6 +6,7 @@ import AboutPageAboutSection from '../About Page About Content Section/Aboutpage
 import AboutPageMissionVisionSection from '../About Page Mission & Vission Components/Aboutpagemissionvisionsection';
 import AboutPageServiceSection from '../About Page Service Section Components/About Page Service Section/Aboutpageservicesection';
 import AboutPageOurTeamSection from '../About Page Our Team Section Components/About Page Our Team Section/Aboutpageourteamsection';
+import AboutPageFAQSection from '../About Page Our FAQ Section Component/About Page Our FAQ Section/Aboutpageourfaqcontentsection';
 
 function Aboutsection({AboutSectionStyle}) {
     
@@ -60,6 +61,13 @@ function Aboutsection({AboutSectionStyle}) {
 
                 {/** About Our Team Section */}
                 <AboutPageOurTeamSection
+                
+                    AboutSectionStyle={AboutSectionStyle}
+                    
+                />
+
+                {/** About FAQ Section */}
+                <AboutPageFAQSection
                 
                     AboutSectionStyle={AboutSectionStyle}
                     

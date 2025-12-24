@@ -1,3 +1,11 @@
+/** About Main Section */
+main{
+
+    width: 100%;
+    height: 100%;
+
+}
+
 /** About Page Main Section */
 .aboutSection{
 
@@ -1288,5 +1296,215 @@
     background-color: #292929;
     padding: 55px 0px;
     border-radius: 50px;
+
+}
+
+/** About Page FAQ Section */
+.aboutSection > .aboutPageFAQSection{
+
+    width: 100%;
+    height: 200vh;
+    background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+
+}
+
+/** About Page FAQ Title Section*/
+.aboutPageFAQSection > .aboutPageFAQTitleSection{
+
+    width: 100%;
+    height: 40%;
+    background-image: linear-gradient(to bottom, #ffffffff, rgba(255, 255, 255, 0.268));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/** FAQ Inner Title Section*/
+.aboutPageFAQTitleSection > .aboutPageFAQInnerTitle{
+
+    text-align: center;
+
+}
+
+.aboutPageFAQInnerTitle > span{
+
+    font-size: 20px;
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    display: inline-flex;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+
+}
+
+.aboutPageFAQInnerTitle > h2{
+
+    font-size: 100px;
+    font-family: var(--bold-font);
+    text-transform: uppercase;
+    line-height: 110px;
+    letter-spacing: 2px;
+    position: relative;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to bottom, var(--third-color), var(--secondary-color));
+
+}
+
+.aboutPageFAQInnerTitle > h2::after{
+
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-color);
+    width: 30%;
+    height: 5px;
+    border-radius: 50%;
+    content: "";
+
+}
+
+/** About Page FAQ Content Section */
+.aboutPageFAQSection > .aboutPageFAQContentSection{
+
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.aboutPageFAQContentSection > .aboutPageFAQContentInnerSection{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+/** First FAQ Div */
+.aboutPageFAQContentInnerSection > .firstFAQDiv{
+
+    width: 1300px;
+    height: 100%;
+
+}
+
+.firstFAQDiv > .firstFaqQuestionDiv{
+
+    width: 100%;
+    height: 100px;
+    /* background-color: #292929; */
+    background-image: linear-gradient(to right, rgba(65, 105, 225, 0.526), royalblue);
+    display: flex;
+    align-items: center;
+    border-radius:  20px 20px 0px 0px;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.firstFaqQuestionDiv > .firstFaqQuestion{
+
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-right: 2px dashed #ffffffff;
+
+}
+
+.firstFaqQuestion > h3{
+
+    color: #ffffffff;
+    margin-left: 20px;
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.firstFaqQuestion h3 > svg{
+
+    font-size: 40px;
+
+}
+
+/** First FAQ Question Div Span Icons */
+.firstFaqQuestionDiv > .firstFaqToggleButtonDiv{
+
+    position: relative;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.firstFaqToggleButtonDiv > .faqSpanDashIconsDiv{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.faqSpanDashIconsDiv > span:nth-child(1){
+
+    position: absolute;
+    width: 25%;
+    height: 3px;
+    background-color: #ffffffff;
+    display: inline-flex;
+
+}
+
+.faqSpanDashIconsDiv > span:nth-child(2){
+
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    transform: rotate(90deg);
+    width: 25%;
+    height: 3px;
+    background-color: #ffffffff;
+    display: inline-flex;
+
+}
+
+.firstFAQDiv > .firstFaqAnswerDiv{
+
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px dashed #292929;
+    border-radius: 0px 0px 20px 20px;
+    margin-bottom: 20px;
+
+}
+
+.firstFaqAnswerDiv > p{
+
+    font-family: var(--regular-font);
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-left: 20px;
 
 }
