@@ -6,7 +6,8 @@ import AboutPageAboutSection from '../About Page About Content Section/Aboutpage
 import AboutPageMissionVisionSection from '../About Page Mission & Vission Components/Aboutpagemissionvisionsection';
 import AboutPageServiceSection from '../About Page Service Section Components/About Page Service Section/Aboutpageservicesection';
 import AboutPageOurTeamSection from '../About Page Our Team Section Components/About Page Our Team Section/Aboutpageourteamsection';
-import AboutPageFAQSection from '../About Page Our FAQ Section Component/About Page Our FAQ Section/Aboutpageourfaqcontentsection';
+import AboutPageFAQSection from '../About Page Our FAQ Section Component/About Page Our FAQ Section/Aboutpageourfaqcontentmainsection';
+import AboutPageGetInTouchMainSection from '../About Page Get In Touch Section/About Page Get In Touch Main Section/Aboutpagegetintouchmainsection';
 
 function Aboutsection({AboutSectionStyle}) {
     
@@ -73,6 +74,12 @@ function Aboutsection({AboutSectionStyle}) {
                     
                 />
 
+                {/** About Get In Touch Section */}
+                <AboutPageGetInTouchMainSection
+                
+                    AboutSectionStyle={AboutSectionStyle}
+                    
+                />
 
             </div>
             

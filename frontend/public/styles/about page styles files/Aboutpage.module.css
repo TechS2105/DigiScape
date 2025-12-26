@@ -1305,6 +1305,9 @@ main{
     width: 100%;
     height: 200vh;
     background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+    background-attachment: fixed;
+    background-size: contain;
+    padding-bottom: 5rem;
 
 }
 
@@ -1313,7 +1316,7 @@ main{
 
     width: 100%;
     height: 40%;
-    background-image: linear-gradient(to bottom, #ffffffff, rgba(255, 255, 255, 0.268));
+    background-image: linear-gradient(to bottom, #ffffffff, rgba(255, 255, 255, 0.584));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1389,14 +1392,14 @@ main{
 }
 
 /** First FAQ Div */
-.aboutPageFAQContentInnerSection > .firstFAQDiv{
+.aboutPageFAQContentInnerSection > .faqDiv{
 
     width: 1300px;
     height: 100%;
 
 }
 
-.firstFAQDiv > .firstFaqQuestionDiv{
+.faqDiv > .faqQuestionDiv{
 
     width: 100%;
     height: 100px;
@@ -1410,7 +1413,7 @@ main{
 
 }
 
-.firstFaqQuestionDiv > .firstFaqQuestion{
+.faqQuestionDiv > .faqQuestion{
 
     width: 90%;
     height: 100%;
@@ -1420,7 +1423,7 @@ main{
 
 }
 
-.firstFaqQuestion > h3{
+.faqQuestion > h3{
 
     color: #ffffffff;
     margin-left: 20px;
@@ -1435,14 +1438,21 @@ main{
 
 }
 
-.firstFaqQuestion h3 > svg{
+.faqQuestion h3 > span{
 
+    display: inline-flex;
+
+}
+
+.faqQuestion h3 span > svg{
+
+    margin-top: -4px;
     font-size: 40px;
 
 }
 
 /** First FAQ Question Div Span Icons */
-.firstFaqQuestionDiv > .firstFaqToggleButtonDiv{
+.faqQuestionDiv > .faqToggleButtonDiv{
 
     position: relative;
     width: 10%;
@@ -1453,7 +1463,7 @@ main{
 
 }
 
-.firstFaqToggleButtonDiv > .faqSpanDashIconsDiv{
+.faqToggleButtonDiv > .faqSpanDashIconsDiv{
 
     position: absolute;
     width: 100%;
@@ -1487,24 +1497,145 @@ main{
 
 }
 
-.firstFAQDiv > .firstFaqAnswerDiv{
+.faqDiv > .faqAnswerDiv{
 
     width: 100%;
-    height: 150px;
+    height: 10rem;
     display: flex;
     align-items: center;
     border-bottom: 2px dashed #292929;
     border-radius: 0px 0px 20px 20px;
     margin-bottom: 20px;
+    overflow: hidden;
 
 }
 
-.firstFaqAnswerDiv > p{
+.faqAnswerDiv > p{
 
     font-family: var(--regular-font);
     font-size: 18px;
     letter-spacing: 1px;
     line-height: 25px;
     margin-left: 20px;
+
+}
+
+/** About Page Get In Touch Main Section */
+.aboutSection > .aboutPageGetInTouchMainSection{
+
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.aboutPageGetInTouchMainSection > .aboutPageGetInTouchImageSection{
+
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: url('../../images/About\ Page\ Get\ In\ Touch\ Images/about_get_in_touch_image2.png');
+    background-attachment: fixed;
+
+}
+
+.aboutPageGetInTouchImageSection > img{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 80%;
+    object-fit: cover;
+    object-position: top;
+    border: 2px solid #ffffffff;
+    border-radius: 50px;
+    box-shadow: 5px 5px 100px rgb(255, 255, 255);
+
+}
+
+.aboutPageGetInTouchMainSection > .aboutPageGetInTouchFormSection{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.aboutPageGetInTouchFormSection > .aboutPageGetIntouchInnerFormSection{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.aboutPageGetIntouchInnerFormSection > .aboutPageGetInTouchTitle{
+
+    width: 100%;
+    height: 35rem;
+    border-top: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.aboutPageGetInTouchTitle > span{
+
+    font-family: var(--medium-font);
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+
+}
+
+.aboutPageGetInTouchTitle > h2{
+
+    font-family: var(--bold-font);
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 1px;
+
+}
+
+.aboutPageGetInTouchTitle > button{
+
+    width: 40%;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    background-color: #292929;
+    color: #ffffffff;
+    font-family: var(--regular-font);
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.8s ease;
+
+}
+
+.aboutPageGetInTouchTitle > button:hover{
+
+    transform: translateY(-5px);
+    width: 50%;
+    box-shadow: 2px 2px 20px #292929;
+    border: 5px solid #ffffffff;
 
 }
