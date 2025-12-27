@@ -14,5 +14,6 @@ router.get('/api/home/blogs', getRouterController.getHomeBlogs); // GET Home Blo
 router.get('/api/blogpage/content', getRouterController.getBlogPageContent);
 router.post('/home/contact/form', postRouterController.postContactFormData) // POST Home Contact Form Router
 router.post('/contact/mail/form', postRouterController.postContactPageFormData); // POST Contact Page Mail Form Router
+router.post('/about/getintouch/mail/form', postRouterController.postAboutPageGetInTouchMail); // POST About Page Get In Touch Mail Form router
 
 export default router;

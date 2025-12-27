@@ -1565,9 +1565,11 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
 }
 
+/** Get In Touch Inner Form Section */
 .aboutPageGetInTouchFormSection > .aboutPageGetIntouchInnerFormSection{
 
     width: 100%;
@@ -1575,9 +1577,12 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
 
 }
 
+/** Get In Touch Title Section */
 .aboutPageGetIntouchInnerFormSection > .aboutPageGetInTouchTitle{
 
     width: 100%;
@@ -1590,6 +1595,7 @@ main{
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    position: absolute;
 
 }
 
@@ -1637,5 +1643,406 @@ main{
     width: 50%;
     box-shadow: 2px 2px 20px #292929;
     border: 5px solid #ffffffff;
+
+}
+
+
+/** Get In Touch Main Form Section */
+.aboutPageGetIntouchInnerFormSection > .aboutPageGetInTouchForm{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffff;
+    transform: translateX(-1000px);
+
+}
+
+/** Get In Touch Main Form Title Section */
+.aboutPageGetInTouchForm > .aboutPageGetInTouchMainFormTitleDiv{
+
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+
+}
+
+.aboutPageGetInTouchMainFormTitleDiv > span{
+
+    color: var(--third-color);
+    margin: 0px 0px 20px 20px;
+    font-family: var(--medium-font);
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-flex;
+    background-image: linear-gradient(-50deg, rgba(255, 255, 255, 0.353) 5%, royalblue);
+    padding: 6px 50px 0px 10px;
+    color: #ffffffff;
+
+}
+
+.aboutPageGetInTouchMainFormTitleDiv > h2{
+
+    color: var(--third-color);
+    font-family: var(--bold-font);
+    font-size: 70px;
+    margin-left: 20px;
+    line-height: 80px;
+    letter-spacing: 2px;
+
+}
+
+/** Get In Touch Main Form Section Inner Form Div */
+.aboutPageGetInTouchForm > .aboutPageGetInTouchInnerFormDiv{
+
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/** Form */
+.aboutPageGetInTouchInnerFormDiv > form{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+/** Form First Input Section */
+form > .formFirstInputSection{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+
+}
+
+/** Form Name Input Div */
+.formFirstInputSection > .fNameInputDiv{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.fNameInputDiv > input{
+
+    width: 85%;
+    height: 50px;
+    padding-left: 10px;
+    border: 1px solid #292929;
+    outline: none;
+    border-radius: 10px;
+    font-family: var(--regular-font);
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 500;
+
+}
+
+/** Form Email Input Div */
+.formFirstInputSection > .fEmailInputDiv{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.fEmailInputDiv > input{
+
+    width: 85%;
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #292929;
+    outline: none;
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: 500;
+
+}
+
+/** Form Second Input Section */
+form > .formSecondInputSection{
+
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.formSecondInputSection > .sMobileInputDiv{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.sMobileInputDiv > input{
+
+    width: 85%;
+    height: 50px;
+    padding-left: 10px;
+    border: 1px solid #292929;
+    outline: none;
+    border-radius: 10px;
+    font-family: var(--regular-font);
+    font-size: 15px;
+    letter-spacing: 2px;
+    
+
+}
+
+.formSecondInputSection > .sSubjectInputDiv{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.sSubjectInputDiv > input{
+
+    width: 85%;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: 1px solid #292929;
+    outline: none;
+
+}
+
+/** Form Third Input Section */
+form > .formThirdInputSection{
+
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.formThirdInputSection > input{
+
+    width: 93%;
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #292929;
+    outline: none;
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+    font-size: 15px;
+
+}
+
+/** Form Fourth Input Section */
+form > .formForthInputSection{
+
+    width: 100%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.formForthInputSection > textarea{
+
+    padding: 20px 0px 0px 10px;
+    border-radius: 10px;
+    resize: none;
+    border: 1px solid #292929;
+    outline: none;
+    font-size: 15px;
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+
+}
+
+/** Form Submit Button Section */
+form > .formSubmitButonSection{
+
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.formSubmitButonSection > button{
+
+    margin-left: 30px;
+    height: 100%;
+    width: 45%;
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+    font-size: 15px;
+    background-color: #292929;
+    color: #ffffffff;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.8s ease;
+    z-index: 2;
+
+}
+
+.formSubmitButonSection > button:hover{
+
+    background-color: #ffffffff;
+    font-size: 16px;
+
+}
+
+.formSubmitButonSection > button::after{
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    content: "";
+    background-color: var(--primary-color);
+    transform: skewX(-20deg) translateY(-20px);
+    opacity: 0;
+    transition: all 0.8s ease;
+    z-index: -2;
+
+}
+
+.formSubmitButonSection > button::before{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    content: "";
+    background-color: rgba(65, 105, 225, 0.658);
+    transform: skewX(-20deg) translateY(20px);
+    opacity: 0;
+    transition: all 0.8s ease;
+    z-index: -2;
+
+}
+
+.formSubmitButonSection > button:hover::after{
+
+    transform: translateY(0px) skewX(-20deg);
+    opacity: 1;
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+.formSubmitButonSection > button:hover::before{
+
+    transform: translateY(0px) skewX(-20deg);
+    opacity: 1;
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+/** Form Submit Message */
+.formSubmitButonSection > .isSubmittingMessage{
+
+    display: inline-flex;
+    width: 45%;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+    font-size: 15px;
+    gap: 5px;
+    padding-left: 40px;
+
+}
+
+.isSubmittingMessage > svg{
+
+    color: royalblue;
+    font-size: 30px;
+    animation: isSubmittingMessageLoader 2s linear infinite;
+
+}
+
+@keyframes isSubmittingMessageLoader {
+    
+    0%{
+
+        transform: rotate(0deg);
+
+    }100%{
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+
+/** Error Message */
+.errorMessage{
+
+    color: red;
+    margin-top: 10px;
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 85%;
+
+}
+
+.formForthInputSection > .errorMessage{
+
+    display: inline-flex;
+    width: 92%;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+    color: red;
 
 }

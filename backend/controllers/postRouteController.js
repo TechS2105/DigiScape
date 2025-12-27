@@ -1,4 +1,4 @@
-import ContactFormMail from '../mail controller/mailcontroller.js';
+import mailcontroller from '../mail controller/mailcontroller.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -26,7 +26,7 @@ const postContactFormData = (req, res) => {
 
     }
 
-    /** Connect Mail */
+    /** Connect With Mail Server */
     ContactFormMail.sendMail(mail, (error) => {
 
         if (error) {
@@ -53,6 +53,7 @@ const postContactPageFormData = (req, res) => {
 
     const { fullname, email, mobile, subject, companyname, message } = req.body;
 
+    // Mail Template
     const mail = {
 
         from: `${fullname}`,
@@ -71,7 +72,8 @@ const postContactPageFormData = (req, res) => {
 
     };
 
-    ContactFormMail.sendMail(mail, (error) => {
+    // Connect With Mail Server 
+    mailcontroller.sendMail(mail, (error) => {
 
         if (error) {
             
@@ -92,9 +94,56 @@ const postContactPageFormData = (req, res) => {
 
 }
 
+/** About Page Get In Touch Mail Form */
+const postAboutPageGetInTouchMail = (req, res) => {
+
+    const { fullname, email, mobile, subject, companyname, message } = req.body;
+
+    // Mail Template
+    const mail = {
+
+        from: `${fullname}`,
+        to: process.env.Email,
+        subject: `${fullname} has been sent a consultation request from about page get in touch form`,
+        html: `
+        
+            <p>Client Name: ${fullname}</p>
+            <p>Email: ${email}</p>
+            <p>Mobile: ${mobile}</p>
+            <p>Subject: ${subject}</p>
+            <p>Company Name: ${companyname}</p>
+            <p>Message: ${message}</p>
+
+        `
+
+    }
+
+    // Connect With Mail Server
+    mailcontroller.sendMail(mail, (error) => {
+
+        if (error) {
+            
+            res.status(400).json({ message: `Their have something error ${error}` });
+
+        } else {
+            
+            res.json({
+
+                status: "200",
+                message: "Mail has been sent successfully"
+
+            });
+
+        }
+
+    });
+
+}
+
 export default {
 
     postContactFormData, 
-    postContactPageFormData
+    postContactPageFormData,
+    postAboutPageGetInTouchMail
 
 }
