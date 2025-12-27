@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { TbLoader } from "react-icons/tb";
 
-const aboutPageGetInTouchURL = `/about/getintouch/mail/form`;
+const aboutPageGetInTouchURL = `https://digiscape-backend.onrender.com`;
 
 function Aboutpagegetintouchinnerformsectionmainform({ AboutSectionStyle }) {
     
@@ -19,7 +19,7 @@ function Aboutpagegetintouchinnerformsectionmainform({ AboutSectionStyle }) {
 
         try { 
 
-            const postGetInTouchMailForm = await fetch(`https://digiscape-backend.onrender.com${aboutPageGetInTouchURL}`, {
+            const postGetInTouchMailForm = await fetch(`${aboutPageGetInTouchURL}/about/getintouch/mail/form`, {
 
                 headers: { "Content-Type": "application/json; charset=utf-8" },
                 method: "POST",
