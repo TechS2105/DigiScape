@@ -1,0 +1,140 @@
+/** Main Section */
+main{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/** Portfolio Page Title Section */
+.portfolioPageTitleSection{
+
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+
+}
+
+/** Portfolio Page Inner Title Section */
+.portfolioPageTitleSection > .portfolioPageInnerTitleSection{
+
+    margin-left: 20px;
+
+}
+
+.portfolioPageInnerTitleSection > span{
+
+    font-size: 20px;
+    font-family: var(--medium-font);
+    margin-bottom: 20px;
+    margin-left: 40px;
+    display: inline-flex;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+
+}
+
+.portfolioPageInnerTitleSection > span::after{
+
+    position: absolute;
+    top: 0px;
+    left: -30px;
+    height: 20px;
+    width: 20px;
+    background-color: var(--primary-color);
+    content: "";
+    border-radius: 5px 5px 5px 5px;
+
+}
+
+.portfolioPageInnerTitleSection > h1{
+
+    font-size: 170px;
+    font-family: var(--bold-font);
+    letter-spacing: 2px;
+    line-height: 150px;
+    text-transform: uppercase;
+
+}
+
+/** Portfolio Banner Section */
+.portfolioBannerSection{
+
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 50rem;
+
+}
+
+.portfolioBannerSection > .portfolioBannerImageSection{
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+/** Banner Scroller Image Section */
+.portfolioBannerImageSection > .portfolioBannerScrollerImageSection{
+
+    width: 100%;
+    height: 100%;
+    /* opacity: 0.7; */
+    overflow: hidden;
+    background-color: #D5D4D6;
+
+}
+
+/** Banner Scroller Image Section Image List */
+.portfolioBannerScrollerImageSection > ul{
+
+    animation: bannerImageScroller 50s linear infinite;
+    width: 100%;
+    list-style-type: none;
+
+}
+
+.portfolioBannerImageSection ul > li{
+
+    display: inline-block;
+
+}
+
+.portfolioBannerImageSection ul li > img{
+
+    width: 150%;
+    object-fit: cover;
+    position: relative;
+
+}
+
+
+@keyframes bannerImageScroller {
+    
+    0%{
+
+        transform: translateY(0%);
+
+    }100%{
+
+        transform: translateY(-100%);
+
+    }
+
+}
+
+/** Banner Overlay Description Div */
+.portfolioBannerSection > .portfolioBannerOverlayDiv{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.992), #2929297c);
+
+}

@@ -1,4 +1,6 @@
 import mailcontroller from '../mail controller/mailcontroller.js';
+import contactPageMail from '../mail controller/mailcontroller.js';
+import aboutPageGetInTouchMail from '../mail controller/mailcontroller.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -73,23 +75,15 @@ const postContactPageFormData = (req, res) => {
     };
 
     // Connect With Mail Server 
-    mailcontroller.sendMail(mail, (error) => {
-
-        if (error) {
-            
-            res.status(400).json({ message: `There has something wrong ${error}` });
-
-        } else {
-            
-            res.json({
-
-                status: 200,
-                message: "Mail has been sent successfully..."
-
-            });
-
-        }
-
+    contactPageMail.sendMail(mail, (error) => {
+      if (error) {
+        res.status(400).json({ message: `There has something wrong ${error}` });
+      } else {
+        res.json({
+          status: 200,
+          message: "Mail has been sent successfully...",
+        });
+      }
     });
 
 }
@@ -119,7 +113,7 @@ const postAboutPageGetInTouchMail = (req, res) => {
     }
 
     // Connect With Mail Server
-    mailcontroller.sendMail(mail, (error) => {
+    aboutPageGetInTouchMail.sendMail(mail, (error) => {
 
         if (error) {
             
