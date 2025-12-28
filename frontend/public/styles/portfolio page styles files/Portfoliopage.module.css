@@ -66,7 +66,6 @@ main{
     height: 100vh;
     overflow: hidden;
     position: relative;
-    margin-bottom: 50rem;
 
 }
 
@@ -136,5 +135,250 @@ main{
     height: 100%;
     width: 100%;
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.992), #2929297c);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.portfolioBannerOverlayDiv > h2{
+
+    font-size: 100px;
+    font-family: var(--bold-font);
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    letter-spacing: 2px;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+
+.portfolioBannerOverlayDiv > h2::after{
+
+    position: absolute;
+    top: 110px;
+    right: 0px;
+    width: 40%;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    content: "";
+    border-radius: 50px;
+
+}
+
+.portfolioBannerOverlayDiv > h2::before{
+
+    position: absolute;
+    top: 130px;
+    right: 0px;
+    width: 20%;
+    height: 5px;
+    content: "";
+    background-color: royalblue;
+    border-radius: 50px;
+
+}
+
+.portfolioBannerOverlayDiv > p{
+
+    font-size: 20px;
+    font-family: var(--regular-font);
+    margin-right: 20px;
+    color: var(--secondary-color);
+    width: 1200px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    text-align: right;
+
+}
+
+/** Portfolio Page Showcasing Section */
+.portfolioPageShowcasingMainTitleSection{
+
+    width: 100%;
+    height: 120vh;
+
+}
+
+.portfolioPageShowcasingMainTitleSection > .portfolioPageShowcasingTitleSection{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.portfolioPageShowcasingTitleSection > .portfolioShowcasingInnerTitleSection{
+
+    margin-left: 20px;
+    text-align: center;
+    
+
+}
+
+.portfolioShowcasingInnerTitleSection > span{
+
+    font-size: 20px;
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    display: inline-flex;
+    text-transform: uppercase;
+
+}
+
+.portfolioShowcasingInnerTitleSection > h2{
+
+    font-size: 160px;
+    font-family: var(--bold-font);
+    letter-spacing: 2px;
+    line-height: 118px;
+    text-transform: uppercase;
+
+}
+
+.portfolioShowcasingInnerTitleSection h2 > .title1{
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px 0px 0px;
+
+} 
+
+.portfolioShowcasingInnerTitleSection h2 .title1 > span{
+
+    display: inline-flex;
+
+}
+
+.portfolioShowcasingInnerTitleSection h2 > .title2{
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px 0px 0px;
+
+}
+
+.portfolioShowcasingInnerTitleSection h2 .title2 > span{
+
+    display: inline-flex;
+
+}
+
+.portfolioShowcasingInnerTitleSection h2 > .title3{
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px 0px 0px;
+
+}
+
+.portfolioShowcasingInnerTitleSection h2 .title3 > span{
+
+    display: inline-flex;
+
+}
+
+.portfolioShowcasingInnerTitleSection h2 > .title4{
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+
+} 
+
+.portfolioShowcasingInnerTitleSection h2 .title4 > span{
+
+    display: inline-flex;
+
+}
+
+.portfolioShowcasingInnerTitleSection h2 .title2 > span{
+
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #292929;
+
+}
+
+.portfolioShowcasingInnerTitleSection h2 .title4 > span{
+
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #292929;
+
+}
+
+/** Portfolio Showcasing Section */
+.portfolioPageShowCasingSection{
+
+    width: 100%;
+    height: 100%;
+    border-bottom: 5px solid #ffffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px 50px 0px;
+    background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+    background-attachment: fixed;
+
+}
+
+.portfolioPageShowCasingSection > .portfolioPageInnerShowCasingSection{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    transition: all 0.8s ease;
+
+}
+
+.portfolioPageInnerShowCasingSection > .portfolioWorkDiv{
+
+    width: 730px;
+    height: 1000px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+    transition: all 0.8s ease;
+
+}
+
+.portfolioWorkDiv > .portfolioImage{
+
+    position: absolute;
+    width: 100%;
+    height: auto;
+    transition: all 5s linear;
+    opacity: 0.5;
+
+}
+
+.portfolioImage > img{
+
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+}
+
+.portfolioWorkDiv:hover > .portfolioImage{
+
+    transform: translateY(calc(-1 * (100% - 1000px)));
+    opacity: 1;
 
 }
