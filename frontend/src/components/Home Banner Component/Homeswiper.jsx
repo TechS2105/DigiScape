@@ -2,8 +2,8 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay,  Navigation } from 'swiper/modules';
-import HomeBannerImage from '../Home Banner Component/Homebannerimages';
-import HomeBannerContent from '../Home Banner Component/Homebannercontents';
+import HomeBannerImage from './Homebannerimages';
+import HomeBannerContent from './Homebannercontents';
 
 function Homeswiper({HomeBannerStyle, getBannerContent}) {
     

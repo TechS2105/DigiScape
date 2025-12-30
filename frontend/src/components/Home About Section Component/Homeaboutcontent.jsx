@@ -3,9 +3,18 @@ import HomeAboutWhatWeOffers from '../Home About Section Component/Homeaboutwhat
 import { TbBulb } from "react-icons/tb";
 import { BiRupee } from "react-icons/bi";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
 
 function Homebannercontent({HomeAboutStyle}) {
     
+    const navigate = useNavigate();
+
+    const goToAbout = () => {
+
+        navigate('/about');
+
+    }
+
     return (
 
         <>
@@ -43,7 +52,7 @@ function Homebannercontent({HomeAboutStyle}) {
                 {/** About us button */}
                 <div className={HomeAboutStyle.buttonBox}>
 
-                    <button> <MdOutlineKeyboardArrowRight /> Discover More </button>
+                    <button onClick={goToAbout}> <MdOutlineKeyboardArrowRight />Explore Our Company Overview </button>
 
                 </div>
 

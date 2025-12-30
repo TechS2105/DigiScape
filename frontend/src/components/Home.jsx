@@ -1,6 +1,6 @@
 import React from "react";
 // import PageLoader from '../components/Page Loader Component/Pageloader';
-import HomeBanner from "../components/Home Banner Component/Homebanner";
+import HomeBanner from '../components/Home Banner Component/Homebanner'
 import MarqueeTextScroller from "./Home Marquee Text Scroller Component/Marqueetextscroller";
 import QuickView from "../components/Home Quickoverview Component/Quickview";
 import HomeAbout from '../components/Home About Section Component/Homeabout';

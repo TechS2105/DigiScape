@@ -5,6 +5,7 @@ import HomePorttfolio from '../objects/Homeportfolio.js';
 import TestimonialContents from '../objects/Testimonialcontents.js';
 import HomeBlogs from '../objects/Homeblogs.js';
 import BlogPageContent from '../objects/Blogpageblogs.js';
+import PortfolioPageProjects from '../objects/Portfoliopageprojects.js';
 
 const getDefaultRouter = (req, res) => {
 
@@ -59,6 +60,13 @@ const getBlogPageContent = (req, res) => {
 
 }
 
+/** Portfolio Page Projects */
+const getPortfolioPageProjects = (req, res) => {
+
+    res.status(200).json(PortfolioPageProjects)
+
+}
+
 export default {
 
     getDefaultRouter,
@@ -68,6 +76,7 @@ export default {
     getHomePortfolioRouter,
     getTestimonialContents,
     getHomeBlogs,
-    getBlogPageContent
+    getBlogPageContent,
+    getPortfolioPageProjects
 
 }

@@ -121,13 +121,13 @@
     letter-spacing: 2px;
     font-size: 15px;
     display: inline-flex;
-    background-color: royalblue;
+    background-image: linear-gradient(to right, royalblue, #ffffffff);
     width: 300px;
     height: 30px;
     display: flex;
     align-items: center;
     padding-left: 10px;
-    border-radius: 0px 50px 50px 0px;
+    padding-top: 5px;
     color: #ffffff;
     margin-bottom: 20px;
 
@@ -241,7 +241,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    width: 250px;
+    width: 400px;
     border-radius: 50px;
     border: 1px solid #292929;
     background-color: transparent;
@@ -252,6 +252,7 @@
     cursor: pointer;
     font-weight: bold;
     transition: all 0.8s ease;
+    font-size: 15px;
 
 }
 

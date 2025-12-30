@@ -14,6 +14,7 @@ function App() {
 
     createRoutesFromElements(
 
+
       <Route path='/' element={<RootLayouts />}>
 
         <Route index element={<Home />} />
