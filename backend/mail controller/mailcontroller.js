@@ -8,7 +8,7 @@ const mailcontroller = nodeMailer.createTransport({
 
     service: 'gmail',
     host: 'smtp.gmail.com',
-    port: '465',
+    port: 465,
     logger: false,
     debug: true,
     secure: true,

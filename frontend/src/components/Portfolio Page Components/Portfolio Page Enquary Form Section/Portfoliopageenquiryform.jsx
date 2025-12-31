@@ -26,7 +26,7 @@ function Portfoliopageenquiryform({ PortfolioPageStyle, configureEnquiryFormStyl
 
             });
 
-            let response = fetchEnquiryMailURL.json();
+            let response = await fetchEnquiryMailURL.json();
             console.log(data, response);
             reset();
 
@@ -119,7 +119,7 @@ function Portfoliopageenquiryform({ PortfolioPageStyle, configureEnquiryFormStyl
                 <div className={PortfolioPageStyle.fourthInputDiv}>
             
                     <label htmlFor="message">Message</label>
-                    <textarea name="message" id="message" placeholder='Type your message...' cols={177} rows={8} {...register('message', { required: { value: true, message: "This field is required" } })}></textarea>
+                    <textarea name="message" id="message" placeholder='Type your message...' {...register('message', { required: { value: true, message: "This field is required" } })}></textarea>
                     {errors.message && <span className={PortfolioPageStyle.enquiryFormErrorMessage}>{errors.message.message}</span>}
             
                 </div>

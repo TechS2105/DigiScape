@@ -941,6 +941,8 @@ form > .fourthInputDiv{
     font-family: var(--regular-font);
     letter-spacing: 2px;
     font-family: var(--regular-font);
+    width: 95%;
+    height: 8rem;
 
 }
 
