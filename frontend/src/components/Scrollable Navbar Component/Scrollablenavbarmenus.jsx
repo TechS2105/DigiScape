@@ -1,8 +1,10 @@
 import React from 'react';
 import { TbSmartHome } from "react-icons/tb";
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function ScrollableNavbarMenus() {
+
+    const navigate = useNavigate();
     
     return (
 
@@ -12,12 +14,12 @@ function ScrollableNavbarMenus() {
 
                 <ul>
 
-                    <li><NavLink to="/"><TbSmartHome /></NavLink></li>
-                    <li><NavLink to="/about">ABOUT</NavLink></li>
-                    <li><NavLink to="/services">SERVICES</NavLink></li>
-                    <li><NavLink to="/portfolio">PORTFOLIO</NavLink></li>
-                    <li><NavLink to="/blog">BLOG</NavLink></li>
-                    <li><NavLink to="/contact">CONTACT</NavLink></li>
+                    <li onClick={() => (navigate('/'))}><TbSmartHome /></li>
+                    <li onClick={() => (navigate('/about'))}>ABOUT</li>
+                    <li onClick={() => (navigate('/services'))}>SERVICES</li>
+                    <li onClick={() => (navigate('/portfolio'))}>PORTFOLIO</li>
+                    <li onClick={() => (navigate('/blog'))}>BLOG</li>
+                    <li onClick={() => (navigate('/contact'))}>CONTACT</li>
 
                 </ul>
 

@@ -67,7 +67,7 @@
 
 }
 
-.innerNavDiv nav ul li > a{
+.innerNavDiv nav ul > li{
 
     color: #ffffff;
     font-size: 17px;
@@ -84,7 +84,7 @@
 
 }
 
-.innerNavDiv nav ul li:hover > a{
+.innerNavDiv nav ul > li:hover {
 
     transform: scale(1.2) rotateY(20deg);
     text-shadow: 5px 5px 2px  #ffffff;
@@ -96,12 +96,48 @@
 
 }
 
-.innerNavDiv nav ul li > a:nth-child(1) svg{
+.innerNavDiv nav ul li:nth-child(1) > svg{
 
     font-size: 30px;
     color: royalblue;
     background-color: #ffffff;
     padding: 10px;
     border-radius: 50px;
+
+}
+
+.innerNavDiv nav ul > li:nth-child(3){
+
+    color: #ffffff;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-family: 'scrollablenavfont';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.8s ease;
+    text-decoration: none;
+    position: relative;
+
+}
+
+.innerNavDiv nav ul > li:nth-child(3):hover{
+
+    transform: scale(1.2) rotateY(20deg);
+    text-shadow: 5px 5px 2px  #ffffff;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 3px;
+    font-style: italic;
+
+}
+
+.innerNavDiv nav ul li:nth-child(3) > .servicesDropdown{
+
+    position: absolute;
+    width: 200px;
+    height: 500px;
 
 }

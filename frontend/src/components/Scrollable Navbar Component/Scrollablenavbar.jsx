@@ -76,10 +76,9 @@ function Scrollablenavbar() {
                     transform: "scale(0)",
                     transition: 'all 1s ease'
 
-                })
+                });
 
             }
-
 
         }
 
@@ -140,7 +139,7 @@ function Scrollablenavbar() {
 
                 });
 
-            }
+            }  
 
         }
 
@@ -162,7 +161,11 @@ function Scrollablenavbar() {
                 {/** Scrollable Navbar Inner Menu */}
                 <div className={ScrollableNavbarStyle.innerNavDiv} style={scrollableNavbar}>
 
-                    <ScrollableNavbarMenus />
+                    <ScrollableNavbarMenus
+                    
+                        scrollableNavbarStyle={ScrollableNavbarStyle}
+                        
+                    />
 
                 </div>
                 
