@@ -534,5 +534,514 @@ main{
 
     width: 100%;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.portfolioFetchingMessage > .loadingSVGDiv{
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.loadingSVGDiv > svg{
+
+    font-size: 50px;
+    color: royalblue;
+    animation: loadingSVG 5s linear infinite;
+
+}
+
+@keyframes loadingSVG {
+    
+    0%{
+
+        transform: rotate(0deg);
+
+    }100%{
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+.portfolioFetchingMessage > .loaderTextDiv{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.loaderTextDiv > span{
+
+    font-family: var(--bold-font);
+    font-size: 20px;
+
+}
+
+/** Portfolio Enquary Form Main Section */
+.portfolioEnquaryFormMainSection{
+
+    width: 100%;
+    height: 100vh;
+    background-color: #292929;
+    border-bottom: 2px dashed #ffffffff;
+    overflow: hidden;
+
+}
+
+
+.portfolioEnquaryFormMainSection > .enquaryTitleSection{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px dashed #292929;
+
+}
+
+.enquaryTitleSection > span{
+
+    font-size: 20px;
+    font-family: var(--medium-font);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+
+}
+
+.enquaryTitleSection > h2{
+
+    font-family: var(--bold-font);
+    font-size: 120px;
+    line-height: 120px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+
+}
+
+.enquaryTitleSection > button{
+
+    width: 40%;
+    height: 80px;
+    background-color: transparent;
+    border: 1px solid #ffffffff;
+    cursor: pointer;
+    font-family: var(--regular-font);
+    font-size: 20px;
+    letter-spacing: 2px;
+    border-radius: 0px 50px 0px 50px;
+    position: relative;
+    transition: all 0.8s ease;
+    overflow: hidden;
+    color: var(--secondary-color);
+
+}
+
+.enquaryTitleSection > button:hover{
+
+    border: 1px solid #292929;
+    color: #292929;
+    border-radius: 50px 0px 50px 0px;
+    
+}
+
+.enquaryTitleSection > button::after{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    content: "";
+    /* background-color: royalblue; */
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+    transition: all 0.8s ease;
+    z-index: -2;
+
+}
+
+.enquaryTitleSection > button:hover::after{
+
+    height: 100%;
+
+}
+
+/** Portfolio Enquary Form Main Form Section */
+.portfolioEnquaryFormMainSection > .enquaryFormSectionMainFormDiv{
+
+    width: 100%;
+    height: 0%;
+    background-color: #292929;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transform: translateY(1000px); */
+    overflow: hidden;
+
+}
+
+.enquaryFormSectionMainFormDiv > form{
+
+    width: 80%;
+    border: 1px solid #292929;
+    padding: 20px 20px;
+    border-radius: 20px;
+
+}
+
+/** First Input Div */
+form > .firstInputDiv{
+
+    width: 100%;
+    height: 100px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.firstInputDiv > .nameInputDiv{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* background-color: rebeccapurple; */
+
+}
+
+.nameInputDiv > label{
+
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    font-size: 20px;
+
+}
+
+.nameInputDiv > input{
+
+    width: 90%;
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #292929;
+    outline: none;
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+    font-size: 15px;
+
+}
+
+.firstInputDiv > .emailInputDiv{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.emailInputDiv > label{
+
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    font-size: 20px;
+
+}
+
+.emailInputDiv > input{
+
+    width: 90%;
+    padding-left: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #292929;
+    outline: none;
+
+}
+
+/** Second Input Div */
+form > .secondInputDiv{
+
+    width: 100%;
+    height: 100px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.secondInputDiv > .mobileInputDiv{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* background-color: rebeccapurple; */
+
+}
+
+.mobileInputDiv > label {
+
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    font-size: 20px;
+
+}
+
+.mobileInputDiv > input{
+
+    width: 90%;
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #292929;
+    outline: none;
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+    font-size: 15px;
+
+}
+
+.secondInputDiv > .companyNameInputDiv{
+
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.companyNameInputDiv > label{
+
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    font-size: 20px;
+
+}
+
+.companyNameInputDiv > input{
+
+    width: 90%;
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #292929;
+    outline: none;
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+    font-size: 15px;
+
+}
+
+/** Form Third Input Div */
+form > .thirdInputDiv{
+
+    width: 100%;
+    height: 100px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.thirdInputDiv > .servicesInputDiv{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.servicesInputDiv > label{
+
+    font-size: 20px;
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+
+}
+
+.servicesInputDiv > select{
+
+    width: 96%;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #292929;
+    font-size: 15px;
+    padding-left: 10px;
+    letter-spacing: 2px;
+    font-family: var(--regular-font);
+    outline: none;
+
+}
+
+.servicesInputDiv select > option{
+
+    font-family: var(--regular-font);
+    font-size: 15px;
+    letter-spacing: 2px;
+
+}
+
+/** Fourth Input Div */
+form > .fourthInputDiv{
+
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* background-color: #292929; */
+
+}
+
+.fourthInputDiv > label{
+
+    font-size: 20px;
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+
+}
+
+.fourthInputDiv > textarea{
+
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid #292929;
+    outline: none;
+    padding: 20px 0px 0px 10px;
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+    font-family: var(--regular-font);
+
+}
+
+/** Submit Button Div */
+form > .submitButtonDiv{
+
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.submitButtonDiv > button{
+
+    width: 30%;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid #292929;
+    cursor: pointer;
+    color: #292929;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    border-radius: 10px;
+    font-family: var(--regular-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.8s ease;
+
+}
+
+.submitButtonDiv > button:hover{
+
+    background-color: #292929;
+    color: #ffffffff;
+
+}
+
+.submitButtonDiv button > svg{
+
+    font-size: 40px;
+    transform: rotate(45deg);
+    margin-top: -5px;
+    margin-left: -20px;
+    transition: all 0.8s ease;
+
+}
+
+.submitButtonDiv button:hover > svg{
+
+    margin-left: 3px;
+    transform: rotate(10deg);
+    font-size: 40px;
+
+}
+
+/** Error Message */
+.enquiryFormErrorMessage{
+
+    color: red;
+    font-family: var(--regular-font);
+    margin-top: 5px;
+    letter-spacing: 2px;
+
+}
+
+/** Submitting Message */
+.submittingMessage{
+
+    font-size: 20px;
+    margin-left: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+
+}
+
+.submittingMessage > svg{
+
+    font-size: 25px;
+    color: royalblue;
+    animation: submitMessageLoader 3s linear infinite;
+
+}
+
+@keyframes submitMessageLoader {
+    
+    0%{
+
+        transform: rotate(0deg);
+
+    }100%{
+
+        transform: rotate(360deg);
+
+    }
 
 }

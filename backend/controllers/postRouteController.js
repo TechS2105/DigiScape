@@ -1,6 +1,7 @@
 import mailcontroller from '../mail controller/mailcontroller.js';
 import contactPageMail from '../mail controller/mailcontroller.js';
 import aboutPageGetInTouchMail from '../mail controller/mailcontroller.js';
+import portfolioMailController from '../mail controller/portfolio_mail_controller.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -134,10 +135,67 @@ const postAboutPageGetInTouchMail = (req, res) => {
 
 }
 
+/** Portfolio Page Enquiry Mail Form */
+const postPortfolioPageEnquiryMail = (req, res) => {
+
+    const { fullname, email, mobile, companyname, services, message } = req.body
+    
+    // Create a mail template 
+    const mail = {
+
+        from: `${fullname}`,
+        to: process.env.Email,
+        subject: `${fullname} send an email from portfolio page enquiry form for enquiry purpose`,
+        html: `
+        
+            <!Doctype html>
+            <html>
+            
+                <head></head>
+                <body>
+
+                    <p>Name: ${fullname}</p>
+                    <p>Email: ${email}</p>
+                    <p>Mobile: ${mobile}</p>
+                    <p>Company Name: ${companyname}</p>
+                    <p>Services: ${services}</p>
+                    <p>Message: ${message}</p>
+
+                </body>
+
+            </html>
+
+        `
+
+    }
+
+    // Send mail 
+    portfolioMailController.sendMail(mail, (error) => {
+
+        if (error) {
+            
+            console.log(error);
+
+        } else {
+            
+            res.json({
+
+                status: 200,
+                message: "Mail has been sent successfully from Portfolio Enquiry form"
+
+            });
+
+        }
+
+    })
+
+}
+
 export default {
 
     postContactFormData, 
     postContactPageFormData,
-    postAboutPageGetInTouchMail
+    postAboutPageGetInTouchMail,
+    postPortfolioPageEnquiryMail
 
 }

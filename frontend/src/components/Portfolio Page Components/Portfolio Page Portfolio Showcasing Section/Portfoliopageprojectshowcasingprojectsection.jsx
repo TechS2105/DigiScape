@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchPortfolioDetails } from '../../../features/Portfolio Page Project/PortfolioSlice';
 import PortfolioPageProjectShowCasingSectionProjectsWork from '../Portfolio Page Portfolio Showcasing Section/Portfoliopageprojectshowcasingsectionprojectswork';
+import { FiLoader } from "react-icons/fi";
 
 function Portfoliopageprojectshowcasingprojectsection({PortfolioPageStyle}) {
 
@@ -22,7 +23,19 @@ function Portfoliopageprojectshowcasingprojectsection({PortfolioPageStyle}) {
 
         <div className={PortfolioPageStyle.portfolioFetchingMessage}>
 
-            
+            {/** Loader SVG Div */}
+            <div className={PortfolioPageStyle.loadingSVGDiv}>
+
+                <FiLoader />
+
+            </div>
+
+            {/** Loader Text Div */}
+            <div className={PortfolioPageStyle.loaderTextDiv}>
+
+                <span>Projects are loading...</span>
+
+            </div>
 
         </div>
 

@@ -15,6 +15,7 @@ router.get('/api/blogpage/content', getRouterController.getBlogPageContent); // 
 router.get('/api/portfoliopage/project', getRouterController.getPortfolioPageProjects); // GET Portfolio Page Projects
 router.post('/home/contact/form', postRouterController.postContactFormData) // POST Home Contact Form Router
 router.post('/contact/mail/form', postRouterController.postContactPageFormData); // POST Contact Page Mail Form Router
-router.post('/about/getintouch/mail/form', postRouterController.postAboutPageGetInTouchMail); // POST About Page Get In Touch Mail Form router
+router.post('/about/getintouch/mail/form', postRouterController.postAboutPageGetInTouchMail); // POST About Page Get In Touch Mail Form Router
+router.post('/portfoliopage/enquiry/mail/form', postRouterController.postPortfolioPageEnquiryMail); // POST Portfolio Page Enquiry Form Router
 
 export default router;
