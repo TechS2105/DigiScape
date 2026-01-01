@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react';
 import NavbarStyle from '../../public/styles/navbar files/Navbar.module.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 function Navbar() {
 
@@ -285,6 +285,9 @@ function Navbar() {
 
     }
 
+    // add navigation in the logo image
+    const navigate = useNavigate();
+
     return (
 
         <header>
@@ -293,7 +296,7 @@ function Navbar() {
             <div className={NavbarStyle.logoDiv}>
 
                 {/* <h1> Digi<span style={{color: "royalblue"}}>S</span>cape </h1> */}
-                <img src="/images/DigiScape Logo Images/DigiScape logo 2.png" alt="" />
+                <img src="/images/DigiScape Logo Images/DigiScape logo 2.png" alt="logo" onClick={() => (navigate('/'))} />
 
             </div>
 

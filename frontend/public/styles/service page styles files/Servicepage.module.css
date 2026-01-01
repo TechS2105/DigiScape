@@ -160,3 +160,380 @@ main{
     width: 1400px;
 
 }
+
+/** Three Service Pillar Section */
+.threeServicePillarSection{
+
+    width: 100%;
+    height: 25rem;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+    background-size: contain;
+    background-attachment: fixed;
+
+}
+
+.threeServicePillarSection > .threeServicePillarTitleDiv{
+
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.threeServicePillarTitleDiv > h4{
+
+    font-size: 100px;
+    font-family: var(--creative-font);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    letter-spacing: 5px;
+
+}
+
+
+.threeServicePillarSection > .threeServicePillarDiv{
+
+    width: 95%;
+    height: 50%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.threeServicePillarDiv > ul{
+
+    height: 100%;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    list-style-type: none;
+    animation: servicePillerScroller 10s linear infinite;
+    white-space: nowrap;
+    margin-top: 20px;
+
+}
+
+.threeServicePillarDiv ul > li{
+
+    text-align: center;
+    width: 700px;
+    font-family: var(--creative-font);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border: 2px dashed #292929;
+    padding: 20px 50px;
+    border-radius: 50px;
+    margin-right: 50px;
+    font-size: 22px;
+    font-weight: 500;
+
+}
+
+@keyframes servicePillerScroller {
+    
+    0%{
+
+        transform: translateX(0%);
+
+    }100%{
+
+        transform: translateX(-100%);
+
+    }
+
+}
+
+/** First Pillar Service Section */
+.firstPillarServiceSection{
+
+    width: 100%;
+    height: 120vh;
+    background-color: #292929;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.firstPillarServiceSection > .pillarServiceContentDiv{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.pillarServiceContentDiv > .pillarServiceInnerContentDiv{
+
+    margin-left: 20px;
+    color: #ffffffff;
+
+}
+
+.pillarServiceInnerContentDiv > span:nth-child(1){
+
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    display: inline-flex;
+
+}
+
+.pillarServiceInnerContentDiv > h3{
+
+    font-size: 20px;
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+
+}
+
+.pillarServiceInnerContentDiv > h2{
+
+    font-size: 55px;
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 20px;
+
+}
+
+.pillarServiceInnerContentDiv > p{
+
+    width: 700px;
+    font-family: var(--regular-font);
+    letter-spacing: 1px;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 20px;
+
+}
+
+.pillarServiceInnerContentDiv > ul{
+
+    margin-bottom: 30px;
+
+}
+
+.pillarServiceInnerContentDiv ul > h4{
+
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+}
+
+.pillarServiceInnerContentDiv ul > li{
+
+    font-family: var(--regular-font);
+    margin-bottom: 15px;
+    margin-left: 10px;
+
+}
+
+.pillarServiceInnerContentDiv > button{
+
+    width: 400px;
+    height: 50px;
+    background-color: transparent;
+    color: #ffffffff;
+    border-radius: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: var(--regular-font);
+    cursor: pointer;
+    transition: all 0.8s ease;
+    border: 1px solid #ffffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+
+}
+
+.pillarServiceInnerContentDiv > button:hover{
+
+    background-color: royalblue;
+    border: 1px solid #292929;
+    color: #ffffffff;
+    gap: 10px;
+
+}
+
+.pillarServiceInnerContentDiv button > svg{
+
+    font-size: 30px;
+    margin-top: -5px;
+    transform: translateX(-20px) scale(0);
+    opacity: 0;
+    transition: all 0.8s ease;
+
+}
+
+.pillarServiceInnerContentDiv button:hover > svg{
+
+    transform: translateX(0px) scale(1);
+    opacity: 1;
+
+}
+
+.firstPillarServiceSection > .pillarServiceImageDiv{
+
+    width: 50%;
+    height: 100%;
+
+}
+
+.pillarServiceImageDiv > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/** Second Service Pillar Section */
+.secondServicePillarSection{
+
+    width: 100%;
+    height: 120vh;
+    background-color: #292929;
+    background-size: contain;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.secondServicePillarSection > .secondServicePillarImageSection{
+
+    width: 50%;
+    height: 100%;
+
+}
+
+.secondServicePillarImageSection > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.secondServicePillarSection > .secondServicePillarContentSection{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.secondServicePillarContentSection > .secondPillarServiceInnerContentSection{
+
+    margin-left: 20px;
+    color: #ffffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.secondPillarServiceInnerContentSection > span{
+
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    display: inline-flex;
+
+}
+
+.secondPillarServiceInnerContentSection > h3{
+
+    font-size: 20px;
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+
+}
+
+.secondPillarServiceInnerContentSection > h2{
+
+    font-size: 55px;
+    line-height: 60px;
+    font-family: var(--bold-font);
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+
+}
+
+.secondPillarServiceInnerContentSection > p{
+
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: var(--regular-font);
+    width: 730px;
+    line-height: 25px;
+    margin-bottom: 20px;
+
+}
+
+.secondPillarServiceInnerContentSection ul > h4{
+
+    font-size: 20px;
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+
+}
+
+.secondPillarServiceInnerContentSection ul > li{
+
+    margin-bottom: 20px;
+    font-family: var(--regular-font);
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-left: 10px;
+
+}
+
+.secondPillarServiceInnerContentSection > button{
+
+    width: 400px;
+    height: 50px;
+    background-color: #ffffffff;
+    border-radius: 10px;
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+    font-size: 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.8s ease;
+
+}
+
+.secondPillarServiceInnerContentSection > button:hover{
+
+    background-color: transparent;
+    border: 1px solid royalblue;
+    color: #ffffffff;
+
+}

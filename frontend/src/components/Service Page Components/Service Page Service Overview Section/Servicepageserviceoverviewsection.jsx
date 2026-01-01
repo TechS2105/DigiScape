@@ -1,5 +1,6 @@
 import React from 'react';
 import { GiPolarStar } from "react-icons/gi";
+import ServicePageServiceOverviewContents from '../Service Page Service Overview Section/Servicepageserviceoverviewcontents';
 
 function Servicepageserviceoverviewsection({ServicePageStyle}) {
     
@@ -13,9 +14,14 @@ function Servicepageserviceoverviewsection({ServicePageStyle}) {
                 {/** Service Overview Inner Section */}
                 <div className={ServicePageStyle.serviceOverviewInnerSection}>
 
-                    <span>What We Do<GiPolarStar /></span>
-                    <h2>Three Core Service Pillars Supporting End to End Digital Growth</h2>
-                    <p>Our service offerings are structured around three essential pillars that address visibility, growth acceleration, and digital infrastructure. This ensures every initiative contributes directly to business objectives, not isolated metrics.</p>
+                    <ServicePageServiceOverviewContents
+                    
+                        sOverviewSpanTitle="What We Do"
+                        sOverviewSVG={<GiPolarStar />}
+                        sOverviewHeading="Three Core Service Pillars Supporting End to End Digital Growth"
+                        sOverviewPara="Our service offerings are structured around three essential pillars that address visibility, growth acceleration, and digital infrastructure. This ensures every initiative contributes directly to business objectives, not isolated metrics."
+                        
+                    />
 
                 </div>
 
