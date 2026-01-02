@@ -1,4 +1,9 @@
 import React from 'react';
+import SecondPillarServiceSectionImage from '../Service Page Second Pillar Service Section/Secondpillarservicesectionimage';
+import SecondPillarServiceContentSection from '../Service Page Second Pillar Service Section/Secondpillarservicecontentsection';
+
+const second_pillar_service_image = "/images/Service Page Images/pillar_service_image2.png";
+const second_pillar_sevice_image_altText = "Specialised Digital Growth Services";
 
 function Secondpillarservicesection({ServicePageStyle}) {
     
@@ -12,7 +17,12 @@ function Secondpillarservicesection({ServicePageStyle}) {
                 {/** Second Pillar Service Image Section */}
                 <div className={ServicePageStyle.secondServicePillarImageSection}>
 
-                    <img src="/images/Service Page Images/pillar_service_image2.png" alt="" />
+                    <SecondPillarServiceSectionImage
+                    
+                        second_pillar_service_image={second_pillar_service_image}
+                        second_pillar_sevice_image_altText={second_pillar_sevice_image_altText}
+                        
+                    />
 
                 </div>
 
@@ -20,28 +30,11 @@ function Secondpillarservicesection({ServicePageStyle}) {
                 <div className={ServicePageStyle.secondServicePillarContentSection}>
 
                     {/** Second Pillar Service Inner Content Section */}
-                    <div className={ServicePageStyle.secondPillarServiceInnerContentSection}>
-
-                        <span>{"{ SERVICE PILLAR 2 }"}</span>
-                        <h3>{"< Specialised Digital Growth Services >"}</h3>
-                        <h2>Advanced Growth Solutions Designed to Scale Performance</h2>
-                        <p>These services support businesses looking to refine performance, improve efficiency, and gain deeper insight into digital outcomes. We focus on optimization, automation, and strategic clarity.</p>
-
-                        <ul>
-
-                            <h4>Included Services</h4>
-                            
-                            <li>Conversion Rate Optimization (CRO)</li>
-                            <li>Analytics & Performance Tracking</li>
-                            <li>Marketing Automation & CRM Integration</li>
-                            <li>Brand Strategy & Digital Positioning</li>
-                            <li>Market & Competitor Research</li>
-
-                        </ul>
-
-                        <button>Explore Growth Services</button>
-
-                    </div>
+                    <SecondPillarServiceContentSection
+                    
+                        ServicePageStyle={ServicePageStyle}
+                        
+                    />
 
                 </div>
 
