@@ -856,54 +856,27 @@ main{
 .svgIconInnerDiv::after{
 
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -2px;
+    left: -2px;
     width: 100%;
     height: 100%;
     content: "";
     border-radius: 50%;
     border: 2px dashed #292929;
-    animation: svgIconInnerDivAfterRotate 10s linear infinite;
+    animation: svgIconInnerDivAfterRotate 20s linear infinite;
 
 }
 
-.svgIconInnerDiv::before{
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    border-radius: 50%;
-    border: 2px dashed #292929;
-    animation: svgIconInnerDivBeforeRotate 10s linear infinite;
-
-}
-
-@keyframes svgIconInnerDivBeforeRotate {
-    
-    0%{
-
-        transform: rotateY(260deg);
-
-    }100%{
-
-        transform: rotateY(0deg);
-
-    }
-
-}
 
 @keyframes svgIconInnerDivAfterRotate {
     
     0%{
 
-        transform: rotateY(0deg);
+        transform: rotate(0deg);
 
     }100%{
 
-        transform: rotateY(-360deg);
+        transform: rotate(-360deg);
 
     }
 

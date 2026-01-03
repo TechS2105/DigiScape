@@ -6,6 +6,7 @@ import TestimonialContents from '../objects/Testimonialcontents.js';
 import HomeBlogs from '../objects/Homeblogs.js';
 import BlogPageContent from '../objects/Blogpageblogs.js';
 import PortfolioPageProjects from '../objects/Portfoliopageprojects.js';
+import OurApproachCardContents from '../objects/Ourapproachcardcontents.js';
 
 const getDefaultRouter = (req, res) => {
 
@@ -67,6 +68,13 @@ const getPortfolioPageProjects = (req, res) => {
 
 }
 
+/** Service Page Our Approach API */
+const getServicePageOurApproach = (req, res) => {
+
+    res.status(200).json(OurApproachCardContents);
+
+}
+
 export default {
 
     getDefaultRouter,
@@ -77,6 +85,7 @@ export default {
     getTestimonialContents,
     getHomeBlogs,
     getBlogPageContent,
-    getPortfolioPageProjects
+    getPortfolioPageProjects,
+    getServicePageOurApproach 
 
 }

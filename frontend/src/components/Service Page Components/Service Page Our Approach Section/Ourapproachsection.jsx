@@ -1,7 +1,38 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 function Ourapproachsection({ServicePageStyle}) {
     
+    const [ourApproachCardContnet, setOurApproachCardContent] = useState([]);
+
+    useEffect(() => { 
+
+        async function ourApproachCardContent() {
+            
+            try {
+                
+                const response = await fetch('http://localhost:3000/api/servicepage/ourapproach/card');
+
+                if (!response.ok) {
+                    
+                    throw new Error(`!HTTP Server Response Status Is ${response.status}`);
+
+                }
+
+                let data = await response.json();
+                setOurApproachCardContent(data);
+
+            } catch (error) {
+                
+                console.log(error);
+
+            }
+            
+        }
+
+        ourApproachCardContent();
+
+    }, []);
+
     return (
 
         <>
@@ -22,30 +53,39 @@ function Ourapproachsection({ServicePageStyle}) {
                 <div className={ServicePageStyle.ourApproachCardBoxesSection}>
 
                     {/** Card Box */}
-                    <div className={ServicePageStyle.ourApproachCardBox}>
+                    {ourApproachCardContnet.map((cardItem, idx) => {
 
-                        {/** SVG Icon Div */}
-                        <div className={ServicePageStyle.cardBoxSVGIcon}>
+                        return (
 
-                            {/** SVG Icon Inner Div */}
-                            <div className={ServicePageStyle.svgIconInnerDiv}>
+                            <div className={ServicePageStyle.ourApproachCardBox} key={idx}>
 
-                                <img src="../../../../public/images/Ourt Approach SVG Icons/our_approach_SVG1.png" alt="" />
+                                {/** SVG Icon Div */}
+                                <div className={ServicePageStyle.cardBoxSVGIcon}>
+
+                                    {/** SVG Icon Inner Div */}
+                                    <div className={ServicePageStyle.svgIconInnerDiv}>
+
+                                        <img src={cardItem.approachSVGImage} alt={cardItem.approachSVGImageAltText} />
+
+                                    </div>
+
+
+                                </div>
+
+                                {/** Content Section Div */}
+                                <div className={ServicePageStyle.cardBoxContentDiv}>
+
+                                    <h4>{cardItem.approachTitle}</h4>
+                                    <p>{cardItem.approachPara}</p>
+
+                                </div>
 
                             </div>
 
+                        );
 
-                        </div>
-
-                        {/** Content Section Div */}
-                        <div className={ServicePageStyle.cardBoxContentDiv}>
-
-                            <h4>Business Discovery & Alignment</h4>
-                            <p>We begin by understanding your business model, market context, and growth objectives to ensure complete strategic alignment.</p>
-
-                        </div>
-
-                    </div>
+                    })}
+                    
                     
                 </div>
 
