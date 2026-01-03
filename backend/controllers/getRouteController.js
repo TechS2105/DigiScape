@@ -7,6 +7,7 @@ import HomeBlogs from '../objects/Homeblogs.js';
 import BlogPageContent from '../objects/Blogpageblogs.js';
 import PortfolioPageProjects from '../objects/Portfoliopageprojects.js';
 import OurApproachCardContents from '../objects/Ourapproachcardcontents.js';
+import WhyChooseUsContents from '../objects/Servicepagewhychooseuscontent.js';
 
 const getDefaultRouter = (req, res) => {
 
@@ -75,6 +76,13 @@ const getServicePageOurApproach = (req, res) => {
 
 }
 
+/** Service Page Why choose Us Content */
+const getWhyChooseUsContent = (req, res) => {
+
+    res.status(200).json(WhyChooseUsContents);
+
+}
+
 export default {
 
     getDefaultRouter,
@@ -86,6 +94,7 @@ export default {
     getHomeBlogs,
     getBlogPageContent,
     getPortfolioPageProjects,
-    getServicePageOurApproach 
+    getServicePageOurApproach,
+    getWhyChooseUsContent
 
 }

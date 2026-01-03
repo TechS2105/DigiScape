@@ -7,6 +7,7 @@ import ServicePageSecondPillaerServiceSection from '../Service Page Second Pilla
 import ServicePageThirdPillarServiceSection from '../Service Page Third Pillar Service Section/Thirdpillarservicesection';
 import OurApproachSection from '../Service Page Our Approach Section/Ourapproachsection';
 import ServicePageWhyChooseUsSection from '../Service Page Why Choose Us Section/Why Choose Us Section/Whychooseussection';
+import ServicePageFinalCTASection from '../Service Page Final CTA Section/Finalctasection';
 
 function Servicepagemainsection({ ServicePageStyle }) {
     
@@ -65,6 +66,13 @@ function Servicepagemainsection({ ServicePageStyle }) {
 
             {/** Why Choose Us Section */}
             <ServicePageWhyChooseUsSection
+            
+                ServicePageStyle={ServicePageStyle}
+                
+            />
+
+            {/** Final CTA Section */}
+            <ServicePageFinalCTASection
             
                 ServicePageStyle={ServicePageStyle}
                 
