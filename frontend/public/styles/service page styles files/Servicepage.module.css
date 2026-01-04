@@ -1182,6 +1182,8 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 
 }
 
@@ -1270,5 +1272,344 @@ main{
     color: #ffffffff;
     box-shadow: 5px 5px 10px #ffffffff inset;
     border: transparent;
+
+}
+
+.servicePageFinalCtaSection > .servicePageMainInnerFinalCtaFormBox{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #292929;
+    transform: translateY(2000px);
+
+}
+
+.servicePageMainInnerFinalCtaFormBox > .servicePageFinalCtaInnerFormTitleSection{
+
+    width: 100%;
+    height: 40%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    transform: translateY(-1000px);
+
+}
+
+.servicePageInnerFormTitleSection > .servicePageInnerFormTitleSectionTitleDiv{
+
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+    overflow: hidden;
+
+}
+
+.servicePageInnerFormTitleSectionTitleDiv > span{
+
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--medium-font);
+    margin-bottom: 30px;
+    margin-right: 20px;
+    transform: translateX(500px);
+
+}
+
+.servicePageInnerFormTitleSectionTitleDiv > h2{
+
+    font-size: 150px;
+    text-align: right;
+    font-family: var(--bold-font);
+    line-height: 140px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transform: translateX(2000px);
+
+}
+
+/** Final CTA Form Section Inner Form Div */
+.servicePageMainInnerFinalCtaFormBox > .servicePageInnerFinalCtaFormSection{
+
+    width: 100%;
+    height: 60%;
+    background-color: #292929;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+/** Final CTA Form Section Inner Form Div Form */
+.servicePageInnerFinalCtaFormSection > form{
+
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+::placeholder{
+
+    font-family: var(--regular-font);
+    font-size: 15px;
+
+}
+
+input{
+
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+
+}
+
+label{
+
+    font-family: var(--medium-font);
+    letter-spacing: 2px;
+    color: var(--secondary-color);
+
+}
+
+select{
+
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-family: var(--regular-font);
+
+}
+
+/** First Input Div */ 
+form > .firstInputDiv{
+
+    width: 100%;
+    height: 16.66%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/** First Input Name div*/
+.firstInputDiv > .firstNameDiv{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+
+}
+
+.firstNameDiv > label{
+
+   
+    font-size: 20px;
+
+}
+
+.firstNameDiv > input{
+
+    width: 95%;
+    height: 50px;
+    text-align: right;
+    padding-right: 10px;
+    outline: none;
+    border: 1px solid var(--secondary-color);
+
+}
+
+/** First Input Email Div */
+.firstInputDiv > .emailDiv{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+
+}
+
+.emailDiv > label{
+
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family: var(--medium-font);
+    color: var(--secondary-color);
+
+}
+
+.emailDiv > input{
+
+    width: 95%;
+    height: 50px;
+    text-align: right;
+    padding-right: 10px;
+
+}
+
+/** Second Input Div */
+form > .secondInputDiv{
+
+    width: 100%;
+    height: 16.66%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+/** Second Input Mobile No. Div */
+.secondInputDiv > .mobileNoDiv{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.mobileNoDiv > label{
+
+    font-size: 20px;
+
+}
+
+.mobileNoDiv > input{
+
+    width: 95%;
+    height: 50px;
+    text-align: right;
+    padding-right: 10px;
+
+}
+
+/** Second Input Company Name Div */
+.secondInputDiv > .companyNameDiv{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 20px;
+
+}
+
+.companyNameDiv > label{
+
+    font-size: 20px;
+
+}
+
+.companyNameDiv > input{
+
+    width: 95%;
+    height: 50px;
+    text-align: right;
+    padding-right: 10px;
+
+}
+
+/** Third Input Div */
+form > .thirdInputDiv{
+
+    width: 100%;
+    height: 16.66%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/** Industry Type Input Div */
+.thirdInputDiv > .industryTypeDiv{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.industryTypeDiv > label{
+
+    font-size: 20px;
+
+}
+
+.industryTypeDiv > select{
+
+    width: 97%;
+    height: 50px;
+    text-align: right;
+    padding-right: 10px;
+    outline: none;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+
+}
+
+.industryTypeDiv select > option{
+
+    padding-right: 20px;
+
+}
+
+/** Company Size Div */
+.thirdInputDiv > .companySizeDiv{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 20px;
+
+}
+
+.companySizeDiv > label{
+
+    font-size: 20px;
+
+}
+
+.companySizeDiv > select{
+
+    width: 97%;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--secondary-color);
+    text-align: right;
+    padding-right: 10px;
 
 }
