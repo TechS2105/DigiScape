@@ -238,6 +238,54 @@ function Finalctasection({ ServicePageStyle }) {
 
                             </div>
 
+                            {/** Fourth Input Div */}
+                            <div className={ServicePageStyle.fourthInputDiv}>
+
+                                {/** Industry Type Div */}
+                                <div className={ServicePageStyle.servicesDiv}>
+
+                                    <label htmlFor="servuces"> Services </label>
+                                    <select name='services'>
+
+                                        <option value="">Choose Your Services</option>
+                                        <option value="Digital Marketing">Digital Marketing</option>
+                                        <option value="Wordpress Development">Wordpress Development</option>
+                                        <option value="Full Stack Web Development">Full Stack Web Development</option>
+                                        <option value="Branding & Designing">Branding & Designing</option>
+                                        <option value="Performance Marketing">Performance Marketing</option>
+                                        <option value="SEO & Content Strategy">SEO & Content Strategy</option>
+                                        <option value="Conversion Rate Improvement">Conversion Rate Improvement</option>
+                                        <option value="Marketing Automation">Marketing Automation</option>
+                                        <option value="End to End Digital Strategy">End to End Digital Strategy</option>
+                                        <option value="Demand Generation">Demand Generation</option>
+                                        <option value="Other">Other</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                            {/** Fifth Input Div  */}
+                            <div className={ServicePageStyle.fifthInputDiv}>
+
+                                {/** Company Size Div */}
+                                <div className={ServicePageStyle.messageDiv}>
+
+                                    <label htmlFor="estimatedtimeline"> Message </label>
+                                    <textarea placeholder='Briefly describe your current goals or challenges...'></textarea>
+                                    
+                                </div>
+
+                            </div>
+
+                            {/** Submit Button Div */}
+                            <div className={ServicePageStyle.submitButtonDiv}>
+
+                                <button type='submit'>Request a Consultation</button>
+
+                            </div>
+
                         </form>
 
                     </div>

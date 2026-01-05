@@ -1344,7 +1344,9 @@ main{
 
     width: 100%;
     height: 60%;
-    background-color: #292929;
+    /* background-color: #292929; */
+    background-image: linear-gradient(-180deg, #292929ff, rgb(255, 255, 255), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff,rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgb(255, 255, 255), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff);
+    background-size: 10000vw 10000vw;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -1354,7 +1356,7 @@ main{
 /** Final CTA Form Section Inner Form Div Form */
 .servicePageInnerFinalCtaFormSection > form{
 
-    width: 80%;
+    width: 90%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1394,6 +1396,30 @@ select{
     font-size: 15px;
     letter-spacing: 2px;
     font-family: var(--regular-font);
+    outline: none;
+    border: 1px solid #ffffffff;
+
+}
+
+select > option{
+
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+    display: inline-flex;
+
+}
+
+textarea{
+
+    outline: none;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    resize: none;
+    font-family: var(--regular-font);
+    font-size: 15px;
+    letter-spacing: 2px;
 
 }
 
@@ -1401,7 +1427,7 @@ select{
 form > .firstInputDiv{
 
     width: 100%;
-    height: 16.66%;
+    height: 16%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1473,7 +1499,7 @@ form > .firstInputDiv{
 form > .secondInputDiv{
 
     width: 100%;
-    height: 16.66%;
+    height: 16%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1540,7 +1566,7 @@ form > .secondInputDiv{
 form > .thirdInputDiv{
 
     width: 100%;
-    height: 16.66%;
+    height: 16%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1611,5 +1637,111 @@ form > .thirdInputDiv{
     border: 1px solid var(--secondary-color);
     text-align: right;
     padding-right: 10px;
+
+}
+
+/** Forth Input Type Div */
+form > .fourthInputDiv{
+
+    width: 100%;
+    height: 16%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.fourthInputDiv > .servicesDiv{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 20px;
+
+}
+
+.servicesDiv > label{
+
+    font-size: 20px;
+
+}
+
+.servicesDiv > select{
+
+    border-radius: 5px;
+    text-align: right;
+    width: 98.9%;
+    height: 50px;
+    padding-right: 10px;
+    border: 1px solid var(--secondary-color);
+    outline: none;
+
+}
+
+/** Fifth Input Div */
+.fifthInputDiv{
+    
+    width: 100%;
+    height: 16%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+
+}
+
+.fifthInputDiv > .messageDiv{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+
+}
+
+.messageDiv > label{
+
+    font-size: 20px;
+
+}
+
+.messageDiv > textarea{
+
+    width: 98%;
+    height: 100px;
+    text-align: right;
+    padding-right: 10px;
+    border-radius: 5px;
+    padding: 10px 10px 0px 0px;
+
+}
+
+/** Submit Button Div */
+form > .submitButtonDiv{
+
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+}
+
+.submitButtonDiv > button{
+
+    margin-right: 20px;
+    width: 40%;
+    height: 60px;
+    border: 1px solid #ffffffff;
+    background-color: transparent;
+    color: #ffffffff;
+    font-size: 20px;
+    border-radius: 50px;
 
 }
