@@ -12,7 +12,7 @@ function Ourapproachcardboxes({ServicePageStyle}) {
             
             try { 
 
-                const response = await axios.get('http://localhost:3000/api/servicepage/ourapproach/card'); // GET all card items through axios
+                const response = await axios.get('https://digiscape-backend.onrender.com/api/servicepage/ourapproach/card'); // GET all card items through axios
                 setOurApproachCardContent(response.data); // return data in this array
 
             } catch (error) {
