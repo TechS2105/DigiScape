@@ -12,7 +12,7 @@ function Whychooseuscontent({ ServicePageStyle }) {
 
             try { 
 
-                const response = await axios.get('http://localhost:3000/api/servicepage/whychooseus/content');
+                const response = await axios.get('https://digiscape-backend.onrender.com/api/servicepage/whychooseus/content');
                 setGetWhyChooseUsContent(response.data);
 
             } catch (error) {
