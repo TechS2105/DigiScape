@@ -17,7 +17,7 @@ function Finalctainnerformsectionform({ ServicePageStyle, configureFinalCTAFormS
 
         try { 
 
-            const sendFormData = await fetch('http://localhost:3000/servicepage/finalCTA/mail/form', {
+            const sendFormData = await fetch('https://digiscape-backend.onrender.com/servicepage/finalCTA/mail/form', {
 
                 headers: { "Content-Type": "application/json; charset=utf-8" },
                 body: JSON.stringify(data),
