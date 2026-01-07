@@ -19,5 +19,6 @@ router.post('/home/contact/form', postRouterController.postContactFormData) // P
 router.post('/contact/mail/form', postRouterController.postContactPageFormData); // POST Contact Page Mail Form Router
 router.post('/about/getintouch/mail/form', postRouterController.postAboutPageGetInTouchMail); // POST About Page Get In Touch Mail Form Router
 router.post('/portfoliopage/enquiry/mail/form', postRouterController.postPortfolioPageEnquiryMail); // POST Portfolio Page Enquiry Form Router
+router.post('/servicepage/finalCTA/mail/form', postRouterController.postServicePageCTAMail); // POST Serivce Page CTA Mail Form Router
 
 export default router;

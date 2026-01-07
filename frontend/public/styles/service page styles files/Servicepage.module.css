@@ -1283,7 +1283,8 @@ main{
     width: 100%;
     height: 100%;
     z-index: 2;
-    background-color: #292929;
+    background-image: linear-gradient(80deg, #292929ff, rgb(255, 255, 255), #292929ff, rgb(255, 255, 255), #292929ff);
+    background-size: 1000vw 100vw;
     transform: translateY(2000px);
 
 }
@@ -1291,7 +1292,7 @@ main{
 .servicePageMainInnerFinalCtaFormBox > .servicePageFinalCtaInnerFormTitleSection{
 
     width: 100%;
-    height: 40%;
+    height: 35%;
     background-color: #ffffff;
     display: flex;
     align-items: flex-end;
@@ -1322,14 +1323,24 @@ main{
     text-transform: uppercase;
     font-family: var(--medium-font);
     margin-bottom: 30px;
-    margin-right: 20px;
     transform: translateX(500px);
+
+}
+
+.servicePageInnerFormTitleSectionTitleDiv span > svg{
+
+    margin-right: 20px;
+    font-size: 50px;
+    margin-top: -2px;
+    color: #292929;
+    margin-left: 5px;
+
 
 }
 
 .servicePageInnerFormTitleSectionTitleDiv > h2{
 
-    font-size: 150px;
+    font-size: 130px;
     text-align: right;
     font-family: var(--bold-font);
     line-height: 140px;
@@ -1343,13 +1354,13 @@ main{
 .servicePageMainInnerFinalCtaFormBox > .servicePageInnerFinalCtaFormSection{
 
     width: 100%;
-    height: 60%;
-    /* background-color: #292929; */
-    background-image: linear-gradient(-180deg, #292929ff, rgb(255, 255, 255), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff,rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgb(255, 255, 255), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff, rgba(255, 255, 255, 0.993), #292929ff, rgb(255, 255, 255), #292929ff, rgba(255, 255, 255, 0.988), #292929ff);
-    background-size: 10000vw 10000vw;
+    height: 65%;
+    background-image: linear-gradient(80deg, #292929ff, rgb(255, 255, 255), #292929ff, rgb(255, 255, 255), #292929ff);
+    background-size: 1000vw 100vw;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    transform: scaleX(0);
 
 }
 
@@ -1358,10 +1369,12 @@ main{
 
     width: 90%;
     height: 100%;
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    transform: translateX(2000px);
 
 }
 
@@ -1414,7 +1427,7 @@ select > option{
 textarea{
 
     outline: none;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--third-color);
     border-radius: 5px;
     resize: none;
     font-family: var(--regular-font);
@@ -1427,10 +1440,11 @@ textarea{
 form > .firstInputDiv{
 
     width: 100%;
-    height: 16%;
+    height: 12%;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background-color: #292929; */
 
 }
 
@@ -1499,10 +1513,11 @@ form > .firstInputDiv{
 form > .secondInputDiv{
 
     width: 100%;
-    height: 16%;
+    height: 12%;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background-color: blue; */
 
 
 }
@@ -1566,10 +1581,11 @@ form > .secondInputDiv{
 form > .thirdInputDiv{
 
     width: 100%;
-    height: 16%;
+    height: 12%;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background-color: antiquewhite; */
 
 }
 
@@ -1644,10 +1660,11 @@ form > .thirdInputDiv{
 form > .fourthInputDiv{
 
     width: 100%;
-    height: 16%;
+    height: 12%;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background-color: yellowgreen; */
 
 }
 
@@ -1685,11 +1702,11 @@ form > .fourthInputDiv{
 .fifthInputDiv{
     
     width: 100%;
-    height: 16%;
+    height: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: red; */
+    /* background-color: rgb(255, 209, 5); */
 
 }
 
@@ -1702,6 +1719,7 @@ form > .fourthInputDiv{
     flex-direction: column;
     justify-content: center;
     padding-right: 20px;
+    margin-top: 50px;
 
 }
 
@@ -1714,7 +1732,7 @@ form > .fourthInputDiv{
 .messageDiv > textarea{
 
     width: 98%;
-    height: 100px;
+    height: 200px;
     text-align: right;
     padding-right: 10px;
     border-radius: 5px;
@@ -1726,7 +1744,7 @@ form > .fourthInputDiv{
 form > .submitButtonDiv{
 
     width: 100%;
-    height: 10%;
+    height: 13%;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -1743,5 +1761,87 @@ form > .submitButtonDiv{
     color: #ffffffff;
     font-size: 20px;
     border-radius: 50px;
+    corner-shape: bevel;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.8s ease 0.3s;
+
+}
+
+.submitButtonDiv > button:hover{
+
+    color: #292929;
+
+}
+
+.submitButtonDiv > button::after{
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: "";
+    height: 0%;
+    width: 100%;
+    background-color: var(--secondary-color);
+    z-index: -2;
+    transition: all 0.8s ease;
+
+}
+
+.submitButtonDiv > button:hover::after{
+
+    height: 100%;
+
+}
+
+/** Error Message */
+.errorMessage{
+
+    color: var(--secondary-color);
+    font-size: 15px;
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+    margin-top: 6px;
+
+}
+
+/** Submitting Message */
+.submittingMessage{
+
+    display: inline-flex;
+    margin-right: 20px;
+    margin-top: 20px;
+    height: 50%;
+    align-items: center;
+    color: #ffffffff;
+    font-family: var(--regular-font);
+    letter-spacing: 2px;
+    font-size: 18px;
+    gap: 10px;
+
+}
+
+.submittingMessage > svg{
+
+    font-size: 25px;
+    margin-top: -5px;
+    animation: svgIconAnime 2s linear infinite
+
+}
+
+@keyframes svgIconAnime {
+    
+    0%{
+
+        transform: rotate(0deg);
+
+    }100%{
+
+        transform: rotate(360deg);
+
+    }
 
 }
